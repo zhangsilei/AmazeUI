@@ -23,32 +23,52 @@
   });  
 })(jQuery);     
 
-$(document).ready(function(){
+/*节点加载完毕后的页面渲染操作*/
+$(document).ready(function(){    
+  setLiSize();
+  setTipLoc();
 
   /*更多按钮事件*/
-  /*var showCount = -1;   // 每次点击更多显示一个电影信息
-  var lis = $("#movie-list").children("li");   
+  var count = 3;     // 默认显示3个电影   
+  var lis = $("#movie-list").children("li");      
   lis.css("display","none");
+  for(var i = 0; i < count; i++){
+    $("#movie-list").children("li").eq(i).css("display","block");
+  } 
+     
   $("#more").click(function(){ 
-    if(showCount > lis.length){   
+    if(count > lis.length){     
       return;
     }else{
-      showCount++;   
-      $("#movie-list").children("li").eq(showCount).css("display","block");
+      $("#movie-list").children("li").eq(count).css("display","block");
+      count++;
     }     
-  })*/
+  })
 
-  /*设置每行内容的高度*/
-  window.onresize = function(){
-    setLiSize();
-  }
-  setLiSize();
 })    
 
-/*设置每行链接的宽高*/
+/*窗口大小改变时的事件*/
+$(window).resize(function(){
+  setLiSize();
+  setTipLoc();    
+})
+
+/*设置每行链接的宽高与<li>的高度一致*/
 var setLiSize = function(){
   var aWidth = $(".content li:eq(0)").width();
   var aHeight = $(".content img:eq(0)").height();   
   $(".content a").css("width", aWidth);    
-  $(".content a").css("height", aHeight);    
+  $(".content a").css("height", aHeight);       
+}
+
+/*设置小徽章的排版*/
+var setTipLoc = function(){
+  var cWidth = document.documentElement.clientWidth;
+  var tip = $(".content-title-3D");     // 3D IMAX徽章  
+  if(cWidth <= 380){     // 超小设备
+    tip.css("display", "block");   
+    tip.css("width", 66);
+  }else{
+    tip.css("display", "inline-block");
+  }
 }

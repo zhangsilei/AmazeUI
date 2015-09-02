@@ -1,4 +1,7 @@
 /* Write your styles */
+/** 
+ * 首页样式 
+ */
 .header-font{
 	font-size: 17px;
 	font-family: "Microsoft Yahei";
@@ -10,11 +13,10 @@
 .content-title-font{
 	font-size: 16px;
 }
-.content-title-tip{
+.content-title-3D,.content-title-new{
 	margin-left: 0px;
 	font-family: "Microsoft Yahei";
 	font-weight: 100;
-	cursor: ;
 }
 .content-introduce{
 	/* margin-top: 2%; */   
@@ -27,3 +29,36 @@
 	min-width: 60px;
 	min-height: 85px;
 }
+.content-score{
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	color: #ff9a00;
+	font-size: 20px;
+	margin-left: 0px;
+	cursor: default;
+}
+.content-fen{
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	font-size: 12px;
+	cursor: default;
+}
+.content-ticket{
+	background: #fff;
+	border: 1px solid #e54847;
+	border-radius: 4px;
+	position: absolute;
+	top: 60px;   
+	right: 0px;
+	font-size: 13px;
+	padding: 7px 17px;
+	color: #e54847;
+}
+.content-ticket:hover{
+	background: none;
+	border: 1px solid #e54847;
+	color: #e54847;
+}
+
