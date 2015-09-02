@@ -3,9 +3,27 @@
 	font-size: 17px;
 	font-family: "Microsoft Yahei";
 }
-.content-introduce{
-	margin-top: 2%;
+.content li{
+	cursor: pointer;
+	position: relative;
 }
+.content-title-font{
+	font-size: 16px;
+}
+.content-title-tip{
+	margin-left: 0px;
+	font-family: "Microsoft Yahei";
+	font-weight: 100;
+	cursor: ;
+}
+.content-introduce{
+	/* margin-top: 2%; */   
+}    
 .content-introduce-font{
+	font-size: 14px;
 	color: #666;
+}
+.content-img{
+	min-width: 60px;
+	min-height: 85px;
 }

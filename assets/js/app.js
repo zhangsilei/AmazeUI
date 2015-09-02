@@ -24,15 +24,31 @@
 })(jQuery);     
 
 $(document).ready(function(){
-  var showCount = -1;   // 每次点击更多显示一个电影信息
+
+  /*更多按钮事件*/
+  /*var showCount = -1;   // 每次点击更多显示一个电影信息
   var lis = $("#movie-list").children("li");   
   lis.css("display","none");
   $("#more").click(function(){ 
-    if(showCount > lis.length){
+    if(showCount > lis.length){   
       return;
     }else{
       showCount++;   
       $("#movie-list").children("li").eq(showCount).css("display","block");
-    }
-  })
-})
+    }     
+  })*/
+
+  /*设置每行内容的高度*/
+  window.onresize = function(){
+    setLiSize();
+  }
+  setLiSize();
+})    
+
+/*设置每行链接的宽高*/
+var setLiSize = function(){
+  var aWidth = $(".content li:eq(0)").width();
+  var aHeight = $(".content img:eq(0)").height();   
+  $(".content a").css("width", aWidth);    
+  $(".content a").css("height", aHeight);    
+}
