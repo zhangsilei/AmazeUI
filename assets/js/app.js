@@ -29,20 +29,25 @@ $(document).ready(function(){
   setTipLoc();
 
   /*更多按钮事件*/
-  var count = 3;     // 默认显示3个电影   
+  var count = 3;     // 默认显示3个电影      
   var lis = $("#movie-list").children("li");      
   lis.css("display","none");
   for(var i = 0; i < count; i++){
-    $("#movie-list").children("li").eq(i).css("display","block");
+    $("#movie-list").children("li").eq(i).css("display","block");       
   } 
-     
   $("#more").click(function(){ 
-    if(count > lis.length){     
-      return;
-    }else{
-      $("#movie-list").children("li").eq(count).css("display","block");
+    if(count == lis.length){     
+      alert("没有更多了~");     // 后期可以改成弹框
+      return;   
+    }else{   
       count++;
+      $("#movie-list").children("li").eq(count-1).css("display","block");
     }     
+  })
+
+  /*登陆事件*/
+  $(".login-btn").click(function(){
+    window.location.href = "amaze_login.html";
   })
 
 })    

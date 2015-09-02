@@ -1,11 +1,16 @@
 /* Write your styles */
+
+
 /** 
  * 首页样式 
  */
+
+/* 首页标题字体样式 */
 .header-font{
 	font-size: 17px;
 	font-family: "Microsoft Yahei";
 }
+/* 首页内容样式 */
 .content li{
 	cursor: pointer;
 	position: relative;
@@ -18,9 +23,6 @@
 	font-family: "Microsoft Yahei";
 	font-weight: 100;
 }
-.content-introduce{
-	/* margin-top: 2%; */   
-}    
 .content-introduce-font{
 	font-size: 14px;
 	color: #666;
@@ -60,5 +62,23 @@
 	background: none;
 	border: 1px solid #e54847;
 	color: #e54847;
+}
+/* 首页菜单样式 */
+.login-head{
+	border-radius: 50%;  
+	width: 50px;
+	height: 50px;
+	margin: 5px 20px 5px 50px;
+	float: left;
+}
+.login-btn{
+	color: #fff;
+	float: left;
+	font-family: "Microsoft Yahei";
+	font-size: 14px;
+	cursor: pointer;
+}
+.menu-text{
+	text-align: center; 
 }
 
