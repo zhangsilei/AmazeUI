@@ -61,29 +61,31 @@
 
   <!-- 标题 -->
   <div class="login-title">
-    账号登陆
+    新用户注册
   </div>  
   <div class="login-line"></div>
   
-  <!-- 登陆框 -->
+  <!-- 注册框 -->
   <div class="am-g login-content">
     <div class="am-u-md-12 am-u-sm-centered">       
       <form class="am-form">
         <fieldset class="am-form-set">
           <input type="text" id="login-acc" placeholder="账户名/手机号/Email">   
           <input type="password" id="login-pwd" placeholder="请输入您的密码">  
+          <input type="password" id="login-pwd" placeholder="再一次输入密码">
         </fieldset>
-        <button type="submit" class="am-btn am-radius am-btn-primary am-btn-block login-btn">登陆</button>
+
+        <!-- 使用条款 -->
+        <label class="am-checkbox protocal">
+          <input type="checkbox" checked="checked" value="" data-am-ucheck checked>
+          我已阅读并同意          
+          <a href="#">《用户协议》</a>
+        </label>
+
+        <button type="submit" class="am-btn am-radius am-btn-primary am-btn-block register-btn">注册</button>
       </form>
     </div>
-  </div>  
-  
-  <a href="amaze_register.html" class="login-register">
-    立即注册   
-  </a>
-  <a href="#" class="login-findpwd">
-    找回密码
-  </a>
+  </div> 
 
   <p class="bottom">© 妹子电影 客服电话：400-670-5335</p> 
 

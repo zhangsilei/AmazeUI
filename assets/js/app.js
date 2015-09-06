@@ -27,8 +27,9 @@
 $(document).ready(function(){    
   setLiSize();
   setTipLoc();
+  setLoginLink();
 
-  /*更多按钮事件*/
+  /* 更多按钮事件 */
   var count = 3;     // 默认显示3个电影      
   var lis = $("#movie-list").children("li");      
   lis.css("display","none");
@@ -45,20 +46,34 @@ $(document).ready(function(){
     }     
   })
 
-  /*登陆事件*/
+  /* 登陆事件 */
   $(".login-btn").click(function(){
     window.location.href = "amaze_login.html";
   })
 
+  /* 用户协议按钮事件 */    
+  $(".protocal input:eq(0)").click(function(){
+    if($(this).attr("checked") != null){     
+      $(".register-btn").attr("disabled", true);   
+      $(".protocal input:eq(0)").attr("checked", null);   
+    }else{      
+      $(".register-btn").attr("disabled", false);    
+      $(".protocal input:eq(0)").attr("checked", "checked");        
+    }
+  })
 })    
 
-/*窗口大小改变时的事件*/
+/*窗口大小改变时的事件*/   
 $(window).resize(function(){
   setLiSize();
-  setTipLoc();    
+  setTipLoc();  
+  setLoginLink();  
 })
 
-/*设置每行链接的宽高与<li>的高度一致*/
+/**
+ * （首页样式）
+ * 设置每行链接的宽高与<li>的高度一致
+ */
 var setLiSize = function(){
   var aWidth = $(".content li:eq(0)").width();
   var aHeight = $(".content img:eq(0)").height();   
@@ -66,14 +81,27 @@ var setLiSize = function(){
   $(".content a").css("height", aHeight);       
 }
 
-/*设置小徽章的排版*/
+/**
+ * （首页样式）
+ * 设置小徽章的排版
+ */    
 var setTipLoc = function(){
   var cWidth = document.documentElement.clientWidth;
   var tip = $(".content-title-3D");     // 3D IMAX徽章  
   if(cWidth <= 380){     // 超小设备
     tip.css("display", "block");   
     tip.css("width", 66);
-  }else{
+  }else{  
     tip.css("display", "inline-block");
+  }
+}
+
+var setLoginLink = function(){
+  if(document.documentElement.clientWidth <= 640){     // 移动端
+    $(".login-register").css("marginLeft", "12px");
+    $(".login-findpwd").css("marginRight", "12px");
+  }else{
+    $(".login-register").css("marginLeft", "18px");
+    $(".login-findpwd").css("marginRight", "18px");
   }
 }
