@@ -30,7 +30,7 @@ $(document).ready(function(){
   setLoginLink();
 
   /* 更多按钮事件 */
-  var count = 3;     // 默认显示3个电影      
+  var count = 3;     // 默认显示3个电影          
   var lis = $("#movie-list").children("li");      
   lis.css("display","none");
   for(var i = 0; i < count; i++){
@@ -55,10 +55,31 @@ $(document).ready(function(){
   $(".protocal input:eq(0)").click(function(){
     if($(this).attr("checked") != null){     
       $(".register-btn").attr("disabled", true);   
-      $(".protocal input:eq(0)").attr("checked", null);   
+      $(".protocal input:eq(0)").attr("checked", null);      
     }else{      
       $(".register-btn").attr("disabled", false);    
       $(".protocal input:eq(0)").attr("checked", "checked");        
+    }
+  })
+
+  /* 注册校验提示 */
+  $(".error-tip").hide();
+  $(".register-btn").click(function(){   
+    var validateAcc = /[\w]/g;
+    if(!validateAcc.test($("#login-acc").val())){   
+      $(".error-tip > p").html("请输入正确的账号名!");         
+      $(".error-tip").show();   
+      return false;
+    }else if($(".am-form-set > input:eq(1)").val().length < 6){
+      $(".error-tip > p").html("请输入正确的密码!");
+      $(".error-tip").show();
+      return false;
+    }else if($(".am-form-set > input:eq(1)").val() != $(".am-form-set > input:eq(2)").val()){
+      $(".error-tip > p").html("两次密码输入不一致!");
+      $(".error-tip").show();
+      return false;
+    }else{
+      alert("ok");
     }
   })
 })    
@@ -71,8 +92,7 @@ $(window).resize(function(){
 })
 
 /**
- * （首页样式）
- * 设置每行链接的宽高与<li>的高度一致
+ * 设置首页每行链接的宽高与<li>的高度一致
  */
 var setLiSize = function(){
   var aWidth = $(".content li:eq(0)").width();
@@ -82,8 +102,7 @@ var setLiSize = function(){
 }
 
 /**
- * （首页样式）
- * 设置小徽章的排版
+ * 设置首页小徽章的排版
  */    
 var setTipLoc = function(){
   var cWidth = document.documentElement.clientWidth;
@@ -96,6 +115,9 @@ var setTipLoc = function(){
   }
 }
 
+/**
+ * 设置登陆页下边链接样式，即“立即注册”和“找回密码”
+ */
 var setLoginLink = function(){
   if(document.documentElement.clientWidth <= 640){     // 移动端
     $(".login-register").css("marginLeft", "12px");

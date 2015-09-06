@@ -59,6 +59,9 @@
       </h1>
   </header>
 
+  <!-- 登陆信息校验提示 -->      
+  <div class='error-tip'><p></p></div>   
+   
   <!-- 标题 -->
   <div class="login-title">
     新用户注册
@@ -70,15 +73,15 @@
     <div class="am-u-md-12 am-u-sm-centered">       
       <form class="am-form">
         <fieldset class="am-form-set">
-          <input type="text" id="login-acc" placeholder="账户名/手机号/Email">   
-          <input type="password" id="login-pwd" placeholder="请输入您的密码">  
-          <input type="password" id="login-pwd" placeholder="再一次输入密码">
-        </fieldset>
+          <input type="text" id="login-acc" placeholder="用户账号（由数字、字母组成）">      
+          <input type="password" id="login-pwd" placeholder="请输入您的密码（最少6位字符）">  
+          <input type="password" id="login-pwd" placeholder="再一次输入密码">      
+        </fieldset>   
 
-        <!-- 使用条款 -->
+        <!-- 使用条款 -->    
         <label class="am-checkbox protocal">
-          <input type="checkbox" checked="checked" value="" data-am-ucheck checked>
-          我已阅读并同意          
+          <input type="checkbox" checked="checked" value="" data-am-ucheck checked>     
+          我已阅读并同意             
           <a href="#">《用户协议》</a>
         </label>
 

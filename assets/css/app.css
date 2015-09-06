@@ -139,3 +139,13 @@
 	text-align: center;
 	margin-top: 5px;
 }
+.error-tip{
+	height: 30px;
+	margin-top: 0px;
+	border-bottom: 1px solid #ffebc8;
+	background: #fff6e0;
+	text-align: center;
+	font-size: 13px;
+	color: #d78900;
+	line-height: 30px;
+}
