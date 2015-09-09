@@ -1,23 +1,23 @@
-<!DOCTYPE html>  
-<html>  
-<head>  
-    <meta charset="utf-8"/>  
-    <title>基于浏览器的HTML5查找地理位置</title> 
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <meta charset="utf-8"/> 
+    <title>基于浏览器的HTML5查找地理位置</title>
     <!-- 百度API -->
- <script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script>  
+ <script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script>
   <script>
 
            function getLocation(){
                var options={
-                   enableHighAccuracy:true, 
+                   enableHighAccuracy:true,
                    maximumAge:1000
                }
                if(navigator.geolocation){
                    //浏览器支持geolocation
                    navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
-                   
                }else{
                    //浏览器不支持geolocation
+                   alert('您的浏览器不支持地理位置定位');
                }
            }
 
@@ -29,19 +29,18 @@
                //纬度
                var latitude = position.coords.latitude;
 
-               //使用百度地图API
-               //创建地图实例  
-               var map =new BMap.Map("container");
-
-               //创建一个坐标
-               var point =new BMap.Point(longitude,latitude);
-               //地图初始化，设置中心点坐标和地图级别  
-               map.centerAndZoom(point,15);
-
-
+    alert('经度'+longitude+'，纬度'+latitude);
+              
+               //根据经纬度获取地理位置，不太准确，获取城市区域还是可以的
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(longitude,latitude);
+    var gc = new BMap.Geocoder();
+    gc.getLocation(point, function(rs){
+       var addComp = rs.addressComponents;
+       alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+    });
 
            }
-  
 
            //失败时
            function onError(error){
@@ -66,11 +65,9 @@
            }
 
            window.onload=getLocation;
+        
    </script>
 </head>
 <body>
-  
-
-   <div id="container" style="width:600px;height:600px"></div>
 </body>
 </html>
