@@ -25,11 +25,11 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">  
 
   <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
-  <meta name="msapplication-TileColor" content="#0e90d2">
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">    
+  <meta name="msapplication-TileColor" content="#0e90d2">    
 
   <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
   <!--
@@ -49,36 +49,39 @@
   <!-- 页头 -->
   <header data-am-widget="header" class="am-header am-header-default">
       <div class="am-header-left am-header-nav">
-          <a href="javascript:window.history.go(-1);" class="">   
+          <a href="amaze_index.html" class="">   
               <img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt="后退"/>
           </a>
       </div>
-
+   
       <h1 class="am-header-title"> 
           Amaze Movie
       </h1>
   </header>
+ 
+  <!-- 登陆信息校验提示 -->      
+  <div class='error-tip'><p></p></div> 
 
   <!-- 标题 -->
   <div class="login-title">
-    账号登陆
+    账号登录    
   </div>  
-  <div class="login-line"></div>
-  
+  <div class="login-line"></div>    
+
   <!-- 登陆框 -->
   <div class="am-g login-content">
     <div class="am-u-md-12 am-u-sm-centered">       
       <form class="am-form">
-        <fieldset class="am-form-set">
-          <input type="text" id="login-acc" placeholder="账户名/手机号/Email">   
+        <fieldset class="am-form-set">   
+          <input type="text" id="login-acc" placeholder="账户名/手机号/Email">       
           <input type="password" id="login-pwd" placeholder="请输入您的密码">  
-        </fieldset>
-        <button type="submit" class="am-btn am-radius am-btn-primary am-btn-block login-btn">登陆</button>
+        </fieldset>   
+        <button type="button" class="am-btn am-radius am-btn-primary am-btn-block login-btn">登录</button>  
       </form>
     </div>
   </div>  
   
-  <a href="amaze_register.html" class="login-register">
+  <a href="amaze_register.html" class="login-register">   
     立即注册   
   </a>
   <a href="#" class="login-findpwd">

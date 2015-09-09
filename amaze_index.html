@@ -40,7 +40,7 @@
         <div class="am-header-left am-header-nav">
             <a href="javascript:void(0);" class="">
                 <span class="am-header-nav-title">Amaze Movie</span>
-            	<i class="am-header-icon am-icon-home"></i>  
+            	<!-- <i class="am-header-icon am-icon-home"></i> -->  
             </a>
         </div>          
 
@@ -105,7 +105,7 @@
 	</div>
 
 	<!-- 电影列表 -->
-	<div data-am-widget="list_news" class="am-list-news am-list-news-default" >
+	<div data-am-widget="list_news" class="am-list-news am-list-news-default">
 	    <!--列表标题-->
 	    <div class="am-list-news-hd am-cf">
 	        <!--带更多链接-->
@@ -132,7 +132,7 @@
 			            <div class="am-list-item-text content-introduce-font">州长已白首，三代大乱斗</div>
 			            <div class="am-list-item-text">129家影院上映1289场</div>
 			        </div>
-		        </a>
+		        </a>  
 
 	        	<span class="content-score">8.8</span>
 	        	<span class="content-fen">分</span>   
@@ -158,7 +158,7 @@
 		        </a>
 
 		        <span class="content-score">6.8</span>
-	        	<span class="content-fen">分</span>  
+	        	<span class="content-fen">分</span>    
 	        	<button type="button" class="am-btn am-btn-default content-ticket">购票</button>
 		      </li>
 
@@ -223,20 +223,25 @@
 		        </a>
 
 		        <span class="content-score">8.8</span>
-	        	<span class="content-fen">分</span>  
+	        	<span class="content-fen">分</span>    
 	        	<button type="button" class="am-btn am-btn-default content-ticket">购票</button>
-		      </li>
-		    </ul>
+		      </li>      
+		    </ul>   
 	    </div>
     
 	    <!--更多在底部-->  
         <div class="am-list-news-ft">
-            <a id="more" class="am-list-news-more am-btn am-btn-default " href="###">查看更多 &raquo;</a>
+            <a id="more" class="am-list-news-more" href="###">加载即将上映影片 &raquo;</a>
         </div>
-        <hr data-am-widget="divider" style="" class="am-divider am-divider-default" />   
+        <hr data-am-widget="divider" style="margin-bottom: 0px;" class="am-divider am-divider-default" />   
 
     </div>
-
+ 	<!-- 底部登录、注册按钮 -->
+	<div class="content-bottom">   
+		<button type="button" class="am-btn am-btn-success am-radius bottom-login">登录</button>
+    	<button type="button" class="am-btn am-btn-success am-radius bottom-register">注册</button>  
+	</div>
+  
 
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>
@@ -246,7 +251,7 @@
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->    
-<script src="assets/js/amazeui.min.js"></script>
+<script src="assets/js/amazeui.min.js"></script>   
 <script src="assets/js/app.js"></script>
 </body>
 </html>
