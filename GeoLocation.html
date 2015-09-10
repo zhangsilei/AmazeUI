@@ -7,16 +7,17 @@
 	<script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script> 
 	<script type="text/javascript">
 	$(document).ready(function(){
+		alert("a")
 		$("button:eq(0)").click(function(){   
 			getLocation();
 		})   
-	})    
+	})        
 
 	/* 获取当前所在城市 */
 	var getLocation = function(){
-		alert("a");
+		alert("调用了getLocation");
 		var options = {
-			enableHighAccuracy: true,
+			enableHighAccuracy: true,   
 			timeout: 6000,   
 		 	maximumAge:1000
 		}
@@ -27,7 +28,7 @@
 		}  
 		function onSuccess(position){
 			// 经度      
-	        var longitude =position.coords.longitude; 
+	        var longitude =position.coords.longitude;      
 	        // 纬度
 	        var latitude = position.coords.latitude;
 	        // 生成坐标点
