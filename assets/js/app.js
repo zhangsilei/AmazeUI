@@ -112,13 +112,25 @@ $(document).ready(function(){
   /* 购票页面头部日期 */
   var date = new Date();
   var month = date.getMonth()+1;
-  var day = date.getDate();    
+  var day = date.getDate();       
   if(day < 10){
     day = "0" + day;     
-  }
-  $(".buy-top > button:eq(0)").html("今天"+month+"月"+day+"日");
-  $(".buy-top > button:eq(1)").html("明天"+month+"月"+(parseInt(day)+1)+"日");           
-  $(".buy-top > button:eq(2)").html("后天"+month+"月"+(parseInt(day)+2)+"日");          
+  }    
+  var dateBtns = new Array($(".buy-top > button:eq(0)"),$(".buy-top > button:eq(1)"),$(".buy-top > button:eq(2)"));   
+  for(i in dateBtns){
+    dateBtns[i].click(function(){
+      $(".buy-data-checked").addClass("buy-date-default");
+      $(".buy-data-checked").removeClass("buy-data-checked am-btn am-btn-danger am-round");
+      $(this).addClass("buy-data-checked am-btn am-btn-danger am-round");
+      $(this).removeClass("buy-date-default");
+    })
+  }    
+  $(".buy-top > button:eq(0)").html("今天"+month+"月"+day+"日");   
+  $(".buy-top > button:eq(1)").html("明天"+month+"月"+(parseInt(day)+1)+"日");                      
+  $(".buy-top > button:eq(2)").html("后天"+month+"月"+(parseInt(day)+2)+"日");
+
+  /* 获取当前所在城市 */
+                          
 })    
     
 /* 窗口大小改变时的事件 */   
@@ -131,9 +143,9 @@ $(window).resize(function(){
 /**
  * 设置首页每行链接的宽高与<li>的高度一致
  */
-var setLiSize = function(){
+var setLiSize = function(){    
   var aWidth = $(".content li:eq(0)").width();
-  var aHeight = $(".content img:eq(0)").height();   
+  var aHeight = $(".content img:eq(0)").height();    
   $(".content a").css("width", aWidth);    
   $(".content a").css("height", aHeight);       
 }
@@ -148,7 +160,7 @@ var setTipLoc = function(){
     tip.css("display", "block");   
     tip.css("width", 66);
   }else{  
-    tip.css("display", "inline-block");
+    tip.css("display", "inline-block");         
   }
 }
 
@@ -164,7 +176,7 @@ var setLoginLink = function(){
     $(".login-findpwd").css("marginRight", "18px");
   }
 }
-   
+
 /**
  * 写入Cookie
  * @method setCookie
@@ -191,7 +203,7 @@ function getCookie(cname){
   if(cookies.length > 0){     // 有cookie
     var search = cname + "=";
     var start = cookies.indexOf(search);
-    if(start != -1){     // 有名字为cname的cookie
+    if(start != -1){     // 有名字为cname的cookie  
       start += search.length;  
       var end = cookies.indexOf(";", start);
       if(end == -1){

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>测试H5GeoLocation获取地理位置信息</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$("button:eq(0)").click(function(){
+			getLocation;
+		})
+	})
+
+	/* 获取当前所在城市 */
+	var getLocation = function(){
+		var options = {
+			enableHighAccuracy: true,
+		 	maximumAge:1000
+		}
+		if(navigator.geolocation){
+			navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+		}else{
+			alert("您的浏览器不支持定位");
+		}
+		function onSuccess(){
+			// 经度
+	        var longitude =position.coords.longitude; 
+	        // 纬度
+	        var latitude = position.coords.latitude;
+	        // 生成坐标点
+	        var point = new BMap.Point(longitude,latitude);  
+	        new BMap.Geocoder().getLocation(point,function(rs){
+	        	var addComp = rs.addressComponents;
+	        	alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+	        })
+		}
+		function onError(error){
+			switch(error.code){
+				case 1:
+					alert("位置服务被拒绝");
+					break;
+				case 2:
+					alert("暂时获取不到位置信息");
+					break;
+				case 3:
+					alert("获取信息超时");
+					break;
+				case 4:
+					alert("未知错误");
+					break;
+			}
+		}
+	}
+	
+	</script>
+</head>
+<body>
+	<button type="button">显示当前位置</button>
+	<p>当前位置是：</p>
+</body>
+</html>
