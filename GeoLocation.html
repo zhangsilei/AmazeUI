@@ -4,26 +4,28 @@
 	<title>测试H5GeoLocation获取地理位置信息</title>
 	<meta charset="UTF-8">
 	<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+	<script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script> 
 	<script type="text/javascript">
 	$(document).ready(function(){
-		$("button:eq(0)").click(function(){
-			getLocation;
-		})
-	})
+		$("button:eq(0)").click(function(){   
+			getLocation();
+		})   
+	})    
 
 	/* 获取当前所在城市 */
 	var getLocation = function(){
 		var options = {
 			enableHighAccuracy: true,
+			timeout: 6000,   
 		 	maximumAge:1000
 		}
 		if(navigator.geolocation){
 			navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
 		}else{
 			alert("您的浏览器不支持定位");
-		}
-		function onSuccess(){
-			// 经度
+		}  
+		function onSuccess(position){
+			// 经度      
 	        var longitude =position.coords.longitude; 
 	        // 纬度
 	        var latitude = position.coords.latitude;
