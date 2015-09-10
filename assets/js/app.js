@@ -103,8 +103,8 @@ $(document).ready(function(){
       $(".error-tip").show();       
     }else if($("#login-pwd").val() != getCookie("db_pwd")){       
       $(".error-tip > p").html("账号名和密码不匹配!");    
-      $(".error-tip").show();      
-    }else{
+      $(".error-tip").show();          
+    }else{    
       window.location.href = "amaze_personal.html";     
     }
   })
@@ -130,7 +130,9 @@ $(document).ready(function(){
   $(".buy-top > button:eq(2)").html("后天"+month+"月"+(parseInt(day)+2)+"日");
 
   /* 获取当前所在城市 */
-                          
+  if(location.pathname.indexOf("amaze_buyTic.html") != -1){     // 当前页面是购票页
+    getLocation();
+  }                   
 })    
     
 /* 窗口大小改变时的事件 */   
@@ -176,6 +178,57 @@ var setLoginLink = function(){
     $(".login-findpwd").css("marginRight", "18px");
   }
 }
+
+/* 获取当前所在城市 */
+  var getLocation = function(){
+    var options = {
+      enableHighAccuracy: true,   
+      timeout: 6000,   
+      maximumAge:1000
+    }
+    if(navigator.geolocation){
+      navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+    }else{
+      alert("您的浏览器不支持定位");    
+    }  
+    function onSuccess(position){
+      // 经度      
+      var longitude =position.coords.longitude;      
+      // 纬度
+      var latitude = position.coords.latitude;
+      // 生成坐标点
+      var point = new BMap.Point(longitude,latitude);  
+      new BMap.Geocoder().getLocation(point,function(rs){
+        var addComp = rs.addressComponents;
+        $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+      })
+    }   
+    function onError(error){  
+      /*switch(error.code){   
+        case 1:
+          alert("位置服务被拒绝");
+          $("#position").html("定位失败")
+          break;
+        case 2:
+          alert("暂时获取不到位置信息");
+          break;
+        case 3:
+          alert("获取信息超时");
+          break;
+        case 4:
+          alert("未知错误");
+          break;
+      }*/
+      switch(error.code){
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+          $("#position").html("定位失败");
+        break;
+      }
+    }
+  }
 
 /**
  * 写入Cookie
