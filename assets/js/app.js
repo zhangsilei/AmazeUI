@@ -131,7 +131,7 @@ $(document).ready(function(){
 
   /* 获取当前所在城市 */
   if(location.pathname.indexOf("amaze_buyTic.html") != -1){     // 当前页面是购票页
-    getLocation;
+    getLocation();
   }                   
 })    
     
