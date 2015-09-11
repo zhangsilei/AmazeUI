@@ -25,8 +25,8 @@
 
 /* 节点加载完毕后的页面渲染操作 */
 $(document).ready(function(){    
-  setLiSize();
-  setTipLoc();
+  setLiSize();      
+  setTipLoc();    
   setLoginLink();
   //$(".register-btn").popover('close');
 
@@ -90,7 +90,7 @@ $(document).ready(function(){
         content: '注册成功!'
       })       
       $(this).popover('open');       
-      setTimeout(function(){   
+      setTimeout(function(){        
         window.location.href = "amaze_login.html";
       }, 800);      
     }                  
@@ -103,7 +103,7 @@ $(document).ready(function(){
       $(".error-tip").show();       
     }else if($("#login-pwd").val() != getCookie("db_pwd")){       
       $(".error-tip > p").html("账号名和密码不匹配!");    
-      $(".error-tip").show();          
+      $(".error-tip").show();            
     }else{    
       window.location.href = "amaze_personal.html";     
     }
@@ -131,6 +131,7 @@ $(document).ready(function(){
 
   /* 获取当前所在城市 */
   if(location.pathname.indexOf("amaze_buyTic.html") != -1){     // 当前页面是购票页
+    alert("a");
     getLocation();
   }                   
 })    
@@ -162,10 +163,10 @@ var setTipLoc = function(){
     tip.css("display", "block");   
     tip.css("width", 66);
   }else{  
-    tip.css("display", "inline-block");         
-  }
+    tip.css("display", "inline-block");           
+  }    
 }
-
+   
 /**
  * 设置登陆页下边链接样式，即“立即注册”和“找回密码”
  */
@@ -194,11 +195,11 @@ var setLoginLink = function(){
     function onSuccess(position){
       // 经度      
       var longitude =position.coords.longitude;      
-      // 纬度
+      // 纬度   
       var latitude = position.coords.latitude;
       // 生成坐标点
       var point = new BMap.Point(longitude,latitude);  
-      new BMap.Geocoder().getLocation(point,function(rs){
+      new BMap.Geocoder().getLocation(point,function(rs){   
         var addComp = rs.addressComponents;
         $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
       })
