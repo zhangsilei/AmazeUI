@@ -180,30 +180,35 @@ var setLoginLink = function(){
 }
 
 /* 获取当前所在城市 */
-  var getLocation = function(){
-    alert("调用了getLocation()");
-    var options = {
-      enableHighAccuracy: true,   
-      timeout: 6000,   
-      maximumAge:1000
-    }
-    if(navigator.geolocation){
-      navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
-    }else{
-      alert("您的浏览器不支持定位");    
-    }  
+var getLocation = function(){
+  var options = {
+    enableHighAccuracy: true,   
+    timeout: 6000,   
+    maximumAge:1000
   }
+  if(navigator.geolocation){
+    navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
+  }else{
+    alert("您的浏览器不支持定位");    
+  }  
+}
 function onSuccess(position){
   // 经度      
   var longitude =position.coords.longitude;      
   // 纬度   
   var latitude = position.coords.latitude;
+  alert('经度'+longitude+'，纬度'+latitude);
   // 生成坐标点
   var point = new BMap.Point(longitude,latitude);  
-  new BMap.Geocoder().getLocation(point,function(rs){   
+  /*new BMap.Geocoder().getLocation(point,function(rs){   
     var addComp = rs.addressComponents;
     alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
-  })
+  })*/
+  var gc = new BMap.Geocoder();
+  gc.getLocation(point, function(rs){
+     var addComp = rs.addressComponents;
+     alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+  });
 }     
 function onError(error){  
   /*switch(error.code){   
