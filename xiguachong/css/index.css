@@ -47,7 +47,7 @@
 	width: 3rem;
 	height: 3rem;
 	display: block;
-	margin-left: 7.5rem;  
+	margin-left: 6.5rem;  
 	position: absolute;
 	bottom: 9.2rem;    
 }   
@@ -56,12 +56,12 @@
 }
 .content-left-weixin-span,.content-left-weibo-span{
 	font-size: 1.1rem;
-	position: absolute;
-	bottom: 5.7rem;    
-	left: 6.1rem; 
+	position: absolute;	
+	bottom: 5.7rem;     
+	left: 5.1rem;   
 }
 .content-left-weibo-span{
 	bottom: 0rem;
-	left: 6.6rem;
+	left: 5.6rem;
 }
 
