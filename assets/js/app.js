@@ -181,7 +181,7 @@ var setLoginLink = function(){
 
 /* 获取当前所在城市 */
 function getLocation(){
-  alert("getLocation")
+  alert("getLocation");
   var options = {
     enableHighAccuracy: true,   
     timeout: 6000,   
