@@ -23,7 +23,7 @@
 	width: 11.11rem;
 	height: 3.67rem;  
 	margin-left: 1.5rem;
-	display: block;      
+	display: block;           
 	margin-bottom: 2rem;
 	display: block;   
 }
@@ -50,19 +50,19 @@
 	display: block;
 	margin-left: 5.5rem;
 	position: absolute;
-	bottom: 8.9rem;    
+	bottom: 9.2rem;    
 }   
 .content-left-weibo-img{   
-	bottom: 3.1rem;
+	bottom: 3.4rem;
 }
 .content-left-weixin-span,.content-left-weibo-span{
 	font-size: 1.1rem;
 	position: absolute;
-	bottom: 5.4rem;    
+	bottom: 5.7rem;    
 	left: 4.1rem; 
 }
 .content-left-weibo-span{
-	bottom: -0.3rem;
+	bottom: 0rem;
 	left: 4.6rem;
 }
 
