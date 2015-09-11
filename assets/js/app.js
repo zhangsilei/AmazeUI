@@ -48,7 +48,12 @@ $(document).ready(function(){
         $(".am-divider").remove();
       }
     }       
-  })     
+  })  
+
+  /* 购票按钮时间 */
+  $(".content-ticket").click(function(){
+    window.location.href = "amaze_buyTic.html";
+  })   
 
   /* 首页底部的登陆、注册按钮跳转 */
   $(".bottom-login").click(function(){
