@@ -204,7 +204,7 @@ function onSuccess(position){
     $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
   })
 }     
-function onError(error){    
+function onError(error){       
   /*switch(error.code){      
     case 1:
       alert("位置服务被拒绝");
