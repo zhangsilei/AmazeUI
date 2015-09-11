@@ -208,7 +208,7 @@ function onSuccess(position){
   var gc = new BMap.Geocoder();
   gc.getLocation(point, function(rs){
      var addComp = rs.addressComponents;
-     alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+     $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
   });
 }     
 function onError(error){  
