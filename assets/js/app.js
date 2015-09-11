@@ -201,9 +201,9 @@ var setLoginLink = function(){
       var point = new BMap.Point(longitude,latitude);  
       new BMap.Geocoder().getLocation(point,function(rs){   
         var addComp = rs.addressComponents;
-        $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+        alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
       })
-    }   
+    }     
     function onError(error){  
       /*switch(error.code){   
         case 1:
