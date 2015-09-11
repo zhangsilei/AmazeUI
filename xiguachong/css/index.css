@@ -1,0 +1,68 @@
+/* 头部样式 */
+.header{
+	background: #000;
+}
+.header-font,.header-font-left{
+	font-size: 1.6rem;  
+	color: #fff;  
+	font-family: "Microsoft Yahei";
+}
+.header-font-left{   
+	font-size: 1.4rem;  
+}
+/* 内容样式 */
+.content-header{
+	background: #2BC0D4;
+}
+/* 左侧导航栏样式 */
+.content-left{
+	text-align: center;
+	position: relative;
+}
+.content-left-logo{  
+	width: 11.11rem;
+	height: 3.67rem;  
+	margin-left: 1.5rem;
+	display: block;      
+	margin-bottom: 2rem;
+	display: block;   
+}
+.content-left-nav{
+	height: 21rem;    
+	list-style: none;
+}   
+.content-left-nav li{     
+	margin-top: 1px;    
+	line-height: 3.5rem;
+	font-size: 1.2rem;   
+	margin-left: -4.3rem;
+} 
+.content-left-nav img{
+	width: 2rem;       
+	height: 2rem;  
+}
+.content-left-nav span{
+	margin-left: .5rem;	
+}
+.content-left-weixin-img,.content-left-weibo-img{
+	width: 3rem;
+	height: 3rem;
+	display: block;
+	margin-left: 5.5rem;
+	position: absolute;
+	bottom: 8.9rem;    
+}   
+.content-left-weibo-img{   
+	bottom: 3.1rem;
+}
+.content-left-weixin-span,.content-left-weibo-span{
+	font-size: 1.1rem;
+	position: absolute;
+	bottom: 5.4rem;    
+	left: 4.1rem; 
+}
+.content-left-weibo-span{
+	bottom: -0.3rem;
+	left: 4.6rem;
+}
+

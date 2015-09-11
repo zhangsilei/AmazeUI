@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI Examples</title>
+
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="css/index.css">   
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+<!-- 
+{ 
+  .am-icon-font; 
+  content: @fa-var-ellipsis-h;
+} -->
+
+  <!-- 页头 -->
+  <!-- <header data-am-widget="header" class="am-header am-header-default header">
+    <div class="am-header-left am-header-nav">
+      <a href="#left-link" class="">
+        <img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/>   
+        <span class="header-font-left">返回</span>         
+      </a>   
+    </div>
+  
+    <h1 class="am-header-title">
+      <span class="header-font">西瓜虫演出</span>
+    </h1>
+  
+    <div class="am-header-right am-header-nav">  
+      <a href="#right-link" class="">
+        <i class="am-header-icon am-icon-ellipsis-h"></i>
+      </a>
+    </div>  
+  </header> -->
+
+  <!-- 内容头 -->
+  <header data-am-widget="header" class="am-header am-header-default content-header">
+    <div class="am-header-left am-header-nav">
+      <!-- 触发器 -->
+      <a href="#doc-oc-demo3" class="" data-am-offcanvas="{effect: 'push'}">  
+        <img src="images/index/menu@2x.png">           
+      </a>     
+    </div>
+      
+    <!-- 侧边栏 -->     
+    <div id="doc-oc-demo3" class="am-offcanvas content-left">        
+      <div class="am-offcanvas-bar">      
+        <div class="am-offcanvas-content">          
+          <img class="content-left-logo" src="images/nav/logo.png">  
+          <!-- 导航 -->
+          <ul class="content-left-nav">
+            <li>
+              <a href="##">
+                <img src="images/nav/zuixin.png">     
+                <span>选择城市</span>
+              </a>  
+            </li>
+            <li>
+              <a href="##">
+                <img src="images/nav/zuixin.png">      
+                <span>选择分类</span>
+              </a>  
+            </li>
+            <li>
+              <a href="##">
+                <img src="images/nav/zhongchou.png">     
+                <span>推荐项目</span>   
+              </a>  
+            </li>
+            <li style="margin-left: -5.5rem;">
+              <a href="##">
+                <img src="images/nav/paihangbang.png">     
+                <span>排行榜</span>
+              </a>  
+            </li>
+            <li>
+              <a href="##">
+                <img src="images/nav/zuixin.png">     
+                <span>最新项目</span>
+              </a>  
+            </li>
+            <li style="margin-left: -3.1rem;">
+              <a href="##">
+                <img src="images/nav/chenggong.png">     
+                <span>已完成项目</span>
+              </a>  
+            </li>
+          </ul>
+          
+          <!-- 微信、微博 -->
+          <a href="#">
+            <img class="content-left-weixin-img" src="images/nav/weixin.png">
+            <span class="content-left-weixin-span">西瓜虫微信服务号</span>  
+          </a>   
+          <a href="#">
+            <img class="content-left-weibo-img" src="images/nav/weibo.png">
+            <span class="content-left-weibo-span">西瓜虫官方微博</span>  
+          </a>  
+        </div>
+      </div>
+    </div> 
+
+    <h1 class="am-header-title">
+      <span class="header-font">西瓜虫</span>
+    </h1>
+
+    <div class="am-header-right am-header-nav">  
+      <a href="#right-link" class="">
+        <i class="am-header-icon am-icon-ellipsis-h"></i>
+      </a>
+    </div>
+  </header>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
