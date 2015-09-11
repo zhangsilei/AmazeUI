@@ -188,7 +188,7 @@ var setLoginLink = function(){
 var getLocation = function(){  
   var options = {
     enableHighAccuracy: true,   
-    maximumAge:1000
+    maximumAge:1000   
   }
   if(navigator.geolocation){
     navigator.geolocation.getCurrentPosition(onSuccess,onError,options);
