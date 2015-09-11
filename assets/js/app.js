@@ -181,7 +181,6 @@ var setLoginLink = function(){
 
 /* 获取当前所在城市 */
 var getLocation = function(){  
-  alert("getLocation");
   var options = {
     enableHighAccuracy: true,   
     timeout: 6000,   
@@ -198,15 +197,14 @@ function onSuccess(position){
   var longitude =position.coords.longitude;      
   // 纬度   
   var latitude = position.coords.latitude;
-  alert('经度'+longitude+'，纬度'+latitude);
   // 生成坐标点   
   var point = new BMap.Point(longitude,latitude);  
-  new BMap.Geocoder().getLocation(point,function(rs){   
+  new BMap.Geocoder().getLocation(point,function(rs){       
     var addComp = rs.addressComponents;
     $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
   })
 }     
-function onError(error){  
+function onError(error){    
   /*switch(error.code){      
     case 1:
       alert("位置服务被拒绝");
