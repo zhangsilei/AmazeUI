@@ -180,7 +180,7 @@ var setLoginLink = function(){
 }
 
 /* 获取当前所在城市 */
-function getLocation(){
+var getLocation = function(){  
   alert("getLocation");
   var options = {
     enableHighAccuracy: true,   
@@ -199,20 +199,15 @@ function onSuccess(position){
   // 纬度   
   var latitude = position.coords.latitude;
   alert('经度'+longitude+'，纬度'+latitude);
-  // 生成坐标点
+  // 生成坐标点   
   var point = new BMap.Point(longitude,latitude);  
-  /*new BMap.Geocoder().getLocation(point,function(rs){   
+  new BMap.Geocoder().getLocation(point,function(rs){   
     var addComp = rs.addressComponents;
-    alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
-  })*/
-  var gc = new BMap.Geocoder();
-  gc.getLocation(point, function(rs){
-     var addComp = rs.addressComponents;
-     $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
-  });
+    $("#position").html(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+  })
 }     
 function onError(error){  
-  /*switch(error.code){   
+  /*switch(error.code){      
     case 1:
       alert("位置服务被拒绝");
       $("#position").html("定位失败")
