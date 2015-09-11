@@ -188,7 +188,6 @@ var setLoginLink = function(){
 var getLocation = function(){  
   var options = {
     enableHighAccuracy: true,   
-    timeout: 6000,   
     maximumAge:1000
   }
   if(navigator.geolocation){
