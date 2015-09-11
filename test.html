@@ -32,7 +32,7 @@
     alert('经度'+longitude+'，纬度'+latitude);
               
                //根据经纬度获取地理位置，不太准确，获取城市区域还是可以的
-    var map = new BMap.Map("allmap");
+    //var map = new BMap.Map("allmap");
     var point = new BMap.Point(longitude,latitude);
     var gc = new BMap.Geocoder();
     gc.getLocation(point, function(rs){

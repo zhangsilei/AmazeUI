@@ -192,44 +192,44 @@ var setLoginLink = function(){
     }else{
       alert("您的浏览器不支持定位");    
     }  
-    function onSuccess(position){
-      // 经度      
-      var longitude =position.coords.longitude;      
-      // 纬度   
-      var latitude = position.coords.latitude;
-      // 生成坐标点
-      var point = new BMap.Point(longitude,latitude);  
-      new BMap.Geocoder().getLocation(point,function(rs){   
-        var addComp = rs.addressComponents;
-        alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
-      })
-    }     
-    function onError(error){  
-      /*switch(error.code){   
-        case 1:
-          alert("位置服务被拒绝");
-          $("#position").html("定位失败")
-          break;
-        case 2:
-          alert("暂时获取不到位置信息");
-          break;
-        case 3:
-          alert("获取信息超时");
-          break;
-        case 4:
-          alert("未知错误");
-          break;
-      }*/
-      switch(error.code){
-        case 1:
-        case 2:
-        case 3:
-        case 4:
-          $("#position").html("定位失败");
-        break;
-      }
-    }
   }
+function onSuccess(position){
+  // 经度      
+  var longitude =position.coords.longitude;      
+  // 纬度   
+  var latitude = position.coords.latitude;
+  // 生成坐标点
+  var point = new BMap.Point(longitude,latitude);  
+  new BMap.Geocoder().getLocation(point,function(rs){   
+    var addComp = rs.addressComponents;
+    alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " + addComp.streetNumber);
+  })
+}     
+function onError(error){  
+  /*switch(error.code){   
+    case 1:
+      alert("位置服务被拒绝");
+      $("#position").html("定位失败")
+      break;
+    case 2:
+      alert("暂时获取不到位置信息");
+      break;
+    case 3:
+      alert("获取信息超时");
+      break;
+    case 4:
+      alert("未知错误");
+      break;
+  }*/
+  switch(error.code){
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+      $("#position").html("定位失败");
+    break;
+  }
+}
 
 /**
  * 写入Cookie
