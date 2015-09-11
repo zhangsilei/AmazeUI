@@ -131,7 +131,6 @@ $(document).ready(function(){
 
   /* 获取当前所在城市 */
   if(location.pathname.indexOf("amaze_buyTic.html") != -1){     // 当前页面是购票页
-    alert("a");
     getLocation();
   }                   
 })    
@@ -182,6 +181,7 @@ var setLoginLink = function(){
 
 /* 获取当前所在城市 */
   var getLocation = function(){
+    alert("调用了getLocation()");
     var options = {
       enableHighAccuracy: true,   
       timeout: 6000,   
