@@ -19,17 +19,13 @@
 .content-left{
 	text-align: center;
 }
-.content-left-logo,.ff-content-left-logo{  
+.content-left-logo{  
 	width: 11.11rem;
 	height: 3.67rem;   
 	margin-left: 1.1rem; 
 	display: block;           
 	margin-bottom: 2rem;
 	display: block;   
-}
-/* ff兼容 */
-.ff-content-left-logo{
-	margin-left: 2.5rem;
 }
 .content-left-nav{
 	height: 21rem;    
@@ -48,7 +44,7 @@
 .content-left-nav span{
 	margin-left: .5rem;	
 }
-.content-left-weixin-img,.content-left-weibo-img,.ff-content-left-weixin-img,.ff-content-left-weibo-img{
+.content-left-weixin-img,.content-left-weibo-img{
 	width: 3rem;
 	height: 3rem;
 	display: block;
@@ -59,32 +55,16 @@
 .content-left-weibo-img{   
 	bottom: 3.4rem;
 }
-/* ff兼容 */     
-.ff-content-left-weixin-img,.ff-content-left-weibo-img{
-	margin-left: 7.2rem; 
-}
-.ff-content-left-weibo-img{   
-	bottom: 3.4rem;
-}
-
-.content-left-weixin-span,.content-left-weibo-span,.ff-content-left-weixin-span,.ff-content-left-weibo-span{
+.content-left-weixin-span,.content-left-weibo-span{
 	font-size: 1.1rem;  
 	position: absolute;	
 	bottom: 5.9rem;  
-	left: 4.3rem;   
+	left: 4.4rem;   
 }
 .content-left-weibo-span{
 	bottom: 0rem;
 	left: 4.7rem;
 }
-/* ff兼容 */ 
-.ff-content-left-weixin-span,.ff-content-left-weibo-span{
-	left: 5.8rem;   
-}   
-.ff-content-left-weibo-span{    
-	left: 6.3rem;   
-}
-
 .search{
 	border: none;
 	outline: none;
