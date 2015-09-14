@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	/* 浏览器样式兼容 */
   fitBrowser();
+  if(navigator.userAgent.indexOf('UCBrowser') > -1) {
+    alert(123);
+  }
 })    
 
 
