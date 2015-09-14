@@ -1,11 +1,13 @@
-/* 头部样式 */
+/*
+ * 头部样式
+ */ 
 .header{
 	background: #000;
 }
 .header-font,.header-font-left{
 	font-size: 1.6rem;  
 	color: #fff;  
-	font-family: "Microsoft Yahei";
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
 }
 .header-font-left{   
 	font-size: 1.4rem;  
@@ -16,7 +18,7 @@
 	text-align: center;
 }
 /* 左侧导航栏样式 */
-.content-left{
+.content-left{ 
 	text-align: center;
 }
 .content-left-logo{  
@@ -27,24 +29,24 @@
 	margin-bottom: 2rem;
 	display: block;   
 }
-.content-left-nav{
+.left-nav{
 	height: 21rem;    
 	list-style: none;
 }   
-.content-left-nav li{     
+.left-nav li{     
 	margin-top: 1px;    
 	line-height: 3.5rem; 
 	font-size: 1.2rem;   
 	margin-left: -4.3rem;      
 } 
-.content-left-nav img{
+.left-nav img{
 	width: 2rem;       
 	height: 2rem;  
 }
-.content-left-nav span{
+.left-nav span{
 	margin-left: .5rem;	
 }
-.content-left-weixin-img,.content-left-weibo-img{
+.weixin-img,.weibo-img{
 	width: 2rem;
 	height: 2rem;
 	display: block;  
@@ -52,16 +54,16 @@
 	position: absolute;
 	bottom: 8.5rem;         
 }    
-.content-left-weibo-img{   
+.weibo-img{   
 	bottom: 3rem;
 }    
-.content-left-weixin-span,.content-left-weibo-span{
+.weixin-span,.weibo-span{
 	font-size: 1.1rem;  
 	position: absolute;	
 	bottom: 5.4rem;  
 	left: 4.4rem;    
 }
-.content-left-weibo-span{
+.weibo-span{
 	bottom: 0rem;
 	left: 4.9rem;
 }
@@ -72,5 +74,119 @@
 	height: 2rem;
 	border-radius: 1rem;
 	padding: .5rem 1rem;
-	background: #1CA1B4;
+	background: #1CA1B4;  
 }
+/* 右侧导航栏样式 */
+.content-right{
+	text-align: center;
+}
+.user-header{
+	width: 6rem;
+	height: 6rem;
+	display: block;    
+	margin-left: 4rem;
+}
+.user-name{
+	font-size: 1.2rem;
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+}
+.right-nav{
+	list-style: none;
+	text-align: center;
+	padding: 0rem;
+	height: 14rem;
+}
+.right-nav span{
+	font-size: 1.2rem;   
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+}
+.right-nav img{
+	width: 2rem;
+	height: 2rem;
+}
+.right-nav li{   
+	line-height: 3.5rem;
+}
+.register{
+	color: #20A7B9;
+}   
+
+/*
+ * 内容块样式
+ */  
+#content{
+
+}  
+.top{   
+	background: #333;   
+	text-align: center;
+	height: 3rem;
+}    
+.top a,.top-a-current{
+	color: #C7C7C7;
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	font-size: 1.4rem;
+	display: inline-block;
+	margin-top: .5rem;
+	padding: .1rem 1rem;
+	margin-left: 1.1rem;
+}
+.top-a-current{
+	border-radius: 1rem; 
+	background: #000;    
+}
+.top-line{
+	width: 100%;
+	height: .2rem;  
+	background: #2BC0D4;
+}
+.main{
+	
+}
+.item{
+	position: relative;   
+}
+.video{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	z-index: 1000;
+	width: 100%;
+}
+.zhezhao{
+	position: absolute;
+	top: 0rem;   
+	left: 0rem;
+	z-index: 1001;
+	width: 100%;
+}
+.play{
+	position: absolute;
+	width: 6rem;
+	height: 6rem;
+	z-index: 1002;
+}
+.intro{
+	position: absolute;
+	width: 100%;
+	left: 0rem;
+	text-align: center;
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	font-size: 1.6rem;
+	color: #C7C7C7;
+}
+.intro img{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+.title{
+	position: absolute;
+	top: 2rem;
+	display: block;
+	z-index: 1001;
+}
+

@@ -7,7 +7,7 @@
   <meta name="keywords" content="">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Amaze UI Examples</title>
+  <title>西瓜虫演出</title>
 
   <!-- Set render engine for 360 browser -->
   <meta name="renderer" content="webkit">
@@ -72,22 +72,22 @@
     </div>  
   </header> -->
 
-  <!-- 内容头 -->
+  <!-- 页头 -->
   <header data-am-widget="header" class="am-header am-header-default content-header">
     <div class="am-header-left am-header-nav">
       <!-- 触发器 -->
-      <a href="#doc-oc-demo3" class="" data-am-offcanvas="{effect: 'push'}">  
+      <a href="#leftside" class="" data-am-offcanvas="{effect: 'push'}">  
         <img src="images/index/menu@2x.png">           
       </a>     
     </div>
       
-    <!-- 侧边栏 -->     
-    <div id="doc-oc-demo3" class="am-offcanvas content-left">        
+    <!-- 导航栏 -->     
+    <div id="leftside" class="am-offcanvas content-left">        
       <div class="am-offcanvas-bar">      
         <div class="am-offcanvas-content">           
           <img class="content-left-logo" src="images/nav/logo.png">  
           <!-- 导航 -->
-          <ul class="content-left-nav">
+          <ul class="left-nav">
             <li>
               <a href="##">
                 <img src="images/nav/zuixin.png">     
@@ -128,29 +128,88 @@
           
           <!-- 微信、微博 -->
           <a href="#">
-            <img class="content-left-weixin-img" src="images/nav/weixin.png">
-            <span class="content-left-weixin-span">西瓜虫微信服务号</span>  
+            <img class="weixin-img" src="images/nav/weixin.png">
+            <span class="weixin-span">西瓜虫微信服务号</span>  
           </a>   
           <a href="#">
-            <img class="content-left-weibo-img" src="images/nav/weibo.png">
-            <span class="content-left-weibo-span">西瓜虫官方微博</span>  
+            <img class="weibo-img" src="images/nav/weibo.png">
+            <span class="weibo-span">西瓜虫官方微博</span>  
           </a>   
         </div>
       </div>
     </div> 
 
+    <!-- 输入框 -->
     <input class="search" type="text">
     <!-- <h1 class="am-header-title">
       <span class="header-font">西瓜虫</span>
     </h1> -->   
    
     <div class="am-header-right am-header-nav">  
-      <a href="#right-link" class="">
+      <a href="#rightside" class="" data-am-offcanvas="{effect: 'push'}">
         <img src="images/index/name@2x.png">
       </a>
     </div>
+
+    <!-- 个人信息栏 -->     
+    <div id="rightside" class="am-offcanvas content-right">        
+      <div class="am-offcanvas-bar am-offcanvas-bar-flip">      
+        <div class="am-offcanvas-content">           
+          <img class="user-header" src="images/personal/touxiang-1.png">
+          <span class="user-name">您还没有登录</span>
+          <!-- 登录导航 -->
+          <ul class="right-nav">
+            <li>
+              <a href="##">
+                <img src="images/personal/weixin.png">
+                <span>微信登录</span>
+              </a>
+            </li>
+            <li>
+              <a href="##">
+                <img src="images/personal/shouji.png">
+                <span>手机登录</span>
+              </a>
+            </li>
+            <li>
+              <a href="##">
+                <img src="images/personal/shouji.png">
+                <span style="margin-right: .3rem;">QQ登录</span>   
+              </a>  
+            </li>
+            <li>   
+              <a href="##">
+                <img src="images/personal/zhuce.png">
+                <span class="register">注册账号</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> 
   </header>
 
+  <!-- 内容块 -->
+  <div id="content">    
+    <div class="top">
+      <a class="top-a-current" href="##">推荐</a>      
+      <a href="##">排行</a>   
+      <a href="##">最新</a>   
+      <a href="##">已完成</a>   
+    </div>     
+    <div class="top-line"></div>
+    <div class="main">
+      <div class="item">
+        <img class="video" src="images/index/shipin.png">
+        <img class="zhezhao" src="images/index/shipinmengban@2x.png">
+        <img class="play" src="images/index/shipin_btn.png">
+        <div class="intro">
+          <img src="images/index/img1.png">
+        </div>
+      </div>
+    </div>
+  </div>
+   
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
