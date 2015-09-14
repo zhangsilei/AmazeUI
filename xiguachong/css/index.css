@@ -35,7 +35,7 @@
 	margin-top: 1px;    
 	line-height: 3.5rem; 
 	font-size: 1.2rem;   
-	margin-left: -4.3rem;   
+	margin-left: -4.3rem;      
 } 
 .content-left-nav img{
 	width: 2rem;       
@@ -50,15 +50,15 @@
 	display: block;  
 	margin-left: 6rem;
 	position: absolute;
-	bottom: 9rem;       
+	bottom: 8.5rem;         
 }    
 .content-left-weibo-img{   
 	bottom: 3rem;
-}
+}    
 .content-left-weixin-span,.content-left-weibo-span{
 	font-size: 1.1rem;  
 	position: absolute;	
-	bottom: 5.9rem;  
+	bottom: 5.4rem;  
 	left: 4.4rem;    
 }
 .content-left-weibo-span{
