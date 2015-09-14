@@ -1,14 +1,15 @@
 $(document).ready(function(){
-  if(navigator.indexOf("UCBroswer") != -1){
+  
+  /*if(navigator.indexOf("UCBroswer") != -1){
     
   }else{
     
-  }
+  }*/
 })
 
-var UCBroswer = function(){
+/*var UCBroswer = function(){
   $(".content-left-logo").css("marginLeft","2rem");
-}    
+}  */  
 
 
 

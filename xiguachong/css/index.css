@@ -20,7 +20,7 @@
 	text-align: center;
 }
 .content-left-logo{  
-	width: 11.11rem;
+	width: 11.11rem; 
 	height: 3.67rem;   
 	margin-left: 1.1rem; 
 	display: block;           
@@ -45,25 +45,25 @@
 	margin-left: .5rem;	
 }
 .content-left-weixin-img,.content-left-weibo-img{
-	width: 3rem;
-	height: 3rem;
-	display: block;
-	margin-left: 5.6rem;
+	width: 2rem;
+	height: 2rem;
+	display: block;  
+	margin-left: 6rem;
 	position: absolute;
-	bottom: 9.4rem;       
-}   
+	bottom: 9rem;       
+}    
 .content-left-weibo-img{   
-	bottom: 3.4rem;
+	bottom: 3rem;
 }
 .content-left-weixin-span,.content-left-weibo-span{
 	font-size: 1.1rem;  
 	position: absolute;	
 	bottom: 5.9rem;  
-	left: 4.6rem;   
+	left: 4.3rem;    
 }
 .content-left-weibo-span{
 	bottom: 0rem;
-	left: 4.8rem;
+	left: 4.7rem;
 }
 .search{
 	border: none;
