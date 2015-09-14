@@ -1,8 +1,12 @@
 $(document).ready(function(){
 	/* 浏览器样式兼容 */
-  fitBrowser();
-  if(navigator.userAgent.indexOf('UCBrowser') > -1) {
-    alert(123);
+  //fitBrowser();
+  if(browser.versions.mobile){
+    if(browser.versions.uc){
+      alert("UC浏览器");
+    }else{
+      alert("非UC浏览器");
+    }
   }
 })    
 
