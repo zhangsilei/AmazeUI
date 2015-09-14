@@ -1,9 +1,6 @@
 $(document).ready(function(){
 	/* 浏览器样式兼容 */
   fitBrowser();
-  if(browser.versions.android){
-    alert("android");
-  }
 })    
 
 
@@ -11,9 +8,9 @@ $(document).ready(function(){
  * 浏览器兼容
  */
 var fitBrowser = function(){
-   if(navigator.userAgent.indexOf("Firefox") != -1){     // ff
+   if(navigator.userAgent.indexOf("webKit") != -1){     // ff
     // logo
-    $(".content-left-logo").addClass("ff-content-left-logo");   
+    $(".content-left-logo").addClass("ff-content-left-logo");      
     $(".content-left-logo").removeClass("content-left-logo");
     // 微信   
     $(".content-left-weixin-img").addClass("ff-content-left-weixin-img"); 
