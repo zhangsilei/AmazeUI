@@ -1,13 +1,15 @@
 /*
  * 头部样式
  */ 
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+}
 .header{
 	background: #000;
 }
 .header-font,.header-font-left{
 	font-size: 1.6rem;  
 	color: #fff;  
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
 }
 .header-font-left{   
 	font-size: 1.4rem;  
@@ -88,7 +90,6 @@
 }
 .user-name{
 	font-size: 1.2rem;
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
 }
 .right-nav{
 	list-style: none;
@@ -98,7 +99,6 @@
 }
 .right-nav span{
 	font-size: 1.2rem;   
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
 }
 .right-nav img{
 	width: 2rem;
@@ -124,7 +124,6 @@
 }    
 .top a,.top-a-current{
 	color: #C7C7C7;
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
 	font-size: 1.4rem;
 	display: inline-block;
 	margin-top: .5rem;
@@ -141,52 +140,59 @@
 	background: #2BC0D4;
 }
 .main{
-	
+	position: relative;
+	color: #fff;
 }
-.item{
-	position: relative;   
-}
-.video{
-	position: absolute;
-	top: 0rem;
-	left: 0rem;
-	z-index: 1000;
-	width: 100%;
+.video,.intro{ 
+	margin: 0rem auto;
 }
 .zhezhao{
 	position: absolute;
-	top: 0rem;   
 	left: 0rem;
-	z-index: 1001;
-	width: 100%;
+	top: 0rem;
 }
 .play{
-	position: absolute;
 	width: 6rem;
 	height: 6rem;
-	z-index: 1002;
-}
-.intro{
 	position: absolute;
+	opacity: .7;
+	display: none;
+}
+.intro-title{
+	font-size: 1.6rem;    
+	position: absolute;       
+	display: none;
+	margin-top: 10%;
+	opacity: .9;
+}  
+.intro-line{
+	background: #fff;
+	position: absolute;
+	height: .09rem;
+	margin-top: 18%;
+	opacity: .5;
+}   
+.intro-content{
 	width: 100%;
-	left: 0rem;
 	text-align: center;
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
-	font-size: 1.6rem;
-	color: #C7C7C7;
-}
-.intro img{
+	font-size: 1.4rem;
 	position: absolute;
-	top: 0rem;
 	left: 0rem;
-	width: 100%;
-	height: 100%;
-	z-index: 1000;
+	margin-top: 25%;
 }
-.title{
+.intro-content img{
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+.intro-content span{
+	opacity: .9;
+}
+.intro-support{
+	width: 4.48rem;
+	height: 5.12rem;
 	position: absolute;
-	top: 2rem;
-	display: block;
-	z-index: 1001;
+	margin-top:38%; 
 }
+
 

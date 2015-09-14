@@ -4,17 +4,45 @@ $(document).ready(function(){
     $(".top-a-current").removeClass("top-a-current");
     $(this).addClass("top-a-current");    
   })
-  // 播放按钮
-  var bTop = ($(".video").height()-$(".play").height())/2;
-  var bLeft = ($(".video").width()-$(".play").width())/2;
-  $(".play").css("top",bTop);
-  $(".play").css("left",bLeft);    
-  // 众筹简介 
-  $(".item div").css("top",$(".video").css("height"));
-  $(".item div").css("height",$(".video").css("height"));
-  // 简介内容
-  var tWidth = $(".title").width();
-  $(".title").css("left",($(".item div").width()-tWidth)/2);  
+  // 视频遮罩层的位置
+  var video = $(".video");
+  var zLeft = video.css("marginLeft");
+  $(".zhezhao").css("left",zLeft);
+  // 播放按钮位置
+  var play = $(".play");
+  var pTop = (video.height() - play.height()) / 2;
+  var pLeft = (video.width() - play.width()) / 2;
+  play.css("top",pTop);
+  play.css("left",pLeft);
+  play.css("display","block");  // 获得位置后再显示
+  play.click(function(){
+    alert("play");
+  })
+  // 概况标题
+  var intro = $(".intro");
+  var introTitle = $(".intro-title");
+  var iLeft= (intro.width() - introTitle.width()) / 2;
+  introTitle.css("top",video.height());
+  introTitle.css("left",iLeft);
+  introTitle.css("display","block");
+  // 横线
+  var introLine = $(".intro-line");
+  introLine.css("width",introTitle.width());
+  introLine.css("top",video.height());
+  introLine.css("left",iLeft);  
+  // 概况内容    
+  var introContent = $(".intro-content");
+  introContent.css("top",video.height());    
+  // 支持按钮
+  var introSupport = $(".intro-support");
+  introSupport.css("top",video.height());
+  introSupport.css("left",(intro.width() - introSupport.width())/2);
+  
+})
+
+// 浏览器窗口缩放时
+$(window).resize(function(){
+  
 })
 
 
