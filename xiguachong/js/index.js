@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	/* 浏览器样式兼容 */
   fitBrowser();
+  if(browser.versions.android){
+    alert("android");
+  }
 })    
 
 
