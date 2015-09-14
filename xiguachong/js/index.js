@@ -14,7 +14,7 @@ $(document).ready(function(){
   $(".item div").css("height",$(".video").css("height"));
   // 简介内容
   var tWidth = $(".title").width();
-  $(".title").css("left",($(".item div").width()-tWidth)/2);
+  $(".title").css("left",($(".item div").width()-tWidth)/2);  
 })
 
 
