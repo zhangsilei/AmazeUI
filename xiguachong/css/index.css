@@ -162,14 +162,14 @@
 	font-size: 1.6rem;    
 	position: absolute;       
 	display: none;
-	margin-top: 10%;
+	margin-top: 8%;
 	opacity: .9;
 }  
 .intro-line{
 	background: #fff;
 	position: absolute;
 	height: .09rem;
-	margin-top: 18%;
+	margin-top: 15%; 
 	opacity: .5;
 }   
 .intro-content{
@@ -178,21 +178,21 @@
 	font-size: 1.4rem;
 	position: absolute;
 	left: 0rem;
-	margin-top: 25%;
+	margin-top: 22%;
 }
 .intro-content img{
 	display: inline-block;
 	width: 1.5rem;
 	height: 1.5rem;
 }
-.intro-content span{
+.intro-content span{ 
 	opacity: .9;
 }
 .intro-support{
 	width: 4.48rem;
 	height: 5.12rem;
 	position: absolute;
-	margin-top:38%; 
+	margin-top:35%; 
 }
 
 
