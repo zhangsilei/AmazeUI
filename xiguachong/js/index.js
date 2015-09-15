@@ -2,7 +2,9 @@ $(document).ready(function(){
   // 顶部tab切换
   $(".top > a").click(function(){
     $(".top-a-current").removeClass("top-a-current");
-    $(this).addClass("top-a-current");    
+    $(this).addClass("top-a-current");  
+    // 更换页面内容
+      
   })
   setEleLocation();
 })
