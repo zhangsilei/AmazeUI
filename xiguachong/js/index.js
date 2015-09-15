@@ -4,10 +4,6 @@ $(document).ready(function(){
     $(".top-a-current").removeClass("top-a-current");
     $(this).addClass("top-a-current");    
   })
-  // 左侧微信、微博图标
- /* var weixin = $(".left-bottom > img:eq(0)");
-  var weibo = $(".left-bottom > img:eq(1)");
-  weixin.css("marginLeft",weixin.css("marginLeft")-weixin.width());*/   
   // 视频遮罩层的位置
   var video = $(".video");
   var zLeft = video.css("marginLeft");
@@ -33,15 +29,17 @@ $(document).ready(function(){
   var introLine = $(".intro-line");
   introLine.css("width",introTitle.width());
   introLine.css("top",video.height());
-  introLine.css("left",iLeft);  
+  introLine.css("left",iLeft);
+  introLine.css("display","block");  
   // 概况内容    
   var introContent = $(".intro-content");
   introContent.css("top",video.height());    
+  introContent.css("display","block");
   // 支持按钮
   var introSupport = $(".intro-support");
   introSupport.css("top",video.height());
   introSupport.css("left",(intro.width() - introSupport.width())/2);
-  
+  introSupport.css("display","block");
 })
 
 // 浏览器窗口缩放时

@@ -26,10 +26,9 @@
 .content-left-logo{  
 	width: 11.11rem; 
 	height: 3.67rem;   
-	margin-left: 1.1rem; 
-	display: block;           
+	display: block;             
 	margin-bottom: 2rem;
-	display: block;   
+	margin-left: 6%;
 }
 .left-nav{
 	height: 21rem;    
@@ -38,7 +37,7 @@
 .left-nav li{     
 	margin-top: 1px;    
 	line-height: 3.5rem; 
-	font-size: 1.2rem;   
+	font-size: 1.4rem;   
 	margin-left: -4.3rem;      
 } 
 .left-nav img{
@@ -189,6 +188,7 @@
 	height: .09rem;
 	margin-top: 15%; 
 	opacity: .5;
+	display: none;
 }   
 .intro-content{
 	width: 100%;
@@ -197,6 +197,7 @@
 	position: absolute;
 	left: 0rem;
 	margin-top: 22%;
+	display: none;
 }
 .intro-content img{
 	display: inline-block;
@@ -211,6 +212,7 @@
 	height: 5.12rem;
 	position: absolute;
 	margin-top:35%; 
+	display: none;
 }
 
 
