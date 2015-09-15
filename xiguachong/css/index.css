@@ -39,13 +39,14 @@
 	line-height: 3.5rem; 
 	font-size: 1.4rem;     
 	float: left;
+	background: red;
 } 
 .left-nav img{   
 	width: 2rem;       
-	height: 2rem;
+	height: 2rem;   
 }
 .left-nav span{
-	margin-left: .5rem;	
+	margin-left: .5rem;	  
 }   
 
 .left-bottom{
