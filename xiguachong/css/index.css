@@ -64,27 +64,6 @@
 	font-size: 1.3rem;
 	display: block;
 }
-/* .weixin-img,.weibo-img{
-	width: 2.5rem;
-	height: 2.5rem;   
-	display: block;  
-	margin-left: 5.7rem;
-	position: absolute;
-	bottom: 8.5rem;         
-}    
-.weibo-img{   
-	bottom: 3rem;
-}    
-.weixin-span,.weibo-span{
-	font-size: 1.1rem;  
-	position: absolute;	
-	bottom: 5.4rem;  
-	left: 4.4rem;    
-}
-.weibo-span{
-	bottom: 0rem;
-	left: 4.9rem;
-} */
 .search{
 	border: none;
 	outline: none;
@@ -109,9 +88,12 @@
 }
 .right-nav{
 	list-style: none;
-	text-align: center;
-	padding: 0rem;
 	height: 14rem;
+}
+.right-nav li{   
+	line-height: 3.5rem;
+	float: left;
+	margin-left: 1rem;
 }
 .right-nav span{
 	font-size: 1.4rem;   
@@ -120,12 +102,6 @@
 	width: 2rem;
 	height: 2rem;
 }
-.right-nav li{   
-	line-height: 3.5rem;
-}
-.register{
-	color: #20A7B9;
-}   
 
 /*
  * 内容块样式
