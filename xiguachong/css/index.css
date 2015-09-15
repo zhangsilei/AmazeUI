@@ -33,13 +33,14 @@
 .left-nav{
 	height: 21rem;    
 	list-style: none;
+	width: 100%;    
 }   
 .left-nav li{     
 	margin-top: 1px;      
 	line-height: 3.5rem; 
 	font-size: 1.4rem;     
 	float: left;
-	background: red;
+	background: red;  
 } 
 .left-nav img{   
 	width: 2rem;       
@@ -90,11 +91,13 @@
 .right-nav{
 	list-style: none;
 	height: 14rem;
+	width: 100%;
 }
 .right-nav li{   
 	line-height: 3.5rem;
 	float: left;
 	margin-left: 1rem;
+	background: red;
 }
 .right-nav span{
 	font-size: 1.4rem;   
