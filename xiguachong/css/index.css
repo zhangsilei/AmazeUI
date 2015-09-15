@@ -33,13 +33,15 @@
 .left-nav{
 	height: 21rem;    
 	list-style: none;
-	width: 15rem;    
+	width: 15rem; 
+	display: block;   
 }   
 .left-nav li{     
 	margin-top: 1px;      
 	line-height: 3.5rem; 
 	font-size: 1.4rem;     
 	float: left;
+	background: red;
 } 
 .left-nav img{   
 	width: 2rem;       
