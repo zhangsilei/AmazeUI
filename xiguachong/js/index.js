@@ -15,7 +15,7 @@ $(document).ready(function(){
   // 播放按钮位置
   var play = $(".play");
   var pTop = (video.height() - play.height()) / 2;
-  var pLeft = (video.width() - play.width()) / 2;
+  var pLeft = (video.width() - play.width()) / 2;   
   play.css("top",pTop);
   play.css("left",pLeft);
   play.css("display","block");  // 获得位置后再显示
