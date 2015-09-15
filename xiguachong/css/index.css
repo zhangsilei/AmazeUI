@@ -7,7 +7,7 @@
 .header{
 	background: #000;
 }
-.header-font,.header-font-left{
+.header-font,.header-font-left{   
 	font-size: 1.6rem;  
 	color: #fff;  
 }
@@ -111,6 +111,7 @@
 #content{
 
 }  
+/* tab标签 */
 .top{   
 	background: #333;   
 	text-align: center;
@@ -133,9 +134,11 @@
 	height: .2rem;  
 	background: #2BC0D4;
 }
+/* 推荐项目样式 */
 .main{
 	position: relative;
 	color: #fff;
+	background: #333;
 }
 .video,.intro{ 
 	margin: 0rem auto;
@@ -191,5 +194,78 @@
 	/* margin-top:35%; */ 
 	display: none;
 }
+/* 项目排行样式 */
+.paihang{
+	
+}
+.paihang-img{
+	min-width: 8rem;
+	min-height: 10rem;
+}
+.paihang-title{
+	font-size: 1.6rem;
+	color: #fff;
+	opacity: .7;
+	margin-right: 1rem;  
+}    
+.paihang-content{
+	font-size: 1.2rem;  
+	color: #fff;
+	opacity: .7;  
+	margin-top: -.1rem;   
+	margin-bottom: .1rem;
+}
+.paihang-content span{
+	margin-right: 1rem;
+}
+.paihang-star{
+	margin-top: 1rem;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.paihang-support{
+	position: absolute;
+	bottom: -.5rem;
+	left: 8.5rem;
+	margin-left: 2.5rem;
+	font-size: 1.5rem;
+}
+.paihang-jiantou{
+	width: 1.2rem;
+	height: 1.2rem;
+	position: absolute; 
+	top: .45rem;
+	right: 1rem;
+}
+/* 最新项目样式 */
+.item{
+  	background: #333;
+}
+.zuixin-img{
+	margin: 0rem auto;  
+}
+.zuixin-content{
+	background: #333;
+	text-align: center;
+}
+.zuixin-content span{   
+	color: #fff;
+	opacity: .7;    
+	font-size: 1.2rem;    
+	margin-right: 1rem;    
+}
+.zuixin-title{
+	display: block;    
+	padding-top: 1rem;
+	padding-bottom: .5rem;
+}
+.zuixin-support{    
+	color: #2BC0D4;
+	display: block;
+	font-size: 1.5rem;
+	padding-top: .5rem;
+	padding-bottom: 1rem;
+}
+
 
 
