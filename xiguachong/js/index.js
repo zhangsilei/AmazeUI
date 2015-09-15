@@ -4,6 +4,10 @@ $(document).ready(function(){
     $(".top-a-current").removeClass("top-a-current");
     $(this).addClass("top-a-current");    
   })
+  // 左侧微信、微博图标
+ /* var weixin = $(".left-bottom > img:eq(0)");
+  var weibo = $(".left-bottom > img:eq(1)");
+  weixin.css("marginLeft",weixin.css("marginLeft")-weixin.width());*/   
   // 视频遮罩层的位置
   var video = $(".video");
   var zLeft = video.css("marginLeft");
