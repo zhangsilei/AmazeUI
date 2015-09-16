@@ -1,0 +1,28 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	color: #fff;
+}
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+#content{
+	background: #333;
+	height: 50rem;
+	
+}
+.logo{
+	width: 12.22rem; 
+	height: 4.03rem; 
+	margin: 0rem auto;
+}
+#content input{
+	margin: 0rem auto;
+	width: 80%;
+}
+.validate{
+	font-size: 1.4rem;
+	margin: 0rem auto;
+}
