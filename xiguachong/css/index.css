@@ -32,14 +32,12 @@
 	height: 21rem;    
 	list-style: none;
 	width: 15rem;   
-	background: red; 
 }   
 .left-nav li{     
 	margin-top: 1px;      
 	line-height: 3.5rem; 
 	font-size: 1.4rem;     
 	float: left;
-	background: blue;
 	margin-left: .6rem;
 } 
 .left-nav img{   
@@ -123,11 +121,13 @@
 	font-size: 1.4rem;
 	display: inline-block;
 	padding: .1rem 1rem;
-	margin: .5rem 3.5%; 
+	margin: 0rem 3.5%;
+	margin-top: .5rem;
+	margin-bottom: .5rem; 
 }
 .top-a-current{
 	border-radius: 1rem; 
-	background: #000;    
+	background: #000;      
 }
 .top-line{
 	width: 100%;
