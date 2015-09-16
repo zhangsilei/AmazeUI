@@ -1,4 +1,4 @@
-$(document).ready(function(){
+window.onload =function(){
   setEleLocation();
 
   /***** 顶部tab标签切换 *****/
@@ -28,7 +28,7 @@ $(document).ready(function(){
       changeTabContent("完成");     
     }
   })
-})
+}
 
 // 浏览器窗口缩放时
 $(window).resize(function(){

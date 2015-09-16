@@ -1,0 +1,21 @@
+.phone,.pwd{
+	position: relative;
+}
+.phone img,.pwd img{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	width: 1.8rem;
+	height: 1.8rem;
+	margin-top: .6rem;
+}
+.register{
+	color: #fff;
+	display: block;
+	max-width: 7rem;
+	margin: 0rem auto;
+	text-align: center;
+	font-size: 1.4rem;
+	margin-top: 1rem;
+	opacity: .9;
+}

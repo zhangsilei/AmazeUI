@@ -37,7 +37,8 @@
   -->
 
   <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="css/city.css">
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="stylesheet" href="css/login.css">
   <!--[if lt IE 9]>
   <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
@@ -48,7 +49,7 @@
   <script src="assets/js/jquery.min.js"></script>
   <!--<![endif]-->
   <script src="assets/js/amazeui.min.js"></script>
-  <script src="assets/js/app.js"></script>
+  <script src="js/login.js"></script>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -62,36 +63,26 @@
     <div class="am-header-left am-header-nav">
       <a href="index.html" class="">
         <img class="am-header-icon-custom" src="data:image/svg+xml;charset=utf-8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 12 20&quot;&gt;&lt;path d=&quot;M10,0l2,2l-8,8l8,8l-2,2L0,10L10,0z&quot; fill=&quot;%23fff&quot;/&gt;&lt;/svg&gt;" alt=""/>
-      </a>
+      </a>  
     </div>
     <h1 class="am-header-title">
-      <span class="title">城市选择</span>   
-    </h1>
+      <span class="title">手机登录</span>      
+    </h1>   
   </header>
 
   <!-- 内容块 -->
-  <div id="content">
-    <ul>
-      <li>
-        <span>当前城市</span>
-        <span class="current-city">南京</span>
-      </li>
-      <li>
-        <span style="opacity: .7;">城市列表</span>
-      </li>
-      <li>
-        <span>北京</span>
-      </li>
-      <li>
-        <span>上海</span>
-      </li>
-      <li>
-        <span>广州</span>
-      </li>
-      <li>
-        <span>深圳</span>
-      </li>
-    </ul>
+  <div id="content">   
+    <img src="images/nav/logo.png" class="am-img-responsive logo"/> 
+    <div class="phone">
+      <input type="text" class="am-form-field" placeholder="输入手机号码">      
+      <img src="images/p_login/phone.png">
+    </div>  
+    <div class="pwd">
+      <input type="text" class="am-form-field" placeholder="输入密码">
+      <img src="images/p_login/mima.png">
+    </div>
+    <button type="button" class="am-btn am-btn-default am-btn-block btn">登录</button>
+    <a class="register" href="register.html">注册账号</a>
   </div>
 
 </body>
