@@ -58,20 +58,20 @@
     <!-- 导航栏 -->     
     <div id="leftside" class="am-offcanvas content-left">        
       <div class="am-offcanvas-bar">      
-        <div class="am-offcanvas-content">           
+        <div class="am-offcanvas-content" style="text-align: center;">           
           <img class="content-left-logo" src="images/nav/logo.png">  
           <!-- 导航 -->
           <ul class="left-nav">
             <li>
               <a href="##">
                 <img src="images/nav/zuixin.png">     
-                <span>选择城市</span>
+                <span>切换城市</span>
               </a>  
             </li>
             <li>
               <a href="##">
                 <img src="images/nav/zuixin.png">      
-                <span>选择分类</span>
+                <span>分类浏览</span>
               </a>  
             </li>  
             <li>
@@ -95,7 +95,7 @@
             <li>
               <a href="##">
                 <img src="images/nav/chenggong.png">       
-                <span>已完成项目</span>
+                <span>完成项目</span>
               </a>  
             </li>  
           </ul>
@@ -168,10 +168,10 @@
   <div id="content">
     <!-- tab -->    
     <div class="top">
-      <a class="top-a-current" href="##">推荐</a>      
-      <a href="##">排行</a>   
-      <a href="##">最新</a>   
-      <a href="##">已完成</a>   
+      <a class="top-a-current" style="color: #2BC0D4" href="javascript:void(0);">推荐</a>      
+      <a href="javascript:void(0);">排行</a>   
+      <a href="javascript:void(0);">最新</a>   
+      <a href="javascript:void(0);">完成</a>   
     </div>  
     <div class="top-line"></div> 
          
@@ -205,7 +205,13 @@
     </div>
 
     <!-- 最新项目 --> 
-    <div class="zuixin"><div class="item"></div></div>
+    <div class="zuixin"><div class="zuixin-item"></div></div>
+
+    <!-- 成功项目 -->
+    <div class="success">
+      <!-- 内容列表 -->
+      <div class="am-list-news-bd"><ul class="am-list"></ul></div>
+    </div>
 
   </div>
    

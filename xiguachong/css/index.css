@@ -26,9 +26,9 @@
 .content-left-logo{  
 	width: 11.11rem; 
 	height: 3.67rem;   
-	display: block;             
+	/* display: block; */                 
 	margin-bottom: 2rem;
-	margin-left: 6%;
+	/* margin-left: 6%; */     
 }
 .left-nav{
 	height: 21rem;    
@@ -121,9 +121,8 @@
 	color: #C7C7C7;
 	font-size: 1.4rem;
 	display: inline-block;
-	margin-top: .5rem;
 	padding: .1rem 1rem;
-	margin-left: 1.1rem;
+	margin: .5rem 3.5%; 
 }
 .top-a-current{
 	border-radius: 1rem; 
@@ -198,15 +197,16 @@
 .paihang{
 	
 }
-.paihang-img{
+.paihang-img,.success-img{
 	min-width: 8rem;
-	min-height: 10rem;
+	min-height: 12rem;
 }
-.paihang-title{
+.paihang-title,.success-title{
 	font-size: 1.6rem;
 	color: #fff;
 	opacity: .7;
-	margin-right: 1rem;  
+	margin-right: 1rem;
+	margin-top: 1rem;  
 }    
 .paihang-content{
 	font-size: 1.2rem;  
@@ -219,7 +219,7 @@
 	margin-right: 1rem;
 }
 .paihang-star{
-	margin-top: 1rem;
+	margin-top: 1.5rem;
 	width: 1.2rem;
 	height: 1.2rem;
 }
@@ -230,15 +230,15 @@
 	margin-left: 2.5rem;
 	font-size: 1.5rem;
 }
-.paihang-jiantou{
+.paihang-jiantou,.success-jiantou{
 	width: 1.2rem;
 	height: 1.2rem;
 	position: absolute; 
-	top: .45rem;
+	top: 1.5rem;
 	right: 1rem;
 }
 /* 最新项目样式 */
-.item{
+.zuixin-item{
   	background: #333;
 }
 .zuixin-img{
@@ -259,12 +259,32 @@
 	padding-top: 1rem;
 	padding-bottom: .5rem;
 }
-.zuixin-support{    
+.zuixin-support,.success-ok{    
 	color: #2BC0D4;
 	display: block;
 	font-size: 1.5rem;
 	padding-top: .5rem;
 	padding-bottom: 1rem;
+}
+/* 成功项目样式 */
+.success-content{
+	font-size: 1rem;  
+	color: #fff;
+	opacity: .7;  
+	margin-top: -.1rem;   
+	margin-bottom: .1rem;  
+}  
+.success-content span{
+	margin-right: 1rem;
+}
+.success-icon{
+	width: 2rem;
+	height: 2rem;
+	margin-top: 1.5rem;
+}
+.success-ok{
+	margin-top: -2.4rem;
+	margin-left: 3rem;
 }
 
 

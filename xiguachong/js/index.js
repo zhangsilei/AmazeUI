@@ -1,17 +1,35 @@
 $(document).ready(function(){
   setEleLocation();
-  // 顶部tab切换
+
+  /***** 顶部tab标签切换 *****/
   $(".top > a").click(function(){
-    $(".top-a-current").removeClass("top-a-current");
-    $(this).addClass("top-a-current");  
-    // 更换页面内容
+    var current = $(".top-a-current");
+    // 移除先前选中tab标签样式
+    current.removeClass("top-a-current");
+    current.css("color","#C7C7C7");
+    // 将当前选中tab标签增加样式
+    $(this).addClass("top-a-current");
+    $(this).css("color","#2BC0D4");
+
+    /***** 更换页面内容 *****/
+    var tuijian = $(".tuijian");
+    var paihang = $(".paihang");
+    var zuixin = $(".zuixin");
+    var success = $(".success");
     if($(this).html() == "推荐"){     // 推荐tab
 
-      $(".paihang ul").empty();     // 移除所有排行内容   
-      $(".zuixin .item").empty();     // 移除所有最新内容 
+      /*$(".paihang ul").empty();     // 移除所有项目排行内容   
+      $(".zuixin .zuixin-item").empty();     // 移除所有最新项目内容 
+      $(".success ul").empty();     // 移除所有成功项目内容*/
+      // 隐藏其它内容
+      paihang.css("display","none");   
+      zuixin.css("display","none");   
+      success.css("display","none");
+      // 点击tab标签显示当前相应内容
+      (tuijian.css("display") == "none") ? tuijian.css("display","block") : null;
       if($(".main").html() == "" || $(".main").html() == null){
-        $(".tuijian").append(
-          "<div class='main'>" +
+        tuijian.append(
+          "<div class='main'>" +            
           "<img src='images/index/shipin.png' class='am-img-responsive video'/>" +
           "<img src='images/index/shipinmengban@2x.png' class='am-img-responsive zhezhao'/>" +
           "<img src='images/index/shipin_btn.png' class='am-img-responsive play'/>" +
@@ -27,17 +45,24 @@ $(document).ready(function(){
           "<span>剩余8天</span></div>" +
           "<img src='images/index/support.png' class='am-img-responsive intro-support'/></div>"
         );
-        $(".paihang").css("display","none");
         setEleLocation();
       }
 
-    }else if($(this).html() == "排行"){     // 排行tab
+    }else if($(this).html() == "排行"){     // 排行tab  
+   
+      /*$(".tuijian .main").remove();     // 移除所有推荐项目内容  
+      $(".zuixin .zuixin-item").empty();     // 移除所有最新项目内容
+      $(".success ul").empty();     // 移除所有成功项目内容*/
+      // 隐藏其它内容而不是删除节点
+      tuijian.css("display","none");   
+      zuixin.css("display","none");   
+      success.css("display","none");
 
-      $(".tuijian .main").remove();     // 移除所有推荐内容  
-      $(".zuixin .item").empty();     // 移除所有最新内容     
+      // 显示当前内容
+      (paihang.css("display") == "none") ? paihang.css("display","block") : null;    
       if($(".paihang ul").html() == "" || $(".paihang ul").html() == null){
-        $(".paihang").css("display","block");
-        $(".am-list").append(
+        paihang.css("display","block");
+        $(".paihang ul").append(
           "<li class='am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left' style='background:#333;'>" +
           "<div class='am-u-sm-4 am-list-thumb'>" +
           "<img src='images/index/img1.png' class='am-img-responsive paihang-img'/></div>" +
@@ -49,27 +74,62 @@ $(document).ready(function(){
           "<span>剩余8天</span></div>" +   
           "<img class='paihang-star' src='images/introduce/star-1.png'>" +    
           "<img class='paihang-star' src='images/introduce/star-1.png'>" + 
-          "<img class='paihang-star' src='images/introduce/star-1.png'>" +
+          "<img class='paihang-star' src='images/introduce/star-1.png'>" +     
           "<img class='paihang-star' src='images/introduce/star-1.png'>" +
           "<img class='paihang-star' src='images/introduce/star-1.png'>" +
           "<a class='paihang-support' href='##'>立即支持</a>" +
           "<img class='paihang-jiantou' src='images/paihang/xiangqing.png'></div></li>"
-        );
+        );   
       }
-
+    
     }else if($(this).html() == "最新"){     // 最新tab
 
-      $(".tuijian .main").remove();     // 移除所有推荐内容  
+      /*$(".tuijian .main").remove();     // 移除所有推荐内容        
       $(".paihang ul").empty();     // 移除所有排行内容
-      if($(".zuixin .item").html() == "" || $(".zuixin .item").html() == null){
-        $(".zuixin .item").append(
+      $(".success ul").empty();     // 移除所有成功项目内容*/
+      // 隐藏其它内容
+      tuijian.css("display","none");   
+      paihang.css("display","none");   
+      success.css("display","none");
+
+      // 显示当前内容 
+      (zuixin.css("display") == "none") ? zuixin.css("display","block") : null;
+      if($(".zuixin .zuixin-item").html() == "" || $(".zuixin .zuixin-item").html() == null){
+        $(".zuixin .zuixin-item").append(
           "<img class='am-img-responsive zuixin-img' src='images/index/tupian-1.png'>" +
           "<div class='zuixin-content'>" +
           "<span class='zuixin-title' style='font-size: 1.6rem;margin-right: 0rem;'>某某某音乐会</span>" +
           "<span>2015-8-17</span><span>13:00</span><span>剩余12天</span><span>49人浏览</span>" +
-          "<a class='zuixin-support' href='##'>立即支持</a></div>"
+          "<a class='zuixin-support' href='##'>立即支持</a></div>"    
+        );     
+      }
+    
+    }else if($(this).html() == "完成"){     // 成功tab
+      
+      /*$(".tuijian .main").remove();   // 移除所有推荐内容        
+      $(".paihang ul").empty();     // 移除所有排行内容
+      $(".zuixin .zuixin-item").empty();     // 移除所有最新内容*/
+      // 隐藏其它内容
+      tuijian.css("display","none");   
+      paihang.css("display","none");   
+      zuixin.css("display","none");
+
+      // 显示当前内容
+      (success.css("display") == "none") ? success.css("display","block") : null;
+      if($(".success ul").html() == "" || $(".success ul").html() == null){
+        $(".success ul").append(
+          "<li class='am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left' style='background:#333;'>" +
+          "<div class='am-u-sm-4 am-list-thumb'>" +
+          "<img src='images/index/img1.png' class='am-img-responsive success-img'/></div>" +
+          "<div class='am-u-sm-8 am-list-main'>" +
+          "<p class='success-title'>某某某演唱会</p>" +
+          "<div class='success-content'>" +
+          "<span>目标: 1500</span><span>已筹: 200</span><span>剩余: 8天</span>" +
+          "<span>时间: 6天</span><span>用时: 4天</span></div>" +        
+          "<img class='success-icon' src='images/introduce/chenggong.png'>" +           
+          "<span class='success-ok'>已完成</span>" +         
+          "<img class='success-jiantou' src='images/paihang/xiangqing.png'></div></li>"    
         );
-        $(".paihang").css("display","none");
       }
 
     }
@@ -109,7 +169,7 @@ var setEleLocation = function(){
   }
   if(intro.width() == 750){
     introTitle.css("marginTop","6.1rem");
-  }
+  }   
   introTitle.css("top",video.height());    
   introTitle.css("left",iLeft);
   introTitle.css("display","block");
