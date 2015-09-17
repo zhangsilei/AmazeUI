@@ -1,5 +1,5 @@
 /**
- * 判断终端
+ * 判断终端类型
  */
 var browser={
     versions:function(){
@@ -19,3 +19,13 @@ var browser={
     }(),
     language:(navigator.browserLanguage || navigator.language).toLowerCase()
 };
+
+/**
+ * 获取请求url的参数
+ * @param  [varname] [description]{string} name 参数名
+ */
+function GetQueryString(name){
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if(r!=null)return  unescape(r[2]); return null;
+}

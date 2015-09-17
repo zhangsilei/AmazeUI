@@ -1,13 +1,14 @@
 window.onload =function(){
   setEleLocation();
+  loginSucView("result");
 
-  /***** 顶部tab标签切换 *****/
+  // 顶部tab标签切换
   $(".top > a").click(function(){
     changeTabName($(this));
     changeTabContent($(this).html());
   })
 
-  /***** 左侧快捷进入tab *****/
+  // 左侧快捷进入tab 
   $(".left-nav a").click(function(){
     // 关闭侧边栏
     $("#leftside").offCanvas('close');
@@ -114,7 +115,7 @@ function changeTabName(ele){
 
 /**
  * Tab选项卡内容切换
- * {string} tabName 标签名称
+ * @param  {string} tabName 标签名称
  */
 function changeTabContent(tabEle){
   var tuijian = $(".tuijian");
@@ -217,6 +218,56 @@ function changeTabContent(tabEle){
         "<span class='success-ok'>已完成</span>" +         
         "<img class='success-jiantou' src='images/paihang/xiangqing.png'></div></li>"    
       );
+    }
+  }
+}
+
+/**
+ * 登陆成功时，操作DOM改变右边栏内容
+ * @param  {string} name 登陆成功返回的标记
+ */
+function loginSucView(name){
+  var result = GetQueryString(name);
+  if(result != null && result != ""){
+    if(result == "success"){
+      $("#rightside .user-header").attr("src","images/introduce/touxiang.png");
+      $("#rightside .user-name").html("我叫小姜姜");
+      // 我的资料
+      var myInfo = $(".right-nav a:eq(0)");
+      change(myInfo,"images/personal/gerenziliao.png","我的资料");
+      myInfo.attr("href","myInfo.html");
+      // 我的钱包
+      var myWallet = $(".right-nav a:eq(1)");
+      change(myWallet,"images/personal/zhongchoujilu.png","我的钱包");
+      myWallet.attr("href","##");
+      // 我的收藏
+      var myLove = $(".right-nav a:eq(2)");
+      change(myLove,"images/personal/zhongchoujilu.png","我的收藏");
+      myLove.attr("href","##");
+      // 插入“我的订单”节点
+      $(".right-nav li:eq(2)").after(
+        "<li><a href='##'>" +
+        "<img src='images/personal/zhongchoujilu.png'> " +  
+        "<span>我的订单</span>" +
+        "</a></li>"
+      );
+      // 插入“分享有礼”节点
+      $(".right-nav li:eq(3)").after(
+        "<li><a href='##'>" +
+        "<img src='images/personal/zhongchoujilu.png'> " +  
+        "<span>分享有礼</span>" +
+        "</a></li>"
+      );
+      // 退出登录
+      var logout = $(".right-nav a:eq(5)");  
+      change(logout,"images/personal/zhongchoujilu.png","退出登录");
+      logout.attr("href","##");    
+    }else{
+      // 登陆失败
+    }
+    function change(ele, src, str){
+      ele.children("img").attr("src",src);
+      ele.children("span").html(str);
     }
   }
 }

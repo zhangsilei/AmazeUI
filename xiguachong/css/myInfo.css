@@ -1,0 +1,63 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	color: #fff;
+}
+/**
+ * 页头
+ */
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+/**
+ * 内容块
+ */
+#content{
+	background: #333;
+}
+.sex{
+	text-align: center;
+}
+.man,.woman{
+	width: 40%;
+	display: inline-block;
+	margin-top: 3rem;
+}
+.man p,.woman p{
+	font-size: 1.4rem;
+	margin-top: 0rem;
+	margin-bottom: 0rem;
+	opacity: .7;
+}
+.man img,.woman img{
+	width: 6rem;
+	height: 6rem;
+}
+.user-info{
+	max-width: 60rem;
+	margin: 0rem auto;   
+	height: 22rem;     /* 先写死 */   
+}
+.user-info ul{
+	font-size: 1.5rem;
+	list-style: none;
+}
+.user-info ul li{
+	margin-top: 2rem;
+}
+.user-info ul li img{
+	width: 1.2em;
+	height: 1.2rem;
+	float: right;
+	margin-right: 1.7rem;
+	margin-top: .4rem;
+}
+.btn,.btn:focus,.btn:active{  
+	background: #2BC0D4;
+	border: none;
+	height: 3.09rem;
+	color: #fff;
+	outline: none;
+}
