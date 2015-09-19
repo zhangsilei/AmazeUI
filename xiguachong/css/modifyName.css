@@ -1,0 +1,35 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+}
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+#content{
+	background: #333;
+	padding-top: 3rem;
+	height: 35rem;     /* 暂时写死 */
+}
+#content input{
+	margin: 0rem auto;
+	width: 80%;
+	margin-bottom: 1rem;  
+	background: #333;
+	border: .1rem solid #999;
+	color: #fff;
+	opacity: .7;
+	font-size: 1.2rem;
+	height: 3.09rem;
+}
+.btn,.btn:focus,.btn:active{  
+	background: #2BC0D4;
+	border: none;
+	width: 80%;
+	margin: 0rem auto;
+	margin-top: 2rem;
+	height: 3.09rem;
+	color: #fff;
+	outline: none;
+}

@@ -1,0 +1,215 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	color: #fff;
+}
+body{
+	background: #333;
+}
+/**
+ * 页头
+ */
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+/**
+ * 内容块
+ */
+#content{
+	position: relative;
+	padding-bottom: 2rem;
+}
+/* 视频 */
+.video{
+	margin: 0rem auto;
+}
+.zhezhao{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+}
+.play{
+	width: 6rem;
+	height: 6rem;
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+}
+.love{
+	width: 3.5rem;
+	height: 3.5rem;     
+	position: absolute;
+	top: 10%;
+	margin-right: 5%;
+}
+/* 照片 */
+.main{
+	width: 25.2rem;
+	margin: 0px auto;
+	overflow: hidden;
+}
+.list{
+	width: 37.2rem;
+	margin: 0rem auto;
+	margin-left: -6rem;
+}
+.img{
+	float: left;
+	margin: .2rem;
+	width: 11.92rem;
+	height: 13.52rem;
+	opacity: .8;
+}  
+.arrow{
+	width: 1.3rem;
+	height: 2.2rem;
+	position: absolute;
+}
+/* 详情、评论tab */
+.tab{
+	margin: 0rem auto;
+	text-align: center;
+}
+.xiangqing,.pinglun{  
+	width: 46%;
+	display: inline-block;
+	font-size: 1.4rem;
+	border-bottom: .1rem solid #2BC0D4;
+}
+.pinglun{
+	margin-left: -.4rem;
+	border-bottom: none;
+}
+.xiangqing span{
+	color: #2BC0D4;
+}
+.tab img{
+	width: 1.48rem;
+	height: 1.48rem;
+}
+/* 详情、评论内容 */
+.body{
+	width: 92%;
+	margin: 0rem auto;
+	padding: 1rem .5rem 0rem;
+}  
+.title{
+	margin-left: .7rem;
+	color: #2BC0D4;
+}
+/* 详情 */
+.time{
+	margin-top: -1.3rem; 
+}
+.location,.intro{	
+	margin-top: -.1rem;
+}
+.time img,.location img{        
+	width: 1.5rem;
+	height: 1.5rem;
+}
+.intro,.text{
+	margin-left: .05rem;
+}
+.intro img{
+	width: 1.3rem;
+	height: 1.3rem;
+}
+.text{
+	margin-top: 1.3rem;
+}
+.time span,.location span,.intro span,.text p{
+	font-size: 1.2rem;
+}
+/* 评论 */
+ul{
+	list-style: none;
+	padding: 0rem;
+}
+ul li span{
+	margin-left: .5rem;
+	font-size: 1.4rem;
+}
+ul li p{
+	font-size: 1.2rem;
+	margin-top: -.3rem;
+	margin-left: 2.9rem;
+}
+ul li img{
+	width: 2rem;
+	height: 2rem;
+}
+/**
+ * 底部块
+ */
+#bottom{
+	position: fixed;
+	bottom: 0rem;
+	background: #E2E1E2;
+	width: 100%;
+	height: 3.5rem;
+}
+.share{
+	position: absolute;
+	top: 15%;
+	width: 2.5rem;
+	height: 2.5rem;
+	margin-left: 1rem;
+}
+#bottom input{
+	position: absolute;
+	left: 5rem;
+	top: 7%;
+	width: 58%;
+	height: 85%;
+	border: none;
+	outline: none;
+}
+#bottom button{
+	position: absolute;
+	right: 0rem;
+	background: #2BC0D4;
+	height: 100%;
+	border: none;
+	font-size: 1.4rem;
+}
+.share-zhezhao{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+.total{
+	position: fixed;   
+	background: red;    
+	left: 0rem;      
+	bottom: 0rem;
+	width: 100%;
+	height: 15rem;
+	z-index: 1001;
+}
+.total img{
+	width: 3.5rem;
+	height: 3.5rem;
+	display: inline-block;
+}
+.total span{   
+	display: inline-block;
+	margin-left: 1rem;
+	margin-top: 1.6rem;
+}
+.weibo,.weixin,.qq{
+	text-align: center;
+	background: #ff5466;
+	height: 5rem;
+}
+.weixin{
+	background: #86d560;
+}  
+.qq{
+	background: #01c2eb;
+}

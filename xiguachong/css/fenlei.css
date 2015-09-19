@@ -1,0 +1,82 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	color: #fff;
+}
+/**
+ * 页头
+ */
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+/**
+ * 内容块
+ */
+#content{
+	background: #333;
+	height: 100%;
+}
+.kind{
+	width: 100%;
+	text-align: center;
+}
+.kind div{    
+	width: 18%; 
+	text-align: center;
+	display: inline-block;
+	margin: 2rem 0rem 3rem;
+}
+.kind img{
+	width: 3rem;
+	height: 3rem;
+	margin: 0rem auto;
+}
+.kind span{
+	font-size: 1.4rem;
+}
+/* 项目排行样式 */
+.paihang{
+	
+}
+.paihang-img,.success-img{
+	min-width: 8rem;
+	min-height: 12rem;
+}
+.paihang-title,.success-title{
+	font-size: 1.6rem;
+	color: #fff;
+	opacity: .7;
+	margin-right: 1rem;
+	margin-top: 1rem;  
+}    
+.paihang-content{
+	font-size: 1.2rem;  
+	color: #fff;
+	opacity: .7;  
+	margin-top: -.1rem;   
+	margin-bottom: .1rem;
+}
+.paihang-content span{
+	margin-right: 1rem;
+}
+.paihang-star{
+	margin-top: 1.5rem;
+	width: 1.2rem;
+	height: 1.2rem;
+}
+.paihang-support{
+	position: absolute;
+	bottom: -.5rem;
+	left: 8.5rem;
+	margin-left: 2.5rem;
+	font-size: 1.5rem;
+}
+.paihang-jiantou,.success-jiantou{
+	width: 1.2rem;
+	height: 1.2rem;
+	position: absolute; 
+	top: 1.5rem;
+	right: 1rem;
+}

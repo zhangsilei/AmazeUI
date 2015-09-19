@@ -1,0 +1,47 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	color: #fff;
+}
+/**
+ * 页头
+ */
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+/**
+ * 内容块
+ */
+#content{
+	background: #333; 
+}
+.item{
+	position: relative;   
+}   
+.img{
+	margin: 0rem auto;
+}
+.zhezhao{
+	position: absolute;
+	top: 0rem;
+}
+.item .span{
+	height: 3rem;
+	text-align: center;
+	margin: 0rem auto;
+} 
+.item .span span{
+	line-height: 3rem;
+	margin-right: 6%;
+	font-size: 1.4rem;
+}
+.item .span button{
+	border: none;
+	background: #2BC0D4;
+	width: 7rem;
+	height: 100%;
+	float: right;	
+	font-size: 1.4rem;
+}
