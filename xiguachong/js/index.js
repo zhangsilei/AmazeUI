@@ -239,7 +239,7 @@ function loginSucView(name){
       // 我的钱包
       var myWallet = $(".right-nav a:eq(1)");
       change(myWallet,"images/personal/zhongchoujilu.png","我的钱包");
-      myWallet.attr("href","##");
+      myWallet.attr("href","myWallet.html");
       // 我的收藏
       var myLove = $(".right-nav a:eq(2)");
       change(myLove,"images/personal/zhongchoujilu.png","我的收藏");
