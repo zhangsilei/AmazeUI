@@ -1,0 +1,81 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+}
+/**
+ * 页头
+ */
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+/**
+ * 内容块
+ */
+#content{
+	background: #333;
+	height: 100%;
+}
+.inuse,.used,.passed{
+	float: left;
+	width: 33.33%;
+	height: 3rem;
+	text-align: center;
+	border-bottom: .1rem solid #2BC0D4;
+	color: #2BC0D4;
+	padding-top: .5rem;
+}
+.used{
+	border: none;
+	color: #fff;
+}
+.passed{
+	border: none;
+	color: #fff;
+}
+
+.card{
+	width: 80%;
+	height: 10rem;
+	background: red;
+	margin: 1rem auto;
+	border-radius: .5rem;
+}
+.top{
+	background: #2BC0D4;
+	color: #fff;
+	border-top-left-radius: .5rem;
+	border-top-right-radius: .5rem;
+	height: 70%;
+	font-size: 1.5rem;
+}
+.card-title{
+	margin: 1rem 0rem 0rem 1rem;
+}
+.top img{
+	width: 2rem;
+	height: 2rem;
+	float: right;
+	margin-right: 1rem;
+	margin-top: 3rem;
+}
+.number{
+	font-size: 5rem;
+	float: right;
+	margin-right: 1rem;
+}
+.bottom{
+	background: #fff;
+	border-bottom-left-radius: .5rem;
+	border-bottom-right-radius: .5rem;
+	height: 30%;
+}
+.bottom span{
+	font-size: 1.4rem;
+	display: inline-block;
+	margin-top: .5rem;
+	float: left;
+	margin-left: .5rem;
+	color: #999;
+}

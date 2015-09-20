@@ -1,0 +1,50 @@
+*{
+	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	color: #fff;
+}
+/**
+ * 页头
+ */
+.content-header{
+	background: #2BC0D4;
+}
+.title{
+	font-size: 1.6rem;
+}
+/**
+ * 内容块
+ */
+#content{
+	background: #333;
+	height: 100%;
+}
+.myGold{
+	position: relative;
+	width: 90%;
+	height: 5rem;
+	margin: 0rem auto;
+}
+.myGold span{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	margin-top: 1.8rem;
+	margin-left: 3rem;
+	font-size: 1.4rem;
+}
+.icon{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	margin-top: 1.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+.jiantou{
+	width: 1.5rem;
+	height: 1.5rem;
+	position: absolute;
+	top: 0rem;
+	right: 0rem;
+	margin-top: 1.9rem;
+}
