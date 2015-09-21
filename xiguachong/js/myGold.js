@@ -1,6 +1,6 @@
-$(document).ready(function(){
+window.onload = function(){
 	setElePosition();
-})
+}
 
 $(window).resize(function(){
 	setElePosition();

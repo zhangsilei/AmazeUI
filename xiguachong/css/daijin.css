@@ -36,9 +36,9 @@
 }
 
 .card{
-	width: 80%;
+	width: 90%;
 	height: 10rem;
-	background: red;
+	background: #fff;
 	margin: 1rem auto;
 	border-radius: .5rem;
 }
@@ -66,16 +66,15 @@
 	margin-right: 1rem;
 }
 .bottom{
-	background: #fff;
-	border-bottom-left-radius: .5rem;
+	background: #fff;  
+	border-bottom-left-radius: .5rem;  
 	border-bottom-right-radius: .5rem;
-	height: 30%;
+	position: relative;
+	top: .5rem;
+	
 }
 .bottom span{
 	font-size: 1.4rem;
-	display: inline-block;
-	margin-top: .5rem;
-	float: left;
-	margin-left: .5rem;
 	color: #999;
+	position: absolute;
 }
