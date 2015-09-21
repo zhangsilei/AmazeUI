@@ -30,12 +30,14 @@
 	left: 0rem;
 	margin: 4% 0rem 0rem 6%;
 	font-size: 1.5rem;
+	display: none;
 }
 .number{
 	position: absolute;
 	top: 0rem;
 	left: 0rem;	
 	font-size: 5rem;
+	display: none;
 }
 .i,.jiantou{
 	width: 1.5rem;
@@ -43,12 +45,14 @@
 	position: absolute;
 	bottom: 0rem;
 	right: 0rem;
+	display: none;
 }
 .how{
 	position: absolute;
 	bottom: 0rem;
 	right: 0rem;
 	font-size: 1.4rem;
+	display: none;
 }
 .jifen-title{
 	text-align: center;
