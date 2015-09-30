@@ -1,31 +1,46 @@
 *{
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	font-family: "STXihei","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self"; 
 	color: #fff;
+}
+:root{
+	background: #202020;
 }
 /**
  * 页头
  */
-.content-header{
-	background: #2BC0D4;
+.am-header{
+	background: #1dbcd2;
 }
-.title{
-	font-size: 1.6rem;
+.am-header-title > span{  
+	font-size: 1.8rem;
 }
 /**
  * 内容块
  */
 #content{
-	background: #333;
+	background: #202020; 
 	height: 100%;
 }
 #content ul{
+	max-width: 40rem;
 	list-style: none;
-	font-size: 1.4rem;
-	padding-top: 2rem;
+	font-size: 1.6rem; 
+	padding-top: 1.5rem;
+	margin: 0rem auto;
 }
-#content ul li{
-	margin-bottom: 2rem;
+#content li{
+	margin-bottom: 2rem;  
 }
-.current-city{
-	margin-left: 60%;
+#content > ul:first-child span + span{
+	float: right;
+	margin-right:2rem;   
+}
+#content li:nth-child(2) span{  
+	color: #999;
+}
+#content img{
+	width: 1.6rem;
+	height: 1.6rem;
+	float: right;
+	margin-right: 2.3rem;
 }

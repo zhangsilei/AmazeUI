@@ -38,18 +38,6 @@
    
   <link rel="stylesheet" href="assets/css/amazeui.min.css">
   <link rel="stylesheet" href="css/index.css">   
-  <!--[if lt IE 9]>
-  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-  <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-  <![endif]-->
-
-  <!--[if (gte IE 9)|!(IE)]><!-->
-  <script src="assets/js/jquery.min.js"></script>
-  <!--<![endif]-->
-  <script src="assets/js/amazeui.min.js"></script>
-  <script src="js/public.js"></script>
-  <script src="js/index.js"></script>
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -59,176 +47,186 @@
 <![endif]-->
 
   <!-- 页头 -->
-  <header data-am-widget="header" class="am-header am-header-default content-header">
+  <header data-am-widget="header" class="am-header am-header-default">
     <div class="am-header-left am-header-nav">
-      <!-- 触发器 -->
+      <!-- 左侧栏触发器 -->
       <a href="#leftside" class="" data-am-offcanvas>  
-        <img src="images/index/menu@2x.png">           
+        <img src="imgs/index/menu@2x.png">           
       </a>     
     </div>   
-      
-    <!-- 导航栏 -->     
-    <div id="leftside" class="am-offcanvas content-left">        
+    <!-- 左侧导航栏 -->     
+    <div id="leftside" class="am-offcanvas">        
       <div class="am-offcanvas-bar">      
-        <div class="am-offcanvas-content" style="text-align: center;">           
-          <img class="content-left-logo" src="images/nav/logo.png">  
-          <!-- 导航 -->
-          <ul class="left-nav">
+        <div class="am-offcanvas-content">           
+          <img class="logo" src="imgs/leftside/logo@2x.png">      
+          <!-- 导航 -->  
+          <ul class="left-nav">    
             <li>
               <a href="city.html">
-                <img src="images/nav/zuixin.png">     
-                <span>切换城市</span>
+                <img src="imgs/leftside/wezhi--@2x.png">          
+                <span>切换城市</span>  
               </a>  
             </li>
-            <li>
+            <li>    
               <a href="fenlei.html">
-                <img src="images/nav/zuixin.png">      
-                <span>分类浏览</span>
+                <img src="imgs/leftside/xuanzefenlei-@2x.png">      
+                <span>分类浏览</span>   
               </a>  
             </li>  
             <li>
               <a href="javascript:void(0);">     
-                <img src="images/nav/zhongchou.png">          
+                <img src="imgs/leftside/tuijianxiangmu@2x.png">          
                 <span>推荐项目</span>   
               </a>  
             </li>
-            <li>
+            <li>    
               <a href="##">
-                <img src="images/nav/paihangbang.png">     
-                <span>排行榜</span>
+                <img src="imgs/leftside/paihangbang@2x.png">     
+                <span>排行榜</span>  
               </a>  
             </li>
             <li>
               <a href="##">
-                <img src="images/nav/zuixin.png">     
+                <img src="imgs/leftside/zuixinxiangmu-@2x.png">     
                 <span>最新项目</span>
               </a>  
             </li>
             <li>
               <a href="##">
-                <img src="images/nav/chenggong.png">       
+                <img src="imgs/leftside/chenggongxiangmu-@2x.png">       
                 <span>完成项目</span>
               </a>  
-            </li>  
+            </li>
           </ul>
-          
           <!-- 微信、微博 -->
-          <div class="left-bottom" style="margin-bottom: 8%;">   
-            <img class="" src="images/nav/weixin.png">
-            <span class="">西瓜虫微信服务号</span>
+          <div class="left-bottom">  
+            <img src="imgs/leftside/weixin-@2x.png">
+            <span>西瓜虫微信服务号</span>
           </div>
-          <div class="left-bottom" style="margin-top: 1.2rem;">
-            <img class="" src="images/nav/weibo.png">
-            <span class="">西瓜虫官方微博</span> 
+          <div class="left-bottom">
+            <img src="imgs/leftside/weibo@2x.png">
+            <span>西瓜虫官方微博</span> 
           </div>
-
         </div>
       </div>   
     </div> 
 
-    <!-- 输入框 -->
-    <input class="search" type="text">
-    <!-- <h1 class="am-header-title">
-      <span class="header-font">西瓜虫</span>
-    </h1> -->   
-   
-    <div class="am-header-right am-header-nav">  
-      <a href="#rightside" class="" data-am-offcanvas>
-        <img src="images/index/name@2x.png">
-      </a>
-    </div>  
-
+    <!-- 搜索框 -->
+    <div class="search">
+      <img src="imgs/index/sousuo-1@2x.png">  
+      <input type="text" placeholder="搜索明星、演唱会、场馆">  
+    </div>
+    <!-- <h1 class="am-header-title">    
+      <span class="header-font">西瓜虫</span>  
+    </h1> -->      
+    
+    <!-- 信息栏触发器 -->
+    <div class="am-header-right am-header-nav">     
+      <a href="#rightside" class="" data-am-offcanvas>     
+        <img src="imgs/index/yonghu-@2x.png">       
+      </a>     
+    </div>    
     <!-- 个人信息栏 -->     
-    <div id="rightside" class="am-offcanvas content-right">        
+    <div id="rightside" class="am-offcanvas">          
       <div class="am-offcanvas-bar am-offcanvas-bar-flip">      
-        <div class="am-offcanvas-content">           
-          <img class="user-header" src="images/personal/touxiang-1.png">
-          <span class="user-name">您还没有登录</span>
-          <!-- 登录导航 -->
-          <ul class="right-nav">
+        <div class="am-offcanvas-content">                 
+          <img class="user-header" src="imgs/login/touxiang-1@2x.png">  
+          <span class="user-title">您还没有登录</span>
+          <!-- 登录导航 --> 
+          <ul class="right-nav"> 
             <li>
               <a href="##">
-                <img src="images/personal/weixin.png">
+                <img src="imgs/login/weixin@2x.png">
                 <span>微信登录</span>   
               </a>
             </li>
             <li>
-              <a href="login.html">
-                <img src="images/personal/shouji.png">
+              <a href="login.html"> 
+                <img src="imgs/login/shouji@2x.png">
                 <span>手机登录</span>
               </a>   
             </li>
-            <li>
+            <li> 
               <a href="##">
-                <img src="images/personal/shouji.png">
-                <span>QQ登录</span><!-- style="margin-right: .3rem;" -->   
-              </a>  
+                <img src="imgs/login/qq@2x.png">
+                <span>QQ登录</span>  
+              </a>    
             </li>
             <!-- 登陆成功后在此处加两个列表 -->
             <li>   
-              <a href="register.html">
-                <img src="images/personal/zhuce.png">
-                <span style="color: #20A7B9;">注册账号</span>
-              </a>
+              <a href="register.html">       
+                <img src="imgs/login/zhuce@2x.png">        
+                <span>注册账号</span>  
+              </a>    
             </li>
           </ul>
         </div>
       </div>
     </div> 
   </header>
-
+   
   <!-- 内容块 -->
-  <div id="content">
-    <!-- tab -->    
-    <div class="top">
-      <a class="top-a-current" style="color: #2BC0D4" href="javascript:void(0);">推荐</a>      
-      <a href="javascript:void(0);">排行</a>   
+  <div id="content">   
+    <!-- tab -->      
+    <div class="tab"> 
+      <a href="javascript:void(0);">推荐</a>               
+      <a href="javascript:void(0);">排行</a>     
       <a href="javascript:void(0);">最新</a>   
-      <a href="javascript:void(0);">完成</a>   
-    </div>  
-    <div class="top-line"></div> 
-         
+      <a href="javascript:void(0);">完成</a>      
+    </div><div></div> 
+
     <!-- 项目推荐 -->  
     <div class="tuijian">
-      <div class="main">                                 
-        <!-- 视频 -->     
-        <img src="images/index/shipin.png" class="am-img-responsive video"/>         
-        <img src="images/index/shipinmengban@2x.png" class="am-img-responsive zhezhao"/>    
-        <img src="images/index/shipin_btn.png" class="am-img-responsive play"/>
-        <!-- 概况 -->
-        <img src="images/index/img1.png" class="am-img-responsive intro"/>
-        <span class="intro-title">某某某音乐会</span>
-        <div class="intro-line"></div> 
-        <div class="intro-content">
-          <img src="images/index/mubiao.png" class="am-img-responsive"/>
-          <span>目标1500</span>
-          <img src="images/index/yichou.png" class="am-img-responsive" style="margin-left:2rem;"/>
-          <span style="margin-right: 2rem;">已筹200</span>
-          <img src="images/index/shengyu.png" class="am-img-responsive"/>
-          <span>剩余8天</span> 
-        </div>
-        <a href="item.html">
-          <img src="images/index/support.png" class="am-img-responsive intro-support"/>
-        </a>
-      </div>
-    </div>
-
+      <!-- 视频 -->     
+      <img src="imgs/index/shipintupian@2x.png" class="am-img-responsive"/>    
+      <img src="imgs/index/shipinmengban@2x.png" class="am-img-responsive"/>
+      <img src="imgs/index/shipin@2x.png" class="am-img-responsive"/> 
+      <div class="video">
+        <video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls">不支持该格式!</video>     
+      </div>  
+      <img src="imgs/index/tupian1@2x.png" class="am-img-responsive"/> 
+      <img src="imgs/index/tupianmengban-@2x.png" class="am-img-responsive"/>  
+      <span>薛之谦音乐会</span>    
+      <div class="intro">   
+        <img src="imgs/index/mubiao-@2x.png" class="am-img-responsive"/>        
+        <span>目标1500</span>   
+        <img src="imgs/index/yichou@2x.png" class="am-img-responsive"/>   
+        <span>已筹200</span>
+        <img src="imgs/index/shengyu@2x.png" class="am-img-responsive"/>      
+        <span>剩余8天</span>  
+      </div> 
+      <a href="item.html">
+        <img src="imgs/index/zhichi-@2x.png" class="am-img-responsive"/>
+      </a>
+    </div>  
+    
     <!-- 项目排行 -->    
-    <div class="paihang">
+    <div class="paihang">     
       <!-- 内容列表 -->
-      <div class="am-list-news-bd"><ul class="am-list"></ul></div>
+      <div class="am-list-news-bd"><ul class="am-list"></ul></div>       
     </div>
 
     <!-- 最新项目 --> 
-    <div class="zuixin"><div class="zuixin-item"></div></div>
+    <div class="zuixin"><div class="zuixin-list"></div></div>
 
     <!-- 成功项目 -->
     <div class="success">
       <!-- 内容列表 -->
       <div class="am-list-news-bd"><ul class="am-list"></ul></div>
     </div>
-
-  </div>
    
+  </div>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script src="js/public.js"></script>
+<script src="js/index.js"></script>   
 </body>
 </html>
