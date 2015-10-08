@@ -77,6 +77,10 @@ function setEleLocation(){
       curVideoDiv.css("display", "block");    
     })  
   })  
+  // 个人信息栏列表
+  if(browser.versions.android){
+    alert("android");
+  }
 }
 
 /**
