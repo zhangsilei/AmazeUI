@@ -155,9 +155,9 @@ function changeTab(tabs, currentTab){
         "<a class='paihang-support' href='item.html'>立即支持</a>" +
         "</div></li>"
       );
-      // Hack一下箭头的位置  
+      // Hack一下箭头的位置
       var pArrow = $(".paihang-jiantou");
-      browser.versions == "android" ? alert("android") : null;
+      browserType("UCBrowser") ? alert("UC") : null;
     }
   }else if(currentTab.html() == "最新"){     // 最新Tab
 
@@ -202,7 +202,7 @@ function changeTab(tabs, currentTab){
       );
       // Hack一下箭头的位置   
       var sArrow = $(".success-jiantou");
-      browser.android ? sArrow.css("top", "1.4rem") : null;
+      browserType("UCBrowser") ? sArrow.css("top", "1.4rem") : null;
     } 
   }
 }
