@@ -212,13 +212,14 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	-webkit-transform: translate(-50%);
 	-ms-transform: translate(-50%);
 	-moz-transform: translate(-50%);
-	-o-transform: translate(-50%);
+	-o-transform: translate(-50%);  
 }
 .tuijian > img:nth-child(3){     /* 播放按钮 */
 	width: 6rem;    
-	height: 6rem;      
+	height: 6rem;     
+	display: none;    
 }
-.video{     
+.video{       
 	display: none;
 	position: absolute;
 	top: 0rem;    
@@ -229,6 +230,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	font-size: 1.8rem;      
 	margin-top: 8%; 
 	border-bottom: .1rem solid #ccccce; 
+	display: none;
 }   
 .intro{     /* 概况内容 */
 	width: 100%;
@@ -238,7 +240,8 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	position: absolute;
 	left: 0rem;
 	top: 0rem;
-	margin-top: 8%;
+	margin-top: 8%;  
+	display: none;
 }
 .intro img{    
 	display: inline-block;
@@ -253,6 +256,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	width: 4.48rem;
 	height: 5.12rem;
 	margin-top: 5%; 
+	display: none;
 }
 /* 项目排行样式 */
 .paihang-poster,.success-poster{
@@ -289,8 +293,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: #1dbcd2;
 }
 .paihang-jiantou,.success-jiantou{
-	background: red;
-	width: 1.2rem;         
+	width: 1.2rem;            
 	height: 1.2rem;       
 	position: absolute;      
 	top: 1rem;     

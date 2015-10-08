@@ -1,5 +1,4 @@
 window.onload = function(){
-  setEleLocation();     // 定位部分元素位置
   loginSucView("result");      
 
   // 顶部选项卡切换 
@@ -25,6 +24,7 @@ window.onload = function(){
     }
   })
 
+  setEleLocation();     // 定位部分元素位置
 }
 
 // 浏览器窗口缩放时
@@ -58,15 +58,15 @@ function setEleLocation(){
     var picZhezhao = $(this).find("img").eq(4);     
     var introTitle = $(this).find("span").eq(0);  
     // 设置每个播放按钮的位置
-    curPlay.css("top", (curPoster.height() - curPlay.height()) / 2);  
+    curPlay.css("top", (curPoster.height() - curPlay.height()) / 2).css("display", "block");  
     // 设置每个图片蒙版的位置
     picZhezhao.css("top", curPoster.height());
     // 设置每个概况标题的位置
-    introTitle.css("top", curPoster.height());   
+    introTitle.css("top", curPoster.height()).css("display", "block");   
     // 设置每个概况内容的位置
-    intro.css("top", parseInt(introTitle.css("top")) + introTitle.height() + parseInt(introTitle.css("marginTop"))); 
+    intro.css("top", parseInt(introTitle.css("top")) + introTitle.height() + parseInt(introTitle.css("marginTop"))).css("display", "block"); 
     // 设置每个支持按钮的位置
-    support.css("top", parseInt(intro.css("top")) + intro.height() + parseInt(intro.css("marginTop")));
+    support.css("top", parseInt(intro.css("top")) + intro.height() + parseInt(intro.css("marginTop"))).css("display", "block");
     // 视频播放事件  
     curPlay.click(function(){ 
       // 先隐藏不必要的元素   
