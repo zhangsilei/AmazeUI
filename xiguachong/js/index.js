@@ -157,7 +157,7 @@ function changeTab(tabs, currentTab){
       );
       // Hack一下箭头的位置  
       var pArrow = $(".paihang-jiantou");
-      browser.android ? pArrow.css("top", "1.4rem") : null;
+      browser.versions == "android" ? alert("android") : null;
     }
   }else if(currentTab.html() == "最新"){     // 最新Tab
 
