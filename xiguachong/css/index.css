@@ -141,36 +141,17 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }
 .user-title{
 	font-size: 1.6rem;       
-	color: #ccc;        
+	color: #ccc;     
 }
 .right-nav{  
 	height: 14rem;
-	width: 14rem;  
-	position: relative;
-	background: red;
+	width: 15rem;   
 }
-.right-nav li:nth-of-type(1),     /* 微信登录 */
-.right-nav li:nth-of-type(2),     /* 手机登录 */
-.right-nav li:nth-of-type(3),     /* QQ登录 */
-.right-nav li:nth-of-type(4){     /* 注册账号 */
-	width: 9rem;
-	line-height: 3.5rem;      
-	position: absolute;   
-	left: 50%;
-	top: 0rem;
-	transform: translate(-50%);
-	/* float: left; */
-	/* margin-left: .4rem;  */  
+.right-nav li{
+	line-height: 3.5rem;
+	float: left;
+	margin-left: .5rem;   
 }    
-.right-nav li:nth-of-type(2){
-	top: 3.5rem;
-}
-.right-nav li:nth-of-type(3){
-	top: 7rem;
-}
-.right-nav li:nth-of-type(4){
-	top: 10.5rem;
-}
 .right-nav span{
 	font-size: 1.6rem;   
 	margin-left: .5rem;  
