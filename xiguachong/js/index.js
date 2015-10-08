@@ -156,8 +156,7 @@ function changeTab(tabs, currentTab){
         "</div></li>"
       );
       // Hack一下箭头的位置
-      var pArrow = $(".paihang-jiantou");
-      browserType("UCBrowser") ? alert("UCCCC") : null;
+      browserType("UCBrowser") ? $(".paihang-jiantou").css("top", "1.2rem") : null;
     }
   }else if(currentTab.html() == "最新"){     // 最新Tab
 
@@ -195,14 +194,13 @@ function changeTab(tabs, currentTab){
         "<p class='success-title'>薛之谦演唱会</p>" +
         "<div class='success-content'>" +
         "<span>目标: 1500</span><span>已筹: 200</span>" +   
-        "<span>时间: 6天</span><span>用时: 4天</span></div>" +        
+        "<span>时间: 6天</span><span>用时: 4天</span></div>" +           
         "<img class='success-icon' src='imgs/wancheng/chenggong.png'>" +              
         "<span class='success-ok'>已完成</span>" +         
         "<img class='success-jiantou' src='imgs/wancheng/xiayiji@2x.png'></div></li>"    
       );
       // Hack一下箭头的位置   
-      var sArrow = $(".success-jiantou");
-      browserType("UCBrowser") ? sArrow.css("top", "1.2rem") : null;  
+      browserType("UCBrowser") ? $(".success-jiantou").css("top", "1.2rem") : null;  
     } 
   }
 }
