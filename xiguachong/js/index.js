@@ -134,8 +134,8 @@ function changeTab(tabs, currentTab){
 
     // 显示当前内容
     (paihang.css("display") == "none") ? paihang.css("display","block") : null;    
-    if($(".paihang ul").html() == "" || $(".paihang ul").html() == null){
-      paihang.css("display","block");
+    if($(".paihang ul").html() == "" || $(".paihang ul").html() == null){   
+      paihang.css("display","block");       
       $(".paihang ul").append(
         "<li class='am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left'style='background: #202020;'>" +
         "<div class='am-u-sm-4 am-list-thumb'>" +
@@ -157,7 +157,7 @@ function changeTab(tabs, currentTab){
       );
       // Hack一下箭头的位置
       var pArrow = $(".paihang-jiantou");
-      browserType("UCBrowser") ? alert("UC") : null;
+      browserType("UCBrowser") ? alert("UCCCC") : null;
     }
   }else if(currentTab.html() == "最新"){     // 最新Tab
 
@@ -202,7 +202,7 @@ function changeTab(tabs, currentTab){
       );
       // Hack一下箭头的位置   
       var sArrow = $(".success-jiantou");
-      browserType("UCBrowser") ? sArrow.css("top", "1.4rem") : null;
+      browserType("UCBrowser") ? sArrow.css("top", "1.2rem") : null;  
     } 
   }
 }
