@@ -16,7 +16,7 @@ var browser={
             iPad: u.indexOf('iPad') > -1, //是否iPad
             webApp: u.indexOf('Safari') == -1 //是否web应该程序，没有头部与底部
         };
-    }(),
+    }(),  
     language:(navigator.browserLanguage || navigator.language).toLowerCase()
 };
 
@@ -24,9 +24,18 @@ var browser={
  * 获取请求url的参数
  * @param  [varname] [description]{string} name 参数名
  */
-function GetQueryString(name){
+function getQueryString(name){
     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
     if(r!=null)return  unescape(r[2]); return null;
+}
+    
+/**  
+ * 检测浏览器类型
+ * @param {String} browserStr 浏览器标志字符串   
+ * @return {boolean}     
+ */    
+function browserType(browserStr){     
+    return (navigator.userAgent.indexOf(browserStr) != -1) ? true: false;
 }
 

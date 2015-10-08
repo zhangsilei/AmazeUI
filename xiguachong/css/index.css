@@ -285,7 +285,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: #1dbcd2;
 }
 .paihang-jiantou,.success-jiantou{
-	width: 1.2rem;
+	width: 1.2rem;   
 	height: 1.2rem;
 	position: absolute; 
 	top: 1.1rem;   

@@ -15,19 +15,13 @@ window.onload = function(){
     // 显示点击的选项卡    
     var tab = $(this).children("span");
     if(tab.html() == "推荐项目"){     // 推荐项目  
-      //changeTab(tabs, );    
-
-      changeTabName(tabs.eq(0));   
-      changeTabContent("推荐");   
+      changeTab(tabs, $(".tab > a:contains('推荐')"));    
     }else if(tab.html() == "排行榜"){     // 排行榜    
-      changeTabName(tabs.eq(1));
-      changeTabContent("排行");
+      changeTab(tabs, $(".tab > a:contains('排行')"));    
     }else if(tab.html() == "最新项目"){     // 最新项目
-      changeTabName(tabs.eq(2));
-      changeTabContent("最新");
+      changeTab(tabs, $(".tab > a:contains('最新')"));
     }else if(tab.html() == "完成项目"){     // 完成项目   
-      changeTabName(tabs.eq(3));
-      changeTabContent("完成");     
+      changeTab(tabs, $(".tab > a:contains('完成')"));
     }
   })
 
@@ -35,7 +29,7 @@ window.onload = function(){
 
 // 浏览器窗口缩放时
 $(window).resize(function(){
-   setEleLocation();   
+  setEleLocation();     
 })
 
 /**
@@ -129,8 +123,8 @@ function changeTab(tabs, currentTab){
         "<span>剩余8天</span></div>" +
         "<img src='images/index/support.png' class='am-img-responsive intro-support'/>"
       );
-      setEleLocation();
     }
+    setEleLocation();    
   }else if(currentTab.html() == "排行"){     // 排行Tab  
 
     // 隐藏其它内容而不是删除节点
@@ -147,19 +141,23 @@ function changeTab(tabs, currentTab){
         "<div class='am-u-sm-4 am-list-thumb'>" +
         "<img src='imgs/paihang/tupian@2x.png' class='am-img-responsive paihang-poster'/></div>" +
         "<div class='am-u-sm-8 am-list-main'>" +
-        "<p class='paihang-title'>2015年周杰伦世界巡回演唱会-南京站</p>" +   
+        "<p class='paihang-title'>2015年周杰伦世界巡回演唱会-南京站</p>" +
+        "<img class='paihang-jiantou' src='imgs/paihang/xiayiji@2x.png'>" +   
         "<div class='paihang-content'>" + 
         "<span>目标1500</span>" +      
-        "<span>已筹200</span>" +   
+        "<span>已筹200</span>" +        
         "<span>剩余8天</span></div>" +   
-        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +    
-        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" + 
+        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +         
+        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +      
         "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +     
         "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
         "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
         "<a class='paihang-support' href='item.html'>立即支持</a>" +
-        "<img class='paihang-jiantou' src='imgs/paihang/xiayiji@2x.png'></div></li>"
+        "</div></li>"
       );
+      // Hack一下箭头的位置
+      var pArrow = $(".paihang-jiantou");
+      browserType("Firefox") ? pArrow.css("top", "1.4rem") : null;
     }
   }else if(currentTab.html() == "最新"){     // 最新Tab
 
@@ -198,10 +196,13 @@ function changeTab(tabs, currentTab){
         "<div class='success-content'>" +
         "<span>目标: 1500</span><span>已筹: 200</span>" +   
         "<span>时间: 6天</span><span>用时: 4天</span></div>" +        
-        "<img class='success-icon' src='imgs/wancheng/chenggong.png'>" +           
+        "<img class='success-icon' src='imgs/wancheng/chenggong.png'>" +              
         "<span class='success-ok'>已完成</span>" +         
         "<img class='success-jiantou' src='imgs/wancheng/xiayiji@2x.png'></div></li>"    
       );
+      // Hack一下箭头的位置   
+      var sArrow = $(".success-jiantou");
+      browserType("Firefox") ? sArrow.css("top", "1.4rem") : null;
     } 
   }
 }
@@ -211,7 +212,7 @@ function changeTab(tabs, currentTab){
  * @param  {string} name 登陆成功返回的标记    
  */
 function loginSucView(name){
-  var result = GetQueryString(name);
+  var result = getQueryString(name);
   if(result != null && result != ""){
     if(result == "success"){
       $("#rightside .user-header").attr("src","images/introduce/touxiang.png");
