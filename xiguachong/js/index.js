@@ -156,7 +156,7 @@ function changeTab(tabs, currentTab){
         "</div></li>"
       );
       // Hack一下箭头的位置
-      browserType("UCBrowser") ? $(".paihang-jiantou").css("top", "1.3rem") : null;  
+      browserType("UCBrowser") ? $(".paihang-jiantou").css("top", "1.2rem") : null;
     }
   }else if(currentTab.html() == "最新"){     // 最新Tab
 
@@ -200,7 +200,7 @@ function changeTab(tabs, currentTab){
         "<img class='success-jiantou' src='imgs/wancheng/xiayiji@2x.png'></div></li>"    
       );
       // Hack一下箭头的位置   
-      browserType("UCBrowser") ? $(".success-jiantou").css("top", "1.3rem") : null;  
+      browserType("UCBrowser") ? $(".success-jiantou").css("top", "1.2rem") : null;  
     } 
   }
 }
