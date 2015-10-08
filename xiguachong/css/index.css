@@ -150,7 +150,8 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 .right-nav li{
 	line-height: 3.5rem;
 	float: left;
-	margin-left: .7rem;   
+	margin-left: .7rem;
+	margin-bottom: .3rem;   
 }    
 .right-nav span{
 	font-size: 1.6rem;   
