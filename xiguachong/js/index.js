@@ -33,7 +33,7 @@ $(window).resize(function(){
 })
 
 /**
- * 部分元素的样式用js控制
+ * 部分元素的样式用js来hack
  */  
 function setEleLocation(){
   var poster = $(".tuijian > img:eq(0)");
@@ -207,43 +207,43 @@ function changeTab(tabs, currentTab){
 
 /**
  * 登陆成功时，操作DOM改变右边栏内容   
- * @param  {string} name 登陆成功返回的标记    
+ * @param {string} name 登陆成功返回的标记    
  */
 function loginSucView(name){
   var result = getQueryString(name);
-  if(result != null && result != ""){
+  if(result != null && result != ""){  
     if(result == "success"){
-      $("#rightside .user-header").attr("src","images/introduce/touxiang.png");
-      $("#rightside .user-name").html("我叫小姜姜");
+      $("#rightside .user-header").attr("src","imgs/index/touxiang@2x.png");
+      $("#rightside .user-title").html("我叫小姜姜");
       // 我的资料
-      var myInfo = $(".right-nav a:eq(0)");
-      change(myInfo,"images/personal/gerenziliao.png","我的资料");   
+      var myInfo = $(".right-nav a:eq(0)");   
+      change(myInfo,"imgs/index/gerenziliao-@2x.png","我的资料");   
       myInfo.attr("href","myInfo.html");
-      // 我的钱包
+      // 我的钱包   
       var myWallet = $(".right-nav a:eq(1)");
-      change(myWallet,"images/personal/zhongchoujilu.png","我的钱包");      
+      change(myWallet,"imgs/index/wodeqianbao-@2x.png","我的钱包");      
       myWallet.attr("href","myWallet.html");
       // 我的收藏       
       var myLove = $(".right-nav a:eq(2)");
-      change(myLove,"images/personal/zhongchoujilu.png","我的收藏");
+      change(myLove,"imgs/index/wodeshoucang-@2x.png","我的收藏");
       myLove.attr("href","myLove.html");   
       // 插入“我的订单”节点
       $(".right-nav li:eq(2)").after(
         "<li><a href='##'>" +
-        "<img src='images/personal/zhongchoujilu.png'> " +  
+        "<img src='imgs/index/wodedingdan@2x.png'> " +  
         "<span>我的订单</span>" +
         "</a></li>"
       );
       // 插入“分享有礼”节点
       $(".right-nav li:eq(3)").after(
         "<li><a href='share.html'>" +
-        "<img src='images/personal/zhongchoujilu.png'> " +  
+        "<img src='imgs/index/fenxiangyouli-@2x.png'> " +  
         "<span>分享有礼</span>" +
         "</a></li>"
       );
       // 退出登录
       var logout = $(".right-nav a:eq(5)");  
-      change(logout,"images/personal/zhongchoujilu.png","退出登录");
+      change(logout,"imgs/index/tuichudenglu-@2x.png","退出登录");
       logout.attr("href","##");    
     }else{
       // 登陆失败
