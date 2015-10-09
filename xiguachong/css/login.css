@@ -1,21 +1,73 @@
+*{
+	font-family: "STXihei","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self"; 
+	color: #fff;
+}
+:root{
+	background: #202020;
+}
+/**
+ * 页头
+ */
+.am-header{
+	background: #1dbcd2;    
+}    
+.am-header-title > span{      
+	font-size: 1.8rem;       
+}
+/**
+ * 内容块
+ */
+#content{
+	background: #202020;    
+	padding-top: 3rem;
+	margin: 0rem auto;
+}
+.logo{
+	width: 13.88rem;     
+	height: 4.58rem;
+	margin: 0rem auto;
+	margin-bottom: 2rem;    
+}  
+#content input{
+	background: #202020;
+	margin: 0rem auto;
+	width: 80%;
+	max-width: 40rem;     
+	height: 3.5rem;   
+	margin-bottom: 1rem;  
+	border: .1rem solid #666;        
+	font-size: 1.5rem;
+}
+.btn,.btn:focus,.btn:active{  
+	background: #1dbcd2;
+	border: none;
+	width: 80%;
+	max-width: 40rem;
+	height: 3.5rem;
+	margin: 0rem auto;
+	margin-top: 2rem;
+	font-size: 1.8rem;
+	color: #fff;
+	outline: none;
+}
+
 .phone,.pwd{
 	position: relative;
 }
-.phone img,.pwd img{
-	position: absolute;
-	top: 0rem;
+.phone img,    
+.pwd img{    
+	position: absolute;        
+	top: .8rem;
 	left: 0rem;
 	width: 1.8rem;
 	height: 1.8rem;
-	margin-top: .6rem;
+	display: none;
 }
-.register{
-	color: #fff;
+#content > a{     /* 注册账号 */
+	color: #ccc;
 	display: block;
-	max-width: 7rem;
 	margin: 0rem auto;
 	text-align: center;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 	margin-top: 1rem;
-	opacity: .9;
 }

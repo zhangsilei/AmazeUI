@@ -62,7 +62,7 @@ function setEleLocation(){
     // 设置每个图片蒙版的位置
     picZhezhao.css("top", curPoster.height());
     // 设置每个概况标题的位置
-    introTitle.css("top", curPoster.height()).css("display", "block");   
+    introTitle.css("top", curPoster.height()).css("display", "block");        
     // 设置每个概况内容的位置
     intro.css("top", parseInt(introTitle.css("top")) + introTitle.height() + parseInt(introTitle.css("marginTop"))).css("display", "block"); 
     // 设置每个支持按钮的位置

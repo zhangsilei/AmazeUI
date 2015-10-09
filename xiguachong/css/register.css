@@ -1,55 +1,72 @@
 *{
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	font-family: "STXihei","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self"; 
+	color: #fff;
 }
-.content-header{
-	background: #2BC0D4;
+:root{
+	background: #202020;
 }
-.title{
-	font-size: 1.6rem;
+/**
+ * 页头
+ */
+.am-header{
+	background: #1dbcd2;    
+}    
+.am-header-title > span{      
+	font-size: 1.8rem;       
 }
+/**
+ * 内容块
+ */
 #content{
-	background: #333;
+	background: #202020;    
 	padding-top: 3rem;
-	height: 35rem;     /* 暂时写死 */
+	margin: 0rem auto;
 }
 .logo{
-	width: 12.22rem; 
-	height: 4.03rem; 
+	width: 13.88rem;     
+	height: 4.58rem;
 	margin: 0rem auto;
-	margin-bottom: 2rem;
+	margin-bottom: 2rem;    
 }
-#content input{
+#content > input,
+.validate input{
+	background: #202020;
 	margin: 0rem auto;
 	width: 80%;
+	max-width: 40rem;     
+	height: 3.5rem;   
 	margin-bottom: 1rem;  
-	background: #333;
-	border: .1rem solid #999;
-	color: #fff;
-	opacity: .7;
-	font-size: 1.2rem;
-	height: 3.09rem;
+	border: .1rem solid #666;        
+	font-size: 1.5rem;
 }
-.validate{
-	font-size: 1.4rem;
-	width: 80%;   
-	margin: 0rem auto;
+.validate{   
+	font-size: 1.5rem;
+	width: 80%;      
+	max-width: 40rem;   
+	margin: 0rem auto;        
 }   
-.validate button{
-	width: 35%;
-	height: 3.09rem;
+.validate input{        
+	width: 65%;    
+	float: left;        
+}
+.validate button{    
+	width: 35%;   
+	height: 3.5rem;
 	border: none;
 	min-width: 7rem;
 	background: #666;
-	color: #fff;
+	color: #ccc;
 	outline: none;
 }
 .btn,.btn:focus,.btn:active{  
-	background: #2BC0D4;
+	background: #1dbcd2;
 	border: none;
 	width: 80%;
+	max-width: 40rem;
+	height: 3.5rem;
 	margin: 0rem auto;
 	margin-top: 2rem;
-	height: 3.09rem;
+	font-size: 1.8rem;
 	color: #fff;
 	outline: none;
 }
