@@ -1,40 +1,42 @@
 *{
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	font-family: "STXihei","Arial","Microsoft Yahei","Helve","Simsun,sans-self"; 
+	color: #fff;
+	outline: none;
+}
+:root{
+	background: #202020;
 }
 /**
  * 页头
  */
-.content-header{
-	background: #2BC0D4;
-}
-.title{
-	font-size: 1.6rem;
+.am-header{
+	background: #1dbcd2;    
+}    
+.am-header-title > span{      
+	font-size: 1.8rem;       
 }
 /**
  * 内容块
  */
 #content{
-	background: #333;
+	background: #f5f5f5;
 	height: 100%;
 }
 .inuse,.used,.passed{
 	float: left;
 	width: 33.33%;
-	height: 3rem;
+	height: 3.5rem;
 	text-align: center;
-	border-bottom: .1rem solid #2BC0D4;
-	color: #2BC0D4;
-	padding-top: .5rem;
+	border-bottom: .3rem solid #2bbccf;
+	font-size: 1.6rem;
+	color: #2abdcf;
+	padding-top: .7rem;
+	background: #202020;
 }
-.used{
+.used,.passed{
 	border: none;
 	color: #fff;
-}
-.passed{
-	border: none;
-	color: #fff;
-}
-
+}  
 .card{
 	width: 90%;
 	height: 10rem;
@@ -42,39 +44,46 @@
 	margin: 1rem auto;
 	border-radius: .5rem;
 }
-.top{
+.card > div:first-child{     /* 代金券头 */
 	background: #2BC0D4;
 	color: #fff;
-	border-top-left-radius: .5rem;
-	border-top-right-radius: .5rem;
+	border-radius: .5rem .5rem 0rem 0rem;
 	height: 70%;
-	font-size: 1.5rem;
 }
-.card-title{
+.card > div:first-child p{     /* 演唱会代金券 */
 	margin: 1rem 0rem 0rem 1rem;
-}
-.top img{
-	width: 2rem;
-	height: 2rem;
+	padding: .8rem 0rem 0rem .5rem;
+	font-size: 1.6rem;
+} 
+.card > div:first-child img{     /* logo */
+	width: 2.5rem;
+	height: 2.5rem;
 	float: right;
-	margin-right: 1rem;
-	margin-top: 3rem;
+	margin: 1rem 1rem 0rem 0rem;
 }
-.number{
-	font-size: 5rem;
+.card > div:first-child span{     /* 代金券金额 */
+	font-size: 4.5rem;
 	float: right;
-	margin-right: 1rem;
+	margin: -1rem 1rem 0rem 0rem;
 }
-.bottom{
-	background: #fff;  
-	border-bottom-left-radius: .5rem;  
-	border-bottom-right-radius: .5rem;
-	position: relative;
-	top: .5rem;
-	
+.card > div:last-child{     /* 代金券底 */
+	background: #fff;   
+	border-radius: 0rem 0rem .5rem .5rem;
 }
-.bottom span{
-	font-size: 1.4rem;
-	color: #999;
-	position: absolute;
+.card > div:last-child span{
+	font-size: 1.3rem; 
+	color: #a7a7a7; 
+}
+.card > div:last-child span:first-child{     /* 使用期限 */
+	float: left;
+	margin: .8rem 0rem 0rem 1rem;
+}
+.card > div:last-child span:nth-child(2){     /* 期限时间 */
+	display: inline-block;
+	margin-top: .9rem;
+}
+.card > div:last-child span:last-child{     /* 使用规则 */
+	float: right;
+	margin: -1.8rem 1rem 0rem 0rem;
+	color: #ff971a;
 }

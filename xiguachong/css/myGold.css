@@ -85,11 +85,12 @@
 	background: #3d3d3d;
 }  
 #content > div:nth-of-type(2) span{     /* 积分明细 */
-	color: #999;
+	color: #999;   
 	margin: 0rem .5rem;
 }
 .item{
 	width: 90%;
+	max-width: 56rem;
 	height: 6rem;
 	margin: 0rem auto;
 	border-bottom: .1rem solid #3d3d3d;
@@ -101,7 +102,7 @@
 	color: #ccc;
 }
 .item span:nth-of-type(2){
-	font-size: 1.8rem;
+	font-size: 1.7rem;
 	font-family: "Helvetica Neue","Regular";
 }
 .item span:nth-of-type(3){

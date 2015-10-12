@@ -214,6 +214,9 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	-moz-transform: translate(-50%);
 	-o-transform: translate(-50%);  
 }
+.tuijian > img:nth-of-type(5){     /* 图片蒙版 */
+	display: none;
+}
 .tuijian > img:nth-child(3){     /* 播放按钮 */
 	width: 6rem;    
 	height: 6rem;     
