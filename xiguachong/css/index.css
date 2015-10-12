@@ -72,7 +72,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 .left-bottom:nth-of-type(2){
 	margin-top: 2.5rem;
 }
-.am-offcanvas-content:nth-child(1) > div:nth-of-type(1){
+.am-offcanvas-content:nth-child(1) > div:nth-of-type(1){   
 	margin: 20% 0rem 1rem 0rem; 
 }
 .left-bottom img{

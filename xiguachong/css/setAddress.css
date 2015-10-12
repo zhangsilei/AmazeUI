@@ -1,32 +1,34 @@
 *{
-	font-family: "STHeiti","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self";
+	font-family: "STXihei","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self"; 
 	color: #fff;
+	outline: none;
 }
-body{
-	background: #333;
+:root{
+	background: #202020;
 }
 /**
  * 页头
  */
-.content-header{
-	background: #2BC0D4;
-}
-.title{
-	font-size: 1.6rem;
+.am-header{
+	background: #1dbcd2;    
+}    
+.am-header-title > span{      
+	font-size: 1.8rem;       
 }
 /**
  * 内容块
  */
 #content{
-	background: #333;
-	height: 100%;
+	background: #202020;
 	padding: 4rem 2rem 0rem;
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 }
 .address-info{
-	max-width: 60rem;
-	margin: 0rem auto;
-	margin-bottom: 10rem;
+	max-width: 40rem;
+	margin: 0rem auto 10rem;
+}
+.address-info div span:nth-of-type(2){
+	float: right;  
 }
 .address-info hr{ 
 	margin-top: .5rem;
@@ -35,13 +37,12 @@ body{
 	margin-top: -.5rem; 
 }
 .btn,.btn:focus,.btn:active{  
-	background: #2BC0D4;
+	background: #1dbcd2;
 	border: none;
 	width: 100%;
-	max-width: 60rem;
-	margin: 0rem auto;
-	margin-top: 2rem;
-	height: 3.09rem;
+	max-width: 40rem;
+	height: 3.5rem;
+	margin: 2rem auto 0rem;
+	font-size: 1.8rem;
 	color: #fff;
-	outline: none;
 }

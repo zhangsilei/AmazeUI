@@ -1,6 +1,7 @@
 *{
 	font-family: "STXihei","Arial","Microsoft Yahei","Hiragino Sans GB","Simsun,sans-self"; 
 	color: #fff;
+	outline: none;
 }
 :root{
 	background: #202020;
@@ -56,7 +57,6 @@
 	min-width: 7rem;
 	background: #666;
 	color: #ccc;
-	outline: none;
 }
 .btn,.btn:focus,.btn:active{  
 	background: #1dbcd2;
@@ -68,5 +68,4 @@
 	margin-top: 2rem;
 	font-size: 1.8rem;
 	color: #fff;
-	outline: none;
 }
