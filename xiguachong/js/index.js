@@ -178,7 +178,7 @@ function changeTab(tabs, currentTab){
     }
   }else if(currentTab.html() == "完成"){     // 完成Tab
 
-    // 隐藏其它内容
+    // 隐藏其它内容   
     tuijian.css("display","none"); 
     paihang.css("display","none");   
     zuixin.css("display","none");
