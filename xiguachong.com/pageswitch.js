@@ -17,7 +17,7 @@
 	var opts = {},
 		canScroll = true;
 
-	var iIndex = 0;
+	var iIndex = 0;   
 
 	var arrElement = [];
 
@@ -42,37 +42,37 @@
 
 			if(opts.keyboard){
 				keyDown();
-			}
+			}  
 		});
 	}
 
 	//滚轮向上滑动事件
 	SP.moveSectionUp = function(){
 		if(iIndex){
-			iIndex--;
-		}else if(opts.loop){
+			iIndex--;  
+			scrollPage(arrElement[iIndex]); 
+		}else if(opts.loop){  
 			iIndex = arrElement.length-1;
 		}
-		scrollPage(arrElement[iIndex]);
 	};
 
 	//滚轮向下滑动事件
 	SP.moveSectionDown = function(){
-		if(iIndex<(arrElement.length-1)){
-			iIndex++;
-		}else if(opts.loop){
-			iIndex = 0;
-		}
-		scrollPage(arrElement[iIndex]);
-	};
+		if(iIndex<(arrElement.length-1)){    
+			iIndex++;  
+			scrollPage(arrElement[iIndex]); 
+		}else if(opts.loop){     
+			iIndex = 0;      
+		}   
+	};   
 
 	//私有方法
-	//页面滚动事件
+	//页面滚动事件   
 	function scrollPage(element){
-		var dest = element.position();
-		if(typeof dest === 'undefined'){ return; }
-		initEffects(dest,element);
-	}
+		var dest = element.position();   
+		if(typeof dest === 'undefined'){ return; }     
+		initEffects(dest,element);    
+	}    
 
 	//重写鼠标滑动事件
 	$(document).on("mousewheel DOMMouseScroll", MouseWheelHandler);
@@ -81,10 +81,22 @@
 		var value = e.originalEvent.wheelDelta || -e.originalEvent.detail;
 		var delta = Math.max(-1, Math.min(1, value));
 		if(canScroll){
-			if (delta < 0) {
-				SP.moveSectionDown();
+			if (delta < 0) {    
+				SP.moveSectionDown();         
+				/*$("#pages > li").each(function(index){
+					if($(this).attr("class") == "active"){
+						$(this).removeClass("active");
+					}
+				}); */
+				$("#pages > li").eq(iIndex).addClass("active");
 			}else {
 				SP.moveSectionUp();
+				/*$("#pages > li").each(function(index){
+					if($(this).attr("class") == "active"){         
+						$(this).removeClass("active");   
+					}
+				});  
+				$("#pages > li").eq(iIndex).addClass("active");*/
 			}
 		}
 		return false;
@@ -107,18 +119,18 @@
 		}
 		var pageHtml = '<ul id="pages"><li class="active"></li>';
 		for(var i=1;i<length;i++){
-			pageHtml += '<li></li>';
+			pageHtml += '<li></li>';  
 		}
-		pageHtml += '</ul>';
+		pageHtml += '</ul>';  
 		$("body").append(pageHtml);
 	}
 
 	//分页事件
-	function paginationHandler(){
+	function paginationHandler(){  
 		var pages = $("#pages li");
 		pages.eq(iIndex).addClass("active").siblings().removeClass("active");
 	}
-
+ 
 	//是否支持css的某个属性
 	function isSuportCss(property){
 		var body = $("body")[0];
@@ -189,9 +201,9 @@
 		}
 		if(iIndex){
 			paginationHandler();
-			var cuerrentElement = arrElement[iIndex],
+			var cuerrentElement = arrElement[iIndex],  
 				dest = cuerrentElement.position();
-			initEffects(dest,cuerrentElement);
+			initEffects(dest,cuerrentElement);  
 		}
 	}
 

@@ -1,128 +1,100 @@
 h1,body,html{
-			padding: 0;
-			margin: 0;
-		}
-		html,body{
-			height: 100%;
-			overflow: hidden;
-		}
-		#container,.section{
-			height: 100%;
-			position: relative; 
-		}
-		#section0,
-		#section1,
-		#section2,
-		#section3{
-			background-color: #000;
-			background-size: cover;
-			background-position: 50% 50%;
-		}
-		#section0{
-			background-image: url(imgs/beijing-1.png);
-			color: #fff;
-		}
-		#section1{  
-			background: #00c2eb;      
-			color: #fff;
-		}         
-		#section2{
-			background-image: url(imgs/beijing-3.png);  
-			color: #fff;
-		}
-		#section3{
-			background-image: url(imgs/beijing-4.png);  
-			color: #fff;
-		}
-		#section0 p{
-			color: #F1FF00;
-		}
-		#section3 p{
-			color: #00A3AF;
-		}
-		.left{
-			float: left;
-		}
-		.intro{
-			position: absolute;
-			top: 50%;
-			width: 100%;
-			-webkit-transform: translateY(-50%);
-			transform: translateY(-50%);
-			text-align: center;
-		}
-		#pages{
-			position:fixed;
-			right: 10px;
-			top: 50%;
-			list-style: none;
-		}
-		#pages li{
-			width: 8px;
-			height: 8px;
-			border-radius: 50%;
-			background: #fff;
-			margin: 0 0 10px 5px;
-		}
-		#pages li.active{
-			width: 14px;
-			height: 14px;
-			border: 2px solid #FFFE00;
-			background: none;
-			margin-left: 0;
-		}
-		#section0 .title{
-			-webkit-transform: translateX(-100%);
-			transform: translateX(-100%);
-			-webkit-animation: sectitle0 1s ease-in-out 100ms forwards;
-			animation: sectitle0 1s ease-in-out 100ms forwards;
-		}
-		#section0 p{
-			-webkit-transform: translateX(100%);
-			transform: translateX(100%);
-			-webkit-animation: sec0 1s ease-in-out 100ms forwards;
-			animation: sec0 1s ease-in-out 100ms forwards;
-		}
-		@-webkit-keyframes sectitle0{
-			0%{
-				-webkit-transform: translateX(-100%);
-				transform: translateX(-100%);
-			}
-			100%{
-				-webkit-transform: translateX(0);
-				transform: translateX(0);
-			}
-		}
-		@keyframes sectitle0{
-			0%{
-				-webkit-transform: translateX(-100%);
-				transform: translateX(-100%);
-			}
-			100%{
-				-webkit-transform: translateX(0);
-				transform: translateX(0);
-			}
-		}
-		@-webkit-keyframes sec0{
-			0%{
-				-webkit-transform: translateX(100%);
-				transform: translateX(100%);
-			}
-			100%{
-				-webkit-transform: translateX(0);
-				transform: translateX(0);
-			}
-		}
-		@keyframes sec0{
-			0%{
-				-webkit-transform: translateX(100%);
-				transform: translateX(100%);
-			}
-			100%{
-				-webkit-transform: translateX(0);
-				transform: translateX(0);
-			}
-		}
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+#container,.section{
+	height: 100%;
+	position: relative; 
+}
+#section0,
+#section1,
+#section2,
+#section3{
+	background-color: #000;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+#section0{
+	background-image: url(imgs/beijing-1.png);
+	color: #fff;
+}
+#section1{  
+	background: #00c2eb;      
+	color: #fff;
+}         
+#section2{
+	background-image: url(imgs/beijing-3.png);  
+	color: #fff;
+}
+#section3{
+	background-image: url(imgs/beijing-4.png);  
+	color: #fff;
+}
+#pages{
+	position:fixed;
+	right: 10px;
+	top: 50%;  
+	list-style: none;
+}
+#pages li{
+	width: 8px;
+	height: 8px;   
+	border-radius: 50%;     
+	background: #fff;
+	margin: 0 0 10px 5px;
+	cursor: pointer;
+}
+#pages li.active{
+	width: 14px;
+	height: 14px;
+	border: 2px solid #FFF;  
+	background: none;
+	margin-left: 0;
+}
+@-webkit-keyframes sectitle0{
+	0%{
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@keyframes sectitle0{
+	0%{
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@-webkit-keyframes sec0{
+	0%{
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@keyframes sec0{
+	0%{
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
 
 
 /******************************
@@ -139,6 +111,34 @@ h1,body,html{
 img{
 	border: none;
 }
+@keyframes logo{
+	0%{
+		transform: translateY(-5px);
+		-webkit-transform: translateY(-5px);
+	}
+	50%{
+		transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+	}
+	100%{
+		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	}
+} 
+@-webkit-keyframes logo{
+	0%{
+		-webkit-transform: translateY(-5px);
+		-webkit-transform: translateY(-5px);
+	}
+	50%{
+		-webkit-transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+	}
+	100%{
+		-webkit-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	}
+}
 /* section0 */
 #header{
 	background: rgba(0, 0, 0, .5);  
@@ -154,29 +154,36 @@ img{
 #header ul{
 	line-height: 86px;
 	float: right;
-	margin-right: 10%;
+	margin-right: 10%;  
 }
 #header ul li{
 	float: left;
 	margin-right: 50px;
+	height: 60px;	
 }
 #header ul li a{
 	text-decoration: none;
 	font-family: "Microsoft Yahei";
 	font-size: 17px;
 	color: #FFF;
+	padding-bottom: 5px;
+	transition: border .5s;
+	-webkit-transition: border .5s;  
+}   
+#header ul li a:hover{
+	border-bottom: 2px solid #00c2eb;
 }
 .main{
 	width: 80%;
 	margin: 0px auto;
 	overflow: hidden;    
 	text-overflow: ellipsis;
-}
-#section0 > .main > img{     /* 手机图片 */
-	width: 588.8px;     
+}   
+#section0 > .main > img{     /* 手机图片 */  
+	width: 588.8px;       
 	height: 673.6px;
-	float: left;
-	margin: -10px 5% 0px -120px;
+	float: left;                                
+	margin: -20px 5% 0px -50px;
 }   
 .tit,
 .text1{
@@ -184,7 +191,11 @@ img{
 	font-family: "SimHei";
 	font-size: 81px;  
 	display: inline-block; 
-	margin-top: 160px;
+	margin-top: 160px; 
+	transform: translateX(-200%);
+	-webkit-transform: translateX(-200%);
+	-webkit-animation: sectitle0 1s ease-in-out 100ms forwards;
+	animation: sectitle0 1s ease-in-out 100ms forwards;
 }
 .text1,
 .text2{
@@ -195,6 +206,10 @@ img{
 .text2{
 	display: block;
 	margin-top: 20px;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-animation: sec0 1s ease-in-out 100ms forwards;
+	animation: sec0 1s ease-in-out 100ms forwards;
 }
 
 .android,
@@ -205,12 +220,22 @@ img{
 	border-radius: 5px;
 	display: inline-block;
 	vertical-align: center;
+	opacity: .8;
+	transition: transform 1s, opacity 1s;  
+	-webkit-transition: transform 1s;      
 }
-.android a,
+.android:hover,
+.ios:hover{ 
+	transform: translateY(-5px);
+	-webkit-transform: translateY(-5px);
+	opacity: 1;
+	animation: logo 1s ease-in-out 300ms forwards;
+}
+.android a,  
 .ios a{
 	width: 100%;
 	height: 100%;
-	display: block;
+	display: block;  
 	color: #FFF;
 } 
 .android{  
@@ -431,12 +456,15 @@ img{
 		margin-top: 45px;
 	}
 	.ticket{
-		margin: 70px 0px 15px 0px; 
+		margin: 70px 0px 15px 0px;   
 	}
 	.cont,.city,   
 	.cont1,.cont2,.cont3,
 	.txt1,.txt2{  
 		font-size: 40px;     
 	} 
+	.txt1{
+		margin: 90px 0px 15px 0px;
+	}
 }
 
