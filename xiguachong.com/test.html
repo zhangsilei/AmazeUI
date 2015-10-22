@@ -1,0 +1,348 @@
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Amaze UI Examples</title>
+
+  <!-- Set render engine for 360 browser -->   
+  <meta name="renderer" content="webkit">
+
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+  <link rel="icon" type="image/png" href="assets/i/favicon.png">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
+  <meta name="msapplication-TileColor" content="#0e90d2">
+
+  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+  <!--
+  <link rel="canonical" href="http://www.example.com/">
+  -->
+
+  <link rel="stylesheet" href="assets/css/amazeui.min.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+  <style type="text/css">
+    .am-header{
+      background: #000;
+    }
+    .am-header-right a{
+      font-size: 1.5rem;
+    }
+
+    /* section0 */
+    .pic{
+      top: 4rem;
+      width: 80%;
+    }
+    .pic img{
+      margin: 6rem 0rem 0rem -20%;
+    }
+    .section0{
+      width: 45%;
+      position: absolute;
+      top: 4rem;  
+      right: 0rem;
+      padding: 5% 1rem 0rem 2rem;
+    }
+    .section0 .tit{
+      display: block;
+    }
+    .section0 .txt{
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .btns{
+      width: 100%;   
+    }
+    .android,
+    .ios{
+      position: absolute;
+      top: 73%;
+      left: 0rem;
+      width: 80%;
+      height: 4.5rem;
+      margin-left: 10%;
+      background: #85d560;
+      display: block;
+      border-radius: 5px;
+    }
+    .ios{
+      background: #00c2eb;
+      top: 86%;
+    }
+    .android img,
+    .ios img{
+      margin: .3rem 0rem 0rem 15%;
+    }
+    .android span,
+    .ios span{
+      position: absolute;
+      top: 1rem;
+      left: 0rem;
+      font-size: 1.5rem;
+    }
+    .down{
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      max-width: 3rem;
+      max-height: 3rem;
+      animation: down .9s infinite;
+      -webkit-animation: down .9s infinite;
+    } 
+    @keyframes down{
+      0% {
+        bottom: -1rem;
+      }
+      50% {
+        bottom: -1.5rem;
+      }
+      100% {
+        bottom: -1rem;
+      }
+    }
+    @-webkit-keyframes down{
+      0% {
+        bottom: -1rem;  
+      }
+      50% {
+        bottom: -1.5rem;    
+      }  
+      100% {
+        bottom: -1rem;  
+      }
+    }
+    
+    /* section1 */
+    .section1{
+      background: #00c2eb;
+    }
+    
+    /* section2 */
+    .fontSection2{
+      position: absolute;
+      top: 0rem;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      width: 80%;
+      font-size: 1.8rem;
+    }
+
+    /* base css */
+    :root{
+      font-family: "SimHei";
+    }
+    span{
+      color: #fff;
+    }
+    .absolute,
+    .am-header,
+    .pic,
+    .btns{
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+    }
+    .section1,
+    .section2,
+    .section3{
+      text-align: center;
+    }
+    .titleFont,
+    .section1 .tit1,
+    .section1 .tit2,
+    .section2 .tit,
+    .section3 .tit1,
+    .section3 .tit2,
+    .section0 .tit{
+      font-size: 3rem;
+    }  
+    .contFont,
+    .section1 .txt1,
+    .section1 .txt2,
+    .section0 .txt{
+      font-size: 1.8rem;
+    }
+    .cont1,
+    .section2 .txt1,
+    .section3 .tit1,
+    .section1 .tit1{
+      margin-top: 20%;
+    }
+    .cont2,
+    .section2 .tit,
+    .section3 .txt1,
+    .section1 .tit2{
+      margin-top: 40%;
+    }
+    .cont3,
+    .section2 .txt2,
+    .section3 .txt2,
+    .section1 .txt1{
+      margin-top: 60%;
+    }
+    .cont4,
+    .section2 .txt3,
+    .section3 .tit2,
+    .section1 .txt2{
+      margin-top: 80%;
+    }
+    .section1 img,
+    .section2 img,
+    .section3 img{
+      position: absolute;
+      bottom: 15%;
+      left: 0rem;
+    }
+
+
+    @media screen and (min-width: 500px){     /* 平板设备 */
+      .phone{   
+        margin-top: 1.5%;
+      }                
+    }
+  </style>
+</head>
+<body>
+<!--[if lte IE 9]>
+<p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
+  href="http://browsehappy.com/" target="_blank">升级浏览器</a>
+  以获得更好的体验！</p>
+<![endif]-->
+
+	<div class="am-slider am-slider-default">
+	  <ul class="am-slides" id="list">
+	    <li>
+        <img src="imgs/beijing-1.png">
+        <!-- 页头 -->    
+        <header data-am-widget="header" class="am-header am-header-default">
+          <div class="am-header-left am-header-nav">     
+            <a href="#" class="">     
+              <img class="am-header-icon-custom" src="imgs/logo.png" style="width:132px;height:42px;" />   
+            </a>
+          </div>
+          <div class="am-header-right am-header-nav">
+            <a href="#right-link" class="">首页</a>
+            <a href="#right-link" class="">关于我们</a>
+            <a href="#right-link" class="">合作</a>
+          </div>    
+        </header>
+        <div class="pic">
+          <img class="am-img-responsive" src="imgs/phone.png">
+        </div>
+        <div class="section0">
+          <span class="tit">西瓜虫</span>
+          <span class="txt">你就能决定娱乐的风向标！</span>
+          <div style="background: grey;width: 80%;height:25%;margin:0rem auto;display:none;">
+            二维码
+          </div>             
+        </div>
+        <div class="btns">
+          <a class="android" href="##">
+            <img class="am-img-responsive" style="width:4rem;height:4rem;" src="imgs/android.png">
+            <span style="margin-left: 40%;">Android</span>         
+            <span style="margin-left: 70%;">下载</span>  
+          </a>
+          <a class="ios" href="##">
+            <img class="am-img-responsive" style="width:4rem;height:4rem;" src="imgs/apple.png">
+            <span style="margin-left: 40%;">iPhone</span>      
+            <span style="margin-left: 70%;">下载</span>
+          </a>
+        </div>
+        <img class="am-img-responsive down" src="imgs/dropdown.png">    
+	    </li>
+	    <li>
+	    	<div class="section1">
+          <span class="tit1 fontSection2">中国</span>
+          <span class="tit2 fontSection2">首家</span>
+          <span class="txt1 fontSection2">演出专业众筹互联网平</span>
+          <span class="txt2 fontSection2">覆盖全国各大城市</span>       
+          <img src="imgs/banner-2.png">
+        </div>
+	    </li>
+	    <li>
+	    	<img class="absolute" src="imgs/beijing-3.png" />
+        <div class="section2">    
+          <span class="txt1 fontSection2">每场演出你就是股东</span>
+          <span class="tit fontSection2">最低的票价</span>
+          <span class="txt2 fontSection2">重叠的收益</span>
+          <span class="txt3 fontSection2">特殊的礼遇</span>
+          <img src="imgs/banner-3.png">
+        </div>      
+	    </li>
+	    <li>    
+	    	<img class="absolute" src="imgs/beijing-4.png" />
+        <div class="section3">    
+          <span class="tit1 fontSection2">城城有演出</span>
+          <span class="txt1 fontSection2">月月有明星</span>
+          <span class="txt2 fontSection2">我们就是你家门口的</span>
+          <span class="tit2 fontSection2">西瓜虫</span>
+          <img src="imgs/banner-4.png">
+        </div>
+	    </li>
+	  </ul>  
+	</div>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+<script type="text/javascript">  
+	$(function() {
+	  $('.am-slider').flexslider({
+	    direction: "vertical",     // 垂直播放
+	    animationLoop: false,     // 不循环播放
+	  	slideshow: false,     // 不自动播放
+	  	controlNav: false,     // 不显示控制点
+	  	directionNav: false     // 不显示上/下一个按钮
+	  });
+    setElePos();
+	});
+
+  function setElePos(){
+    var screenWidth = $(window).width();
+    var screenHeight = $(window).height();
+    // 每个li的高度等于屏幕高度
+    $("#list li > img").each(function(){ 
+      fullHeight($(this), screenHeight);
+    })  
+    $("#list li > div").each(function(){
+      fullHeight($(this), screenHeight);
+    })
+    function fullHeight(element, height){
+      element.height(height);
+    }
+  }
+
+  $(window).resize(function(){
+    setElePos();
+  })
+</script>
+</body>
+</html>

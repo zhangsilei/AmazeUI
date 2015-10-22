@@ -1,0 +1,470 @@
+h1,body,html{
+	padding: 0;
+	margin: 0;
+}
+html,body{
+	height: 100%;
+	overflow: hidden;
+}
+#container,.section{
+	height: 100%;
+	position: relative; 
+}
+#section0,
+#section1,
+#section2,
+#section3{
+	background-color: #000;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+#section0{
+	background-image: url(imgs/beijing-1.png);
+	color: #fff;
+}
+#section1{  
+	background: #00c2eb;      
+	color: #fff;
+}         
+#section2{
+	background-image: url(imgs/beijing-3.png);  
+	color: #fff;
+}
+#section3{
+	background-image: url(imgs/beijing-4.png);  
+	color: #fff;
+}
+#pages{
+	position:fixed;
+	right: 10px;
+	top: 50%;  
+	list-style: none;
+}
+#pages li{
+	width: 8px;
+	height: 8px;   
+	border-radius: 50%;     
+	background: #fff;
+	margin: 0 0 10px 5px;
+	cursor: pointer;
+}
+#pages li.active{
+	width: 14px;
+	height: 14px;
+	border: 2px solid #FFF;  
+	background: none;
+	margin-left: 0;
+}
+@-webkit-keyframes sectitle0{
+	0%{
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@keyframes sectitle0{
+	0%{
+		-webkit-transform: translateX(-100%);
+		transform: translateX(-100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@-webkit-keyframes sec0{
+	0%{
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+@keyframes sec0{
+	0%{
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+	100%{
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+
+/******************************
+ *
+ * 自定义css 
+ * 
+ ******************************/
+*{
+	margin: 0px;
+	padding: 0px;         
+	text-decoration: none;   
+	list-style: none;
+}
+img{
+	border: none;
+}
+@keyframes logo{
+	0%{
+		transform: translateY(-5px);
+		-webkit-transform: translateY(-5px);
+	}
+	50%{
+		transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+	}
+	100%{
+		transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	}
+} 
+@-webkit-keyframes logo{
+	0%{
+		-webkit-transform: translateY(-5px);
+		-webkit-transform: translateY(-5px);
+	}
+	50%{
+		-webkit-transform: translateY(5px);
+		-webkit-transform: translateY(5px);
+	}
+	100%{
+		-webkit-transform: translateY(0px);
+		-webkit-transform: translateY(0px);
+	}
+}
+/* section0 */
+#header{
+	background: rgba(0, 0, 0, .5);  
+	width: 100%;
+	min-width: 1000px;
+	height: 86px;
+}
+#header img{     /* logo */   
+	margin: 10px 0px 0px 10%; 
+	width: 195.5px;
+	height: 68px; 
+}   
+#header ul{
+	line-height: 86px;
+	float: right;
+	margin-right: 10%;  
+}
+#header ul li{
+	float: left;
+	margin-right: 50px;
+	height: 60px;	
+}
+#header ul li a{
+	text-decoration: none;
+	font-family: "Microsoft Yahei";
+	font-size: 17px;
+	color: #FFF;
+	padding-bottom: 5px;
+	transition: border .5s;
+	-webkit-transition: border .5s;  
+}   
+#header ul li a:hover{
+	border-bottom: 2px solid #00c2eb;
+}
+.main{
+	width: 80%;
+	margin: 0px auto;
+	overflow: hidden;    
+	text-overflow: ellipsis;
+}   
+#section0 > .main > img{     /* 手机图片 */  
+	width: 588.8px;       
+	height: 673.6px;
+	float: left;                                
+	margin: -20px 5% 0px -50px;
+}   
+.tit,
+.text1{
+	color: #FFF;
+	font-family: "SimHei";
+	font-size: 81px;  
+	display: inline-block; 
+	margin-top: 160px; 
+	transform: translateX(-200%);
+	-webkit-transform: translateX(-200%);
+	-webkit-animation: sectitle0 1s ease-in-out 100ms forwards;
+	animation: sectitle0 1s ease-in-out 100ms forwards;
+}
+.text1,
+.text2{
+	font-size: 43px;
+	margin-left: 15px;
+	font-family: "STXihei";
+}
+.text2{
+	display: block;
+	margin-top: 20px;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	-webkit-animation: sec0 1s ease-in-out 100ms forwards;
+	animation: sec0 1s ease-in-out 100ms forwards;
+}
+
+.android,
+.ios{
+	width: 280px;   	
+	height: 56px;
+	background: #85d560;
+	border-radius: 5px;
+	display: inline-block;
+	vertical-align: center;
+	opacity: .8;
+	transition: transform 1s, opacity 1s;  
+	-webkit-transition: transform 1s;      
+}
+.android:hover,
+.ios:hover{ 
+	transform: translateY(-5px);
+	-webkit-transform: translateY(-5px);
+	opacity: 1;
+	animation: logo 1s ease-in-out 300ms forwards;
+}
+.android a,  
+.ios a{
+	width: 100%;
+	height: 100%;
+	display: block;  
+	color: #FFF;
+} 
+.android{  
+	margin-top: 50px;
+}
+.android img,
+.ios img{
+	width: 48px;
+	height: 48px;
+	margin: 4px 0px 0px 30px;
+}
+.ios{
+	background: #00c2eb;
+	margin-top: 20px;   
+}
+.android span,
+.ios span{ 
+	float: right;
+	height: 56px;
+	line-height: 56px;  
+	margin-right: 30px;  
+	font-family: "STXihei";
+	font-size: 20px; 
+}
+/* section1 */
+.china,.first,
+.ticket,
+.show,.xgc{
+	font-family: "SimHei";
+	font-size: 58px;
+	margin-left: 10%;
+}
+.china{
+	display: block;
+	margin-top: 60px;
+}
+.cont,.city,
+.cont1,.cont2,.cont3,
+.txt1,.txt2{
+	font-family: "STXihei";
+	font-size: 45px;
+}
+.city{
+	display: block;
+	margin: 15px 0px 0px 10.5%;
+}
+#section1 > .main > img,
+#section2 > .main > img,
+#section3 > .main > img{   
+	width: 100%;  
+	height: 100%; 
+	margin-top: -140px;
+}
+#section1 > .main > img{
+	max-width: 1620px; 
+	max-height: 741px;
+}
+#section2 > .main > img,
+#section3 > .main > img{
+	max-width: 1620px; 
+	max-height: 600px;
+}
+/* section2 */
+.cont1{
+	margin-left: 10%;
+}
+.ticket{  
+	display: inline-block;
+	margin: 70px 0px 15px 0px;  
+} 
+.cont3{
+	display: block;
+	margin: 0px 0px 40px 10%;
+}
+#section2 > .main > img{
+	margin: 0px;
+}
+/* section3 */
+.show,
+.xgc{
+	margin: 0px;
+}
+.show{
+	margin-left: 10%;
+}
+.txt1{
+	margin: 70px 0px 15px 0px;
+	display: inline-block;
+}
+.txt2{
+	display: inline-block;
+	margin: 0px 0px 150px 10%;
+}     
+
+/******************************
+ *
+ * 响应不同分辨率大小的屏幕
+ *
+ ******************************/ 
+@media screen and (min-width: 1920px){     /* 大屏幕：大于等于16寸 */
+	/* section0 */
+	#header{
+		height: 102px;
+		background: red;
+	}
+	#header img{     /* logo */   
+		width: 230px;
+		height: 80px;     
+		margin-top: 8px; 
+	} 
+	#header ul{
+		line-height: 102px;   
+	}   
+	#header ul li a{
+		font-size: 22px; 
+	}
+	#section0 > .main > img{     /* 手机图片 */
+		width: 736px;     
+		height: 842px;
+		margin: 10px 5% 0px -120px;
+	}   
+	.tit{
+		font-size: 96px;     
+		margin-top: 250px;
+	}
+	.text1,
+	.text2{
+		font-size: 58px;
+	}
+	.android,   
+	.ios{
+		width: 382px;      	        
+		height: 76px;   
+	}
+	.android img,
+	.ios img{
+		width: 58px;
+		height: 58px;
+		margin: 8px 0px 0px 50px;
+	}
+	.android span,
+	.ios span{ 
+		line-height: 76px;  
+		margin-right: 35px;   
+		font-size: 28px;    
+	}  
+	/* section1、section2、section3 */
+	.china,.first,
+	.ticket,
+	.show,.xgc{
+		font-size: 78px;
+	}
+	.china{
+		margin-top: 45px;
+	}
+	.ticket{
+		margin: 70px 0px 15px 0px; 
+	}
+	.cont,.city,
+	.cont1,.cont2,.cont3,
+	.txt1,.txt2{  
+		font-size: 60px;   
+	} 
+}
+@media screen and (max-width: 1280px){     /* 小屏幕：小于等于13寸; */
+	/* section0 */
+	#header{
+		height: 70px;
+	}
+	#header img{     /* logo */   
+		width: 161px;
+		height: 56px;     
+		margin-top: 5px; 
+	} 
+	#header ul{
+		line-height: 70px;   
+	}   
+	#header ul li a{
+		font-size: 16px; 
+	}
+	#section0 > .main > img{     /* 手机图片 */
+		width: 515.2px;     
+		height: 589.4px;
+		margin: -25px 5% 0px -120px;
+	}   
+	.tit{
+		font-size: 76px;     
+		margin-top: 125px;
+	}
+	.text1,
+	.text2{
+		font-size: 38px;
+	}
+	.android,   
+	.ios{
+		width: 240px;      	        
+		height: 52px;   
+	}
+	.android img,
+	.ios img{
+		width: 40px;
+		height: 40px;
+	}
+	.android span,
+	.ios span{ 
+		height: 52px;
+		line-height: 52px;  
+		margin-right: 15px;   
+		font-size: 18px;    
+	}  
+	/* section1、section2、section3 */
+	.china,.first,
+	.ticket,
+	.show,.xgc{
+		font-size: 53px;
+	} 
+	.china{
+		margin-top: 45px;
+	}
+	.ticket{
+		margin: 70px 0px 15px 0px;   
+	}
+	.cont,.city,   
+	.cont1,.cont2,.cont3,
+	.txt1,.txt2{  
+		font-size: 40px;     
+	} 
+	.txt1{
+		margin: 90px 0px 15px 0px;
+	}
+}
+
