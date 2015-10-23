@@ -7,9 +7,9 @@
   <meta name="keywords" content="">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Amaze UI Examples</title>
+  <title>西瓜虫官网</title>
 
-  <!-- Set render engine for 360 browser -->   
+  <!-- Set render engine for 360 browser -->
   <meta name="renderer" content="webkit">
 
   <!-- No Baidu Siteapp-->
@@ -48,21 +48,24 @@
 
     /* section0 */
     .pic{
-      top: 4rem;
+      /* top: 4rem; */
       width: 80%;
     }
     .pic img{
       margin: 6rem 0rem 0rem -20%;
+      background: red;
     }
     .section0{
       width: 45%;
       position: absolute;
       top: 4rem;  
       right: 0rem;
-      padding: 5% 1rem 0rem 2rem;
+      padding: 11% 1rem 0rem 2rem;
     }
     .section0 .tit{
       display: block;
+      width: 100%;
+      text-align:center;
     }
     .section0 .txt{
       display: block;
@@ -70,11 +73,11 @@
     }
     .btns{
       width: 100%;   
-    }
+    } 
     .android,
     .ios{
       position: absolute;
-      top: 73%;
+      bottom: 18%;
       left: 0rem;
       width: 80%;
       height: 4.5rem;
@@ -85,7 +88,9 @@
     }
     .ios{
       background: #00c2eb;
-      top: 86%;
+      bottom: 18%;
+      transform: translateY(6rem);
+      -webkit-transform: translateY(6rem);
     }
     .android img,
     .ios img{
@@ -145,6 +150,17 @@
       transform: translateX(-50%);
       -webkit-transform: translateX(-50%);
       width: 80%;
+      font-size: 1.8rem;
+    }
+
+    .downLoad{
+      position: absolute;
+      bottom: 18%;
+      left: 50%;
+      transform: translateX(-50%);
+      -webkit-transform: translateX(-50%);
+      display: none;
+      margin-bottom: 7rem;
       font-size: 1.8rem;
     }
 
@@ -215,6 +231,11 @@
       left: 0rem;
     }
 
+    @media screen and (min-height: 550px){     /* 小屏设备 */
+      .downLoad{   
+        display: block;
+      }                
+    }
 
     @media screen and (min-width: 500px){     /* 平板设备 */
       .phone{   
@@ -257,6 +278,7 @@
             二维码
           </div>             
         </div>
+        <span class="downLoad">官方App下载</span>
         <div class="btns">
           <a class="android" href="##">
             <img class="am-img-responsive" style="width:4rem;height:4rem;" src="imgs/android.png">
@@ -313,36 +335,7 @@
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
-<script type="text/javascript">  
-	$(function() {
-	  $('.am-slider').flexslider({
-	    direction: "vertical",     // 垂直播放
-	    animationLoop: false,     // 不循环播放
-	  	slideshow: false,     // 不自动播放
-	  	controlNav: false,     // 不显示控制点
-	  	directionNav: false     // 不显示上/下一个按钮
-	  });
-    setElePos();
-	});
-
-  function setElePos(){
-    var screenWidth = $(window).width();
-    var screenHeight = $(window).height();
-    // 每个li的高度等于屏幕高度
-    $("#list li > img").each(function(){ 
-      fullHeight($(this), screenHeight);
-    })  
-    $("#list li > div").each(function(){
-      fullHeight($(this), screenHeight);
-    })
-    function fullHeight(element, height){
-      element.height(height);
-    }
-  }
-
-  $(window).resize(function(){
-    setElePos();
-  })
-</script>
+<script src="common.js"></script>
+<script type="index.js"></script>
 </body>
 </html>
