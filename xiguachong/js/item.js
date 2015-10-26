@@ -1,17 +1,12 @@
-/*************************************
- *
- * 项目介绍页
- * 
- ************************************/
 window.onload = function(){
 	setElePosition();
 
 	// 点击评论Tab
 	$(".pinglun").click(function(){
-		$(".xiangqing img").attr("src","imgs/item/xiangqing-2@2x.png");
+		$(".xiangqing img").attr("src","images/index/xiangqing-2@2x.png");
 		$(".xiangqing span").css("color","#fff");
 		$(".xiangqing").css("borderBottom","none");
-		$(".pinglun img").attr("src","imgs/item/pinglun-2@2x.png");
+		$(".pinglun img").attr("src","images/index/pinglun-2@2x.png");
 		$(".pinglun span").css("color","#2BC0D4");
 		$(".pinglun").css("borderBottom",".1rem solid #2BC0D4");  
   
@@ -19,10 +14,10 @@ window.onload = function(){
 		$(".xiangqing-content").css("display","none");
 		if($(".pinglun-content").html() == "" || $(".pinglun-content").html() == null){
 			$(".body").append(
-				"<ul class='pinglun-content'><li><img src='imgs/item/weixintouxiang-@2x.png'>" +   
+				"<ul class='pinglun-content'><li><img src='images/introduce/touxiang.png'>" +   
 				"<span>我是小姜姜 : 点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞点赞</span>" + 
 				"<p>刚刚发表</p></ul>" +
-				"<ul class='pinglun-content'><li><img src='imgs/item/weixintouxiang-@2x.png'>" +   
+				"<ul class='pinglun-content'><li><img src='images/introduce/touxiang.png'>" +   
 				"<span>我是小姜姜 : 点赞点赞点赞</span>" + 
 				"<p>刚刚发表</p></ul>"
 			)
@@ -33,10 +28,10 @@ window.onload = function(){
 
 	//点击详情Tab
 	$(".xiangqing").click(function(){
-		$(".pinglun img").attr("src","imgs/item/pinglun-1-@2x.png");
+		$(".pinglun img").attr("src","images/index/pinglun-1-@2x.png");
 		$(".pinglun span").css("color","#fff");
 		$(".pinglun").css("borderBottom","none");
-		$(".xiangqing img").attr("src","imgs/item/xiangqing-1-@2x.png");
+		$(".xiangqing img").attr("src","images/index/xiangqing-1-@2x.png");
 		$(".xiangqing span").css("color","#2BC0D4");
 		$(".xiangqing").css("borderBottom",".1rem solid #2BC0D4"); 
 
@@ -48,15 +43,15 @@ window.onload = function(){
 	// 点击分享按钮
 	$("#bottom img").click(function(){ 
 		$("#fenxiang").append(
-			"<img src='imgs/item/mengban@2x.png' class='am-img-responsive share-zhezhao'>" +
+			"<img src='images/nav/beijingmengban@2x.png' class='am-img-responsive share-zhezhao'>" +
 			"<div class='total'><div class='weibo'>" +
-			"<img src='imgs/item/weibo-@2x.png' class='am-img-responsive'>" +
+			"<img src='images/nav/weibo-@2x.png' class='am-img-responsive'>" +
 			"<span>新浪微博</span></div>" +
 			"<div class='weixin'>" +      
-			"<img src='imgs/item/weixin@2x.png' class='am-img-responsive'>" +  
+			"<img src='images/nav/weixin@2x.png' class='am-img-responsive'>" +  
 			"<span>微信好友</span></div>" +
 			"<div class='qq'>" +
-			"<img src='imgs/item/qq@2x.png' class='am-img-responsive'>" +
+			"<img src='images/nav/qq@2x.png' class='am-img-responsive'>" +
 			"<span>QQ 好友</span></div></div>" 
 		)
 

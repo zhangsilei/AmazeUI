@@ -1,1 +1,101 @@
-#content{background:#202020}.poster{position:relative;max-width:62rem;margin:0 auto}.poster>img:nth-of-type(1){opacity:.7;filter:alpha(opacity=70)}.poster>span:nth-of-type(1){position:absolute;top:3%;left:3%;font-size:1.8rem}.poster>span:nth-of-type(2){position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);-webkit-transform:translate(-50%,-50%);-moz-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);-o-transform:translate(-50%,-50%);font-size:5.3rem}.how{background:#202020;border-radius:1.5rem;border-top-right-radius:0;border-bottom-right-radius:0;position:absolute;bottom:6%;right:0;padding:.1rem 0 .1rem .5rem}.how img:nth-of-type(1),.how img:nth-of-type(2){width:1.7rem;height:1.7rem;margin-bottom:.1rem;display:inline-block}.how img:nth-of-type(2){width:1.2rem;height:1.2rem}.poster span:nth-of-type(3){font-size:1.5rem}#content>div:nth-of-type(2){text-align:center;font-size:1.5rem;margin:1rem auto 1rem;max-width:56rem}.line{width:37%;height:.1rem;display:inline-block;margin-bottom:.3rem;background:#3d3d3d}#content>div:nth-of-type(2) span{color:#999;margin:0 .5rem}.item{width:90%;max-width:56rem;height:6rem;margin:0 auto;border-bottom:.1rem solid #3d3d3d;padding-top:1rem}.item span:nth-of-type(1),.item span:nth-of-type(2){font-size:1.6rem;color:#ccc}.item span:nth-of-type(2){font-size:1.7rem;font-family:"Helvetica Neue",Regular}.item span:nth-of-type(3){font-size:1.9rem;float:right;color:#1dbcd2;font-family:"Helvetica Neue",Regular}.item span:nth-of-type(4){display:block;font-size:1.4rem;color:#aaa}
+/**
+ * 内容块
+ */
+#content{
+	background: #202020;
+}
+.poster{
+	position: relative;
+	max-width: 62rem;
+	margin: 0rem auto;
+}	
+.poster > img:nth-of-type(1){     /* 背景海报 */
+	opacity: .7;
+	filter: alpha(opacity=70);
+}
+.poster > span:nth-of-type(1){     /* 当前积分 */
+	position: absolute;
+	top: 3%;
+	left: 3%;
+	font-size: 1.8rem;
+}
+.poster > span:nth-of-type(2){     /* 总积分数 */
+	position: absolute;
+	top: 50%;
+	left: 50%;	
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	font-size: 5.3rem;
+}
+.how{
+	background: #202020;
+	border-radius: 1.5rem;
+	border-top-right-radius: 0rem;
+	border-bottom-right-radius: 0rem;
+	position: absolute;
+	bottom: 6%;
+	right: 0rem;
+	padding: .1rem 0rem .1rem .5rem;
+}          
+.how img:nth-of-type(1),     /* i */
+.how img:nth-of-type(2){     /* 右箭头 */
+	width: 1.7rem;   
+	height: 1.7rem;   
+	margin-bottom: .1rem;
+	display: inline-block;
+}
+.how img:nth-of-type(2){     /* 右箭头 */    
+	width: 1.2rem;   
+	height: 1.2rem;  
+}
+.poster span:nth-of-type(3){     /* 如何积分 */ 
+	font-size: 1.5rem;
+}
+#content > div:nth-of-type(2){     /* 积分明细标题层 */
+	text-align: center; 
+	font-size: 1.5rem;
+	margin: 1rem auto 1rem;
+	max-width: 56rem;
+}
+.line{ 
+	width: 37%;   
+	height: .1rem;
+	display: inline-block;
+	margin-bottom: .3rem;
+	background: #3d3d3d;
+}  
+#content > div:nth-of-type(2) span{     /* 积分明细 */
+	color: #999;   
+	margin: 0rem .5rem;
+}
+.item{
+	width: 90%;
+	max-width: 56rem;
+	height: 6rem;
+	margin: 0rem auto;
+	border-bottom: .1rem solid #3d3d3d;
+	padding-top: 1rem;
+}
+.item span:nth-of-type(1),
+.item span:nth-of-type(2){
+	font-size: 1.6rem;
+	color: #ccc;
+}
+.item span:nth-of-type(2){
+	font-size: 1.7rem;
+	font-family: "Helvetica Neue","Regular";
+}
+.item span:nth-of-type(3){
+	font-size: 1.9rem;
+	float: right;
+	color: #1dbcd2;
+	font-family: "Helvetica Neue","Regular";
+}
+.item span:nth-of-type(4){
+	display: block; 
+	font-size: 1.4rem;
+	color: #aaa;
+}

@@ -1,1 +1,30 @@
-#content{background:#202020;height:100%}#content ul{max-width:40rem;list-style:none;font-size:1.6rem;padding-top:1.5rem;margin:0 auto}#content li{margin-bottom:2rem}#content>ul:first-child span+span{float:right;margin-right:2rem}#content li:nth-child(2) span{color:#999}#content img{width:1.6rem;height:1.6rem;float:right;margin-right:2.3rem}
+/**
+ * 内容块
+ */
+#content{
+	background: #202020; 
+	height: 100%;
+}
+#content ul{
+	max-width: 40rem;
+	list-style: none;
+	font-size: 1.6rem; 
+	padding-top: 1.5rem;
+	margin: 0rem auto;
+}
+#content li{
+	margin-bottom: 2rem;  
+}
+#content > ul:first-child span + span{
+	float: right;
+	margin-right:2rem;   
+}
+#content li:nth-child(2) span{  
+	color: #999;
+}
+#content img{
+	width: 1.6rem;
+	height: 1.6rem;
+	float: right;
+	margin-right: 2.3rem;
+}

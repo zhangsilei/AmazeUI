@@ -1,1 +1,27 @@
-#content{background:#202020;padding-top:3rem}#content input{background:#202020;margin:0 auto;width:80%;max-width:40rem;height:3.5rem;margin-bottom:1rem;border:.1rem solid #666;font-size:1.5rem}.btn,.btn:active,.btn:focus{background:#1dbcd2;border:none;width:80%;max-width:40rem;height:3.5rem;margin:2rem auto 0;font-size:1.8rem;color:#fff}
+/**
+ * 内容块
+ */
+#content{
+	background: #202020;
+	padding-top: 3rem;
+}
+#content input{
+	background: #202020;
+	margin: 0rem auto;
+	width: 80%;
+	max-width: 40rem;      
+	height: 3.5rem;   
+	margin-bottom: 1rem;  
+	border: .1rem solid #666;        
+	font-size: 1.5rem;
+}
+.btn,.btn:focus,.btn:active{  
+	background: #1dbcd2;
+	border: none;
+	width: 80%;
+	max-width: 40rem;
+	height: 3.5rem;
+	margin: 2rem auto 0rem;
+	font-size: 1.8rem;
+	color: #fff;
+}

@@ -1,1 +1,18 @@
-*{font-family:STXihei,Arial,"Microsoft Yahei",Helve,"Simsun,sans-self";color:#fff;outline:0;list-style:none}:root{background:#202020}.am-header{background:#1dbcd2}.am-header-title>span{font-size:1.8rem}
+*{
+	font-family: "STXihei","Arial","Microsoft Yahei","Helve","Simsun,sans-self"; 
+	color: #fff;
+	outline: none;
+	list-style: none;
+} 
+:root{
+	background: #202020;
+}
+/**
+ * 页头  
+ */
+.am-header{
+	background: #1dbcd2;    
+}    
+.am-header-title > span{      
+	font-size: 1.8rem;       
+}
