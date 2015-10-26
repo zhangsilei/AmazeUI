@@ -3,6 +3,7 @@ h1,body,html{
 	margin: 0;
 }
 html,body{
+	min-width: 1200px;
 	height: 100%;
 	overflow: hidden;
 }
@@ -163,7 +164,7 @@ img{
 }
 #header ul li a{
 	text-decoration: none;
-	font-family: "Microsoft Yahei";
+	font-family: "SimHei";
 	font-size: 17px;
 	color: #FFF;
 	padding-bottom: 5px;

@@ -37,253 +37,7 @@
   -->
 
   <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-  <style type="text/css">
-    .am-header{
-      background: #000;
-    }
-    .am-header-right a{
-      font-size: 1.5rem;
-    }
-    .right-menu{
-      display: block;
-      margin-top: -1.5rem;        
-    }
-
-    /* section0 */
-    .pic{
-      /* top: 4rem; */
-      width: 80%;
-    }
-    .pic img{
-      margin: 6rem 0rem 0rem -20%;
-    }   
-
-    /* section0 */   
-    .section0{
-      width: 45%;
-      position: absolute;
-      top: 4rem;  
-      right: 0rem;
-      padding: 11% 1rem 0rem 2rem;
-    }
-    .fontSection0{
-      display: block;
-      text-align: center;
-    }
-    .section0 .tit{
-      text-align:center;
-    }
-    .section0 .txt{
-      margin-top: 1rem;
-    }
-    .btns{
-      width: 100%;   
-    } 
-    .android,
-    .ios{
-      position: absolute;
-      bottom: 18%;
-      left: 0rem;
-      width: 80%;
-      height: 4.5rem;
-      margin-left: 10%;
-      background: #85d560;
-      display: block;
-      border-radius: 5px;
-    }
-    .ios{
-      background: #00c2eb;
-      bottom: 18%;
-      transform: translateY(6rem);
-      -webkit-transform: translateY(6rem);
-    }
-    .android img,
-    .ios img{
-      margin: .3rem 0rem 0rem 15%;
-    }
-    .android span,
-    .ios span{
-      position: absolute;
-      top: 1rem;
-      left: 0rem;
-      font-size: 1.5rem;
-    }
-    .down{
-      position: absolute;
-      bottom: -1rem;
-      left: 50%;
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      max-width: 3rem;
-      max-height: 3rem;
-      animation: down .9s infinite;
-      -webkit-animation: down .9s infinite;
-    } 
-    @keyframes down{
-      0% {
-        bottom: -1rem;
-      }
-      50% {
-        bottom: -1.5rem;
-      }
-      100% {
-        bottom: -1rem;
-      }
-    }
-    @-webkit-keyframes down{
-      0% {
-        bottom: -1rem;  
-      }
-      50% {
-        bottom: -1.5rem;    
-      }  
-      100% {
-        bottom: -1rem;  
-      }
-    }
-    
-    /* section1 */
-    .section1{
-      background: #00c2eb;
-    }
-    
-    /* section2 */
-    .fontSection2{
-      position: absolute;
-      top: 0rem;
-      left: 50%;
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      width: 80%;
-      font-size: 1.8rem;
-    }
-
-    .downLoad{
-      position: absolute;
-      bottom: 18%;
-      left: 50%;
-      transform: translateX(-50%);
-      -webkit-transform: translateX(-50%);
-      display: block;
-      margin-bottom: 7rem;
-      font-size: 1.8rem;
-    }
-
-    /* base css */
-    :root{
-      font-family: "SimHei";
-    }
-    span{
-      color: #fff;
-    }
-    .absolute,
-    .am-header,
-    .pic,
-    .btns{
-      position: absolute;
-      top: 0rem;
-      left: 0rem;
-    }
-    .section1,
-    .section2,
-    .section3{
-      text-align: center;
-    }
-    .titleFont,
-    .section1 .tit1,
-    .section1 .tit2,
-    .section2 .tit,
-    .section3 .tit1,
-    .section3 .tit2,
-    .section0 .tit{
-      font-size: 3rem;
-    }  
-    .contFont,
-    .section1 .txt1,
-    .section1 .txt2,
-    .section0 .txt{
-      font-size: 1.8rem;
-    }
-    .cont1,
-    .section2 .txt1,
-    .section3 .tit1,
-    .section1 .tit1{
-      /* margin-top: 20%; */
-      margin-top: 5rem;
-    }
-    .cont2,
-    .section2 .tit,
-    .section3 .txt1,
-    .section1 .tit2{
-      /* margin-top: 40%; */
-      margin-top: 11rem;
-    }
-    .cont3,
-    .section2 .txt2,
-    .section3 .txt2,
-    .section1 .txt1{
-      /* margin-top: 60%; */
-      margin-top: 19rem;
-    }
-    .cont4,
-    .section2 .txt3,
-    .section3 .tit2,
-    .section1 .txt2{
-      /* margin-top: 80%; */
-      margin-top: 27rem;
-    }
-    .section1 img,
-    .section2 img,
-    .section3 img{
-      position: absolute;
-      bottom: 15%;
-      left: 0rem;
-    }
-
-    @media screen and (min-width: 1024px){     /* 平板设备，暂时未兼容 */
-      .phone{   
-        margin-top: 1.5%;
-      }                
-    }
-
-    @media screen and (max-height: 550px){     /* 小屏设备，差不多跟果4一样大的屏幕 */
-      .pic img{
-        margin: 4rem 0rem 0rem -20%;
-      }
-      .section0{
-        top: 2rem;  
-      }
-      .downLoad{   
-        display: none;
-      }                
-      .cont1,
-      .section2 .txt1,
-      .section3 .tit1,
-      .section1 .tit1{
-        margin-top: 5rem;
-      }
-      .cont2,
-      .section2 .tit,
-      .section3 .txt1,
-      .section1 .tit2{
-        margin-top: 10rem;
-      }
-      .cont3,
-      .section2 .txt2,
-      .section3 .txt2,
-      .section1 .txt1{
-        margin-top: 15rem;
-      }
-      .cont4,
-      .section2 .txt3,
-      .section3 .tit2,
-      .section1 .txt2{
-        margin-top: 20rem;
-      } 
-    }
-
-  </style>
+  <link rel="stylesheet" href="mindex.css">   
 </head>
 <body>
 <!--[if lte IE 9]>
@@ -295,7 +49,7 @@
 	<div class="am-slider am-slider-default">
 	  <ul class="am-slides" id="list">
 	    <li>
-        <img src="imgs/beijing-1.png">
+        <img src="imgs/beijing-1.png" id="bg1">
         <!-- 页头 -->    
         <header data-am-widget="header" class="am-header am-header-default">
           <div class="am-header am-header-nav">
@@ -323,15 +77,9 @@
               </nav>
             </a>
           </div>
-
-          <!-- <div class="am-header-right am-header-nav">
-             <a href="#right-link" class="">首页</a>
-             <a href="#right-link" class="">关于我们</a>
-             <a href="#right-link" class="">合作</a>
-           </div>    --> 
         </header>
         <div class="pic">
-          <img class="am-img-responsive" src="imgs/phone.png">
+          <img class="am-img-responsive" src="imgs/phone.png">  
         </div>
         <div class="section0">
           <span class="tit fontSection0">西瓜虫</span>
@@ -359,13 +107,14 @@
 	    	<div class="section1">
           <span class="tit1 fontSection2">中国</span>
           <span class="tit2 fontSection2">首家</span>
-          <span class="txt1 fontSection2">演出专业众筹互联网平</span>
+          <span class="txt1 fontSection2">演出专业众筹互联网平台</span>
           <span class="txt2 fontSection2">覆盖全国各大城市</span>       
           <img src="imgs/banner-2.png">
         </div>
+        <img class="am-img-responsive down" src="imgs/dropdown.png">
 	    </li>
 	    <li>
-	    	<img class="absolute" src="imgs/beijing-3.png" />
+	    	<img class="absolute" src="imgs/beijing-3.png" id="bg3"/>
         <div class="section2">    
           <span class="txt1 fontSection2">每场演出你就是股东</span>
           <span class="tit fontSection2">最低的票价</span>
@@ -373,9 +122,10 @@
           <span class="txt3 fontSection2">特殊的礼遇</span>
           <img src="imgs/banner-3.png">
         </div>      
+        <img class="am-img-responsive down" src="imgs/dropdown.png">
 	    </li>
 	    <li>    
-	    	<img class="absolute" src="imgs/beijing-4.png" />
+	    	<img class="absolute" src="imgs/beijing-4.png" id="bg4"/>
         <div class="section3">    
           <span class="tit1 fontSection2">城城有演出</span>
           <span class="txt1 fontSection2">月月有明星</span>
@@ -398,6 +148,33 @@
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
 <script src="common.js"></script>
-<script src="index.js"></script>
+<script type="text/javascript">
+  if(!browser.versions.mobile){     // PC端
+    window.location.href = "index.html";
+  }
+
+  // 初始化amaze全屏轮播图
+  $('.am-slider').flexslider({
+    direction: "vertical",     // 垂直播放
+    animationLoop: false,     // 不循环播放
+    slideshow: false,     // 不自动播放
+    controlNav: false,     // 不显示控制点
+    directionNav: false     // 不显示上/下一个按钮
+  });
+  initPage();   
+
+  function initPage(){
+    var screenWidth = $(window).width();
+    var screenHeight = $(window).height();
+    // 每个li的高度等于屏幕高度
+    $("#list li > img").each(function(){    
+      $(this).height(screenHeight);
+      $(this).width(950);
+    })  
+    $("#list li > div").each(function(){
+      $(this).height(screenHeight);
+    })
+  }
+</script>
 </body>
 </html>

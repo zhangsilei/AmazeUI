@@ -71,14 +71,20 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="pageswitch.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="pageswitch.js"></script>
+	<script src="common.js"></script>
 	<script type="text/javascript">
-		$(function(){
-			$("#container").switchPage({
-				'keyboard' : true
-			});
-		});
+		if(browser.versions.mobile){     // 移动端
+			window.location.href = "mindex.html";
+		}
+		// 初始化自定义轮播插件
+    $("#container").switchPage({
+      'keyboard' : true
+    });
+    $(window).resize(function(){
+      initPage();
+    })
 	</script>
 </body>
 </html>
