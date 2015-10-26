@@ -151,29 +151,29 @@
 <script type="text/javascript">
   if(!browser.versions.mobile){     // PC端
     window.location.href = "index.html";
-  }
+  }else{
+    // 初始化amaze全屏轮播图
+    $('.am-slider').flexslider({
+      direction: "vertical",     // 垂直播放
+      animationLoop: false,     // 不循环播放
+      slideshow: false,     // 不自动播放
+      controlNav: false,     // 不显示控制点
+      directionNav: false     // 不显示上/下一个按钮
+    });
+    initPage();   
 
-  // 初始化amaze全屏轮播图
-  $('.am-slider').flexslider({
-    direction: "vertical",     // 垂直播放
-    animationLoop: false,     // 不循环播放
-    slideshow: false,     // 不自动播放
-    controlNav: false,     // 不显示控制点
-    directionNav: false     // 不显示上/下一个按钮
-  });
-  initPage();   
-
-  function initPage(){
-    var screenWidth = $(window).width();
-    var screenHeight = $(window).height();
-    // 每个li的高度等于屏幕高度
-    $("#list li > img").each(function(){    
-      $(this).height(screenHeight);
-      $(this).width(950);
-    })  
-    $("#list li > div").each(function(){
-      $(this).height(screenHeight);
-    })
+    function initPage(){
+      var screenWidth = $(window).width();
+      var screenHeight = $(window).height();
+      // 每个li的高度等于屏幕高度
+      $("#list li > img").each(function(){    
+        $(this).height(screenHeight);
+        $(this).width(950);
+      })  
+      $("#list li > div").each(function(){
+        $(this).height(screenHeight);
+      })
+    }
   }
 </script>
 </body>

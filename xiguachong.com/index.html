@@ -77,14 +77,15 @@
 	<script type="text/javascript">
 		if(browser.versions.mobile){     // 移动端
 			window.location.href = "mindex.html";
+		}else{
+			// 初始化自定义轮播插件
+		    $("#container").switchPage({
+		      'keyboard' : true
+		    });
+		    $(window).resize(function(){
+		      initPage();
+		    })
 		}
-		// 初始化自定义轮播插件
-    $("#container").switchPage({
-      'keyboard' : true
-    });
-    $(window).resize(function(){
-      initPage();
-    })
 	</script>
 </body>
 </html>
