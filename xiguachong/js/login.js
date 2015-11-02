@@ -1,18 +1,18 @@
 $(document).ready(function(){
-	setEleLocation();
+	initPage();
 	$(".btn").click(function(){
 		window.location.href = "index.html?result=success";
 	})
 })  
 
 $(window).resize(function(){
-	setEleLocation();
+	initPage();
 })    
-
+  
 /**
- * Hack定位图标
+ * 页面初始化时，用js定位部分元素
  */
-function setEleLocation(){
+function initPage(){
 	var accIpt = $(".phone input");      
 	var pwdIpt = $(".pwd input");  
 	var phone = $(".phone img");   

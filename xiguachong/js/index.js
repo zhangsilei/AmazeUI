@@ -1,52 +1,129 @@
 window.onload = function(){
-  loginSucView("result");      
+  initPage();     
 
-  // 顶部选项卡切换 
-  var tabs = $(".tab a");
-  $(".tab > a").click(function(){
-    changeTab(tabs, $(this));
+  var imgurl = getQueryString('imgurl');
+  var nickname = getQueryString('nickname');
+  var rightLists = new Array();
+  var rightNavLinks = $('.right-nav a');
+  var ls = window.localStorage;  
+  // 初始化右侧列表新节点       
+  var myInfo = {       
+    ele: rightNavLinks.eq(0),
+    iconSrc: 'imgs/index/gerenziliao-@2x.png',    
+    listName: '我的资料',   
+    targetUrl: 'javascript:void(0)'              
+  }      
+  var myWallet = {    
+    ele: rightNavLinks.eq(1),
+    iconSrc: 'imgs/index/wodeqianbao-@2x.png',               
+    listName: '我的钱包',      
+    targetUrl: 'myWallet.html'    
+  }  
+  var myLove = {
+    ele: rightNavLinks.eq(2),
+    iconSrc: 'imgs/index/wodeshoucang-@2x.png',           
+    listName: '我的收藏',   
+    targetUrl: 'myLove.html'
+  }
+  var logout = {
+    ele: rightNavLinks.eq(3),
+    iconSrc: 'imgs/index/tuichudenglu-@2x.png',     
+    listName: '退出登录',   
+    targetUrl: '##'         
+  }
+  rightLists.push(myInfo, myWallet, myLove, logout);      
+  // 判断用户登录状态   
+  if(ls.getItem('status') != 'online'){                        
+    var flag = getQueryString('flag');                        
+    if(flag == 'success'){                  
+      loginSucView(imgurl, decodeURI(nickname), rightLists);                   
+      // 登录成功后将用户状态及用户信息保持在localStorage     
+      if(ls){             
+        var userStr = JSON.stringify(new User(decodeURI(nickname), null, null, imgurl));       
+        ls.setItem('status', 'online');         
+        ls.setItem('user', userStr);      
+      }else{          
+        console.log('浏览器不支持localStorage！');              
+      }                
+    }else if(flag == "fail"){    
+      imgurl = null;                 
+      nickname = null;      
+      rightLists = null;           
+      console.log("登录失败！flag=" + flag);                  
+    }                      
+  }else{                    
+    var userStr = ls.getItem('user');       
+    var userObj = JSON.parse(userStr);      
+    loginSucView(userObj.imgurl, decodeURI(userObj.nickname), rightLists);                              
+  }          
+
+  // 我的资料事件
+  if(rightNavLinks.first().children('span').html() == '我的资料'){  
+    rightNavLinks.first().click(function(){  
+      $.get('/my/userInfo', function(data){           
+        var userStr = ls.getItem('user');
+        var userObj = JSON.parse(userStr);       
+        userObj.sex = data.sex;
+        userObj.phoneNum = data.phone;       
+        ls.setItem('user', JSON.stringify(userObj));    
+        window.location.href = 'myInfo.html'; 
+      })        
+    })  
+  }
+ 
+  // 退出登录事件       
+  if(rightNavLinks.last().children('span').html() == '退出登录'){
+    rightNavLinks.last().click(function(){     
+      ls.removeItem('status');        
+      ls.removeItem('user');        
+      window.location.href = "/user/Logout";           
+    }) 
+  }
+
+  // 顶部选项卡切换    
+  var tabs = $(".tab a");  
+  $(".tab > a").click(function(){    
+    changeTab(tabs, $(this));    
   })  
     
   // 左侧快捷入口进入选项卡    
   $(".left-nav a").click(function(){      
     // 关闭侧边栏      
     $("#leftside").offCanvas('close');
-    // 显示点击的选项卡    
+    // 显示点击的选项卡       
     var tab = $(this).children("span");
     if(tab.html() == "推荐项目"){     // 推荐项目  
-      changeTab(tabs, $(".tab > a:contains('推荐')"));    
+      changeTab(tabs, $(".tab > a:contains('推荐')"));      
     }else if(tab.html() == "排行榜"){     // 排行榜    
       changeTab(tabs, $(".tab > a:contains('排行')"));      
-    }else if(tab.html() == "最新项目"){     // 最新项目
+    }else if(tab.html() == "最新项目"){     // 最新项目  
       changeTab(tabs, $(".tab > a:contains('最新')"));
     }else if(tab.html() == "完成项目"){     // 完成项目   
       changeTab(tabs, $(".tab > a:contains('完成')"));
     }
   })
-
-  setEleLocation();     // 定位部分元素位置
 }
-
+  
 // 浏览器窗口缩放时
-$(window).resize(function(){
-  setEleLocation();     
-})
+$(window).resize(function(){   
+  initPage();            
+})    
 
 /**
- * 部分元素的样式用js来hack
+ * 页面初始化时，用JS来定位部分元素  
  */  
-function setEleLocation(){
+function initPage(){
   var poster = $(".tuijian > img:eq(0)");
   var videoDiv = $(".video");
   var video = $(".video video");
-  var intro = $(".intro");
-  var support = $(".tuijian a img");
+  var intro = $(".intro");  
+  var support = $(".tuijian a img");    
   // 统一设置所有视频层的宽高和位置
-  videoDiv.css("width", poster.width());       
-  videoDiv.css("height", poster.height());
-  videoDiv.css("left", poster.css("marginLeft"));    
-  video.attr("width", "100%");
-  video.attr("height", "100%");
+  videoDiv.css('width', poster.width()).css('height', poster.height()).css('left', poster.css('marginLeft'));       
+  // videoDiv.css("height", poster.height());
+  // videoDiv.css("left", poster.css("marginLeft"));    
+  video.attr('width', '100%').attr('height', '100%');  
+  // video.attr("height", "100%");
   // 统一设置所有支持按钮的位置
   support.css("top", poster.height());
   // 遍历所有推荐模块来改变每个模块中相应的部分元素样式    
@@ -54,11 +131,11 @@ function setEleLocation(){
     var curPoster = $(this).find("img").eq(0);   
     var curZhezhao = $(this).find("img").eq(1);
     var curPlay = $(this).find("img").eq(2);  
-    var curVideoDiv = $(this).find(".video");
-    var picZhezhao = $(this).find("img").eq(4);     
-    var introTitle = $(this).find("span").eq(0);  
+    var curVideoDiv = $(this).find(".video");   
+    var picZhezhao = $(this).find("img").eq(4);       
+    var introTitle = $(this).find("span").eq(0);     
     // 设置每个播放按钮的位置
-    curPlay.css("top", (curPoster.height() - curPlay.height()) / 2).css("display", "block");  
+    curPlay.css("top", (curPoster.height() - curPlay.height()) / 2).css("display", "block");    
     // 设置每个图片蒙版的位置
     picZhezhao.css("top", curPoster.height()).css("display", "block"); 
     // 设置每个概况标题的位置
@@ -68,11 +145,11 @@ function setEleLocation(){
     // 设置每个支持按钮的位置
     support.css("top", parseInt(intro.css("top")) + intro.height() + parseInt(intro.css("marginTop"))).css("display", "block");
     // 视频播放事件  
-    curPlay.click(function(){ 
+    curPlay.click(function(){    
       // 先隐藏不必要的元素   
       curPoster.css("visibility", "hidden");            
       curZhezhao.css("visibility", "hidden");     
-      curPlay.css("visibility", "hidden");   
+      curPlay.css("visibility", "hidden");        
       // 再显示视频层
       curVideoDiv.css("display", "block");    
     })  
@@ -81,7 +158,7 @@ function setEleLocation(){
 
 /**
  * 选项卡切换
- * @param  {ElementList} tabs 所有选项卡
+ * @param  {ElementList} tabs 所有选项卡   
  * @param  {Element} currentTab 当前选中的选项卡 
  */
 function changeTab(tabs, currentTab){
@@ -124,10 +201,10 @@ function changeTab(tabs, currentTab){
         "<img src='images/index/support.png' class='am-img-responsive intro-support'/>"
       );
     }
-    setEleLocation();    
+    initPage();    
   }else if(currentTab.html() == "排行"){     // 排行Tab  
 
-    // 隐藏其它内容而不是删除节点
+    // 隐藏其它内容而不是删除节点 
     tuijian.css("display","none");     
     zuixin.css("display","none");        
     success.css("display","none");  
@@ -206,54 +283,55 @@ function changeTab(tabs, currentTab){
 }
 
 /**
- * 登陆成功时，操作DOM改变右边栏内容   
- * @param {string} name 登陆成功返回的标记    
+ * @param {String} nickname 用户昵称     
+ * @param {Number} sex 性别  
+ * @param {String} phoneNum 手机号
+ * @param {String} imgPath 头像路径   
  */
-function loginSucView(name){
-  var result = getQueryString(name);
-  if(result != null && result != ""){  
-    if(result == "success"){
-      $("#rightside .user-header").attr("src","imgs/index/touxiang@2x.png");
-      $("#rightside .user-title").html("我叫小姜姜");
-      // 我的资料
-      var myInfo = $(".right-nav a:eq(0)");   
-      change(myInfo,"imgs/index/gerenziliao-@2x.png","我的资料");   
-      myInfo.attr("href","myInfo.html");
-      // 我的钱包   
-      var myWallet = $(".right-nav a:eq(1)");
-      change(myWallet,"imgs/index/wodeqianbao-@2x.png","我的钱包");      
-      myWallet.attr("href","myWallet.html");
-      // 我的收藏       
-      var myLove = $(".right-nav a:eq(2)");
-      change(myLove,"imgs/index/wodeshoucang-@2x.png","我的收藏");
-      myLove.attr("href","myLove.html");   
-      // 插入“我的订单”节点
-      $(".right-nav li:eq(2)").after(
-        "<li><a href='##'>" +
-        "<img src='imgs/index/wodedingdan@2x.png'> " +  
-        "<span>我的订单</span>" +
-        "</a></li>"
-      );
-      // 插入“分享有礼”节点
-      $(".right-nav li:eq(3)").after(
-        "<li><a href='share.html'>" +
-        "<img src='imgs/index/fenxiangyouli-@2x.png'> " +  
-        "<span>分享有礼</span>" +
-        "</a></li>"
-      );
-      // 退出登录
-      var logout = $(".right-nav a:eq(5)");  
-      change(logout,"imgs/index/tuichudenglu-@2x.png","退出登录");
-      logout.attr("href","##");    
-    }else{
-      // 登陆失败
-    }
-    function change(ele, src, str){
-      ele.children("img").attr("src",src);
-      ele.children("span").html(str);
-    }
+ var User = function(nickname, sex, phoneNum, imgurl){         
+  this.nickname = nickname;  
+  this.sex = sex;  
+  this.phoneNum = phoneNum;    
+  this.imgurl = imgurl; 
+}  
+  
+/**
+ * 登录成功视图，登陆成功后改变右侧列表项并显示用户信息。  
+ *（注：此处未重构右侧DOM结构，只是将原有的四个节点更换成新节点，剩下的新节点直接追加在后面）  
+ * @param {String} imgurl 用户头像地址
+ * @param {String} nickname 用户昵称      
+ * @param {Elements} rightLists 新的列表节点集        
+ */            
+function loginSucView(imgurl, nickname, rightLists){     
+  var userHeader = $(".user-header");    
+  var userTitle = $(".user-title");   
+  // 刷新右侧列表       
+  userHeader.attr('src', imgurl);       
+  userTitle.html(nickname);     
+  for(list in rightLists){            
+    var temp = rightLists[list].ele;
+    temp.children('img').attr('src', rightLists[list].iconSrc);  
+    temp.children('span').html(rightLists[list].listName);
+    temp.attr('href', rightLists[list].targetUrl);
   }
+  // 插入“我的订单”节点   
+  $(".right-nav li").last().before(      
+    "<li><a href='##'>" +  
+    "<img src='imgs/index/wodedingdan@2x.png'> " +         
+    "<span>我的订单</span>" +   
+    "</a></li>"    
+  );
+  // 插入“分享有礼”节点      
+  $(".right-nav li").last().before(     
+    "<li><a href='share.html'>" +
+    "<img src='imgs/index/fenxiangyouli-@2x.png'> " +       
+    "<span>分享有礼</span>" +     
+    "</a></li>"   
+  );      
 }
+
+    
+    
 
 
 	

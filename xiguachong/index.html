@@ -2,12 +2,13 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>西瓜虫演出</title>
+  <title>西瓜虫演出</title>   
+  <meta property="qc:admins" content="137726140260175130767636" />
    
   <!-- Set render engine for 360 browser -->      
   <meta name="renderer" content="webkit">
@@ -65,19 +66,19 @@
             <li>
               <a href="city.html">
                 <img src="imgs/leftside/wezhi--@2x.png">            
-                <span>切换城市</span>  
+                <span>选择城市</span>  
               </a>  
             </li>
-            <li>       
+            <!-- <li>       
               <a href="fenlei.html">  
                 <img src="imgs/leftside/xuanzefenlei-@2x.png">      
                 <span>分类浏览</span>   
               </a>  
-            </li>  
+            </li>   -->
             <li>
               <a href="javascript:void(0);">     
                 <img src="imgs/leftside/tuijianxiangmu@2x.png">          
-                <span>推荐项目</span>   
+                <span>首页</span>   
               </a>  
             </li>
             <li>    
@@ -130,7 +131,7 @@
     <!-- 个人信息栏 -->     
     <div id="rightside" class="am-offcanvas">          
       <div class="am-offcanvas-bar am-offcanvas-bar-flip">      
-        <div class="am-offcanvas-content">                 
+        <div class="am-offcanvas-content">                    
           <img class="user-header" src="imgs/login/touxiang-1@2x.png">  
           <span class="user-title">您还没有登录</span>
           <!-- 登录导航 --> 
@@ -143,19 +144,19 @@
             </li>
             <li>
               <a href="login.html"> 
-                <img src="imgs/login/shouji@2x.png">
-                <span>手机登录</span>
-              </a>   
+                <img src="imgs/login/shouji@2x.png">  
+                <span>手机登录</span>  
+              </a>      
             </li>
-            <li> 
-              <a href="javascript:window.open('/user/QQLogin');">
+            <li>   
+              <a href="javascript:window.location.href = '/user/QQLogin';">
                 <img src="imgs/login/qq@2x.png">
                 <span>QQ登录</span>  
               </a>    
             </li>
-            <!-- 登陆成功后在此处加两个列表 -->
+            <!-- 登陆成功后在此处加两个列表“我的订单”和“分享有礼” -->
             <li>   
-              <a href="register.html">       
+              <a href="register.html">         
                 <img src="imgs/login/zhuce@2x.png">        
                 <span>注册账号</span>  
               </a>    
@@ -171,16 +172,16 @@
     <!-- tab -->      
     <div class="tab"> 
       <a href="javascript:void(0);">推荐</a>               
-      <a href="javascript:void(0);">排行</a>     
-      <a href="javascript:void(0);">最新</a>   
-      <a href="javascript:void(0);">完成</a>         
+      <a href="javascript:void(0);">演出众筹</a>     
+      <a href="javascript:void(0);">瓜子众筹</a>   
+      <a href="javascript:void(0);">瓜子娱乐</a>         
     </div><div></div> 
 
     <!-- 项目推荐 -->  
     <div class="tuijian">
       <!-- 视频 -->     
-      <img src="imgs/index/shipintupian@2x.png" class="am-img-responsive"/>    
-      <img src="imgs/index/shipinmengban@2x.png" class="am-img-responsive"/>
+      <img src="imgs/index/shipintupian@2x.png" class="am-img-responsive"/>      
+      <img src="imgs/index/shipinmengban@2x.png" class="am-img-responsive"/>     
       <img src="imgs/index/shipin@2x.png" class="am-img-responsive"/> 
       <div class="video">
         <video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls">不支持该格式!</video>  
@@ -191,7 +192,7 @@
       <div class="intro">   
         <img src="imgs/index/mubiao-@2x.png" class="am-img-responsive"/>        
         <span>目标1500</span>   
-        <img src="imgs/index/yichou@2x.png" class="am-img-responsive"/>        
+        <img src="imgs/index/yichou@2x.png" class="am-img-responsive"/>           
         <span>已筹200</span>
         <img src="imgs/index/shengyu@2x.png" class="am-img-responsive"/>      
         <span>剩余8天</span>  
@@ -225,15 +226,9 @@
   
 <!--[if (gte IE 9)|!(IE)]><!-->
 <script src="assets/js/jquery.min.js"></script>   
-<!--<![endif]-->
+<!--<![endif]-->   
 <script src="assets/js/amazeui.min.js"></script>      
 <script src="js/common.js"></script>    
 <script src="js/index.js"></script>   
-<script type="text/javascript">
-  var flag = getQueryString("flag");     
-  var imgUrl = getQueryString("imgurl");      
-  var nickName = getQueryString("nickname");  
-  alert("登陆状态：" + flag + "****头像路径：" + imgUrl + "****用户昵称：" + decodeURI(nickName));      
-</script>
 </body>
 </html>

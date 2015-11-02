@@ -55,20 +55,20 @@
     </div>
     <h1 class="am-header-title">  
       <span>手机注册</span>   
-    </h1>
-  </header>    
+    </h1>  
+  </header>      
 
   <!-- 内容块 -->
   <div id="content">   
-    <img src="imgs/leftside/logo@2x.png" class="am-img-responsive logo"/>   
-    <input type="text" class="am-form-field" placeholder="输入手机号码（仅用于接收验证码）">      
+    <img src="imgs/leftside/logo@2x.png" class="am-img-responsive logo"/>     
+    <input type="text" class="am-form-field" placeholder="输入手机号码（仅用于接收验证码）" name="mobile" id="mobile" value="">      
     <div class="validate">
-      <input type="text" class="am-form-field" placeholder="输入验证码">     
-      <button type="button">获取验证码</button>  
-      <div style="clear: both;"></div>       
+      <input type="text" class="am-form-field" placeholder="输入验证码" name="code" id="code">     
+      <button type="button" id="codeBtn">获取验证码</button>    
+      <div style="clear: both;"></div>        
     </div>          
-    <input type="text" class="am-form-field" placeholder="输入密码">                      
-    <input type="text" class="am-form-field" placeholder="输入昵称">
+    <input type="text" class="am-form-field" placeholder="输入密码" name="userPwd" id="userPwd">                           
+    <input type="text" class="am-form-field" placeholder="输入昵称" name="userName" id="userName">   
     <button type="button" class="am-btn am-btn-default am-btn-block btn">注册</button>         
   </div>
 <!--[if lt IE 9]>
@@ -81,6 +81,6 @@
 <script src="assets/js/jquery.min.js"></script>
 <!--<![endif]-->
 <script src="assets/js/amazeui.min.js"></script>
-<script src="assets/js/app.js"></script>
+<script src="js/register.js"></script>
 </body>
 </html>
