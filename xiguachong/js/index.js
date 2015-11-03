@@ -6,23 +6,23 @@ window.onload = function(){
   var rightLists = new Array();
   var rightNavLinks = $('.right-nav a');
   var ls = window.localStorage;  
-  // 初始化右侧列表新节点       
+  // 初始化右侧列表的新节点       
   var myInfo = {       
     ele: rightNavLinks.eq(0),
     iconSrc: 'imgs/index/gerenziliao-@2x.png',    
     listName: '我的资料',   
     targetUrl: 'javascript:void(0)'              
-  }      
-  var myWallet = {    
+  }         
+  var myWallet = {      
     ele: rightNavLinks.eq(1),
-    iconSrc: 'imgs/index/wodeqianbao-@2x.png',               
+    iconSrc: 'imgs/index/wodeqianbao-@2x.png',                   
     listName: '我的钱包',      
     targetUrl: 'myWallet.html'    
   }  
   var myLove = {
-    ele: rightNavLinks.eq(2),
+    ele: rightNavLinks.eq(2),      
     iconSrc: 'imgs/index/wodeshoucang-@2x.png',           
-    listName: '我的收藏',   
+    listName: '我的收藏',     
     targetUrl: 'myLove.html'
   }
   var logout = {
@@ -34,7 +34,7 @@ window.onload = function(){
   rightLists.push(myInfo, myWallet, myLove, logout);      
   // 判断用户登录状态   
   if(ls.getItem('status') != 'online'){                        
-    var flag = getQueryString('flag');                        
+    var flag = getQueryString('flag');                          
     if(flag == 'success'){                  
       loginSucView(imgurl, decodeURI(nickname), rightLists);                   
       // 登录成功后将用户状态及用户信息保持在localStorage     
@@ -42,58 +42,58 @@ window.onload = function(){
         var userStr = JSON.stringify(new User(decodeURI(nickname), null, null, imgurl));       
         ls.setItem('status', 'online');         
         ls.setItem('user', userStr);      
-      }else{          
-        console.log('浏览器不支持localStorage！');              
+      }else{            
+        console.log('浏览器不支持localStorage！');                  
       }                
     }else if(flag == "fail"){    
-      imgurl = null;                 
+      imgurl = null;                  
       nickname = null;      
-      rightLists = null;           
-      console.log("登录失败！flag=" + flag);                  
+      rightLists = null;               
+      console.log("登录失败！flag=" + flag);                       
     }                      
   }else{                    
     var userStr = ls.getItem('user');       
-    var userObj = JSON.parse(userStr);      
+    var userObj = JSON.parse(userStr);         
     loginSucView(userObj.imgurl, decodeURI(userObj.nickname), rightLists);                              
-  }          
+  }             
 
   // 我的资料事件
   if(rightNavLinks.first().children('span').html() == '我的资料'){  
-    rightNavLinks.first().click(function(){  
-      $.get('/my/userInfo', function(data){           
-        var userStr = ls.getItem('user');
-        var userObj = JSON.parse(userStr);       
-        userObj.sex = data.sex;
+    rightNavLinks.first().click(function(){         
+      $.get('/my/userInfo', function(data){               
+        var userStr = ls.getItem('user');     
+        var userObj = JSON.parse(userStr);          
+        userObj.sex = data.sex;        
         userObj.phoneNum = data.phone;       
-        ls.setItem('user', JSON.stringify(userObj));    
-        window.location.href = 'myInfo.html'; 
-      })        
+        ls.setItem('user', JSON.stringify(userObj));           
+        window.location.href = 'myInfo.html';    
+      })         
     })  
   }
  
   // 退出登录事件       
-  if(rightNavLinks.last().children('span').html() == '退出登录'){
-    rightNavLinks.last().click(function(){     
-      ls.removeItem('status');        
-      ls.removeItem('user');        
-      window.location.href = "/user/Logout";           
+  if(rightNavLinks.last().children('span').html() == '退出登录'){  
+    rightNavLinks.last().click(function(){       
+      ls.removeItem('status');          
+      ls.removeItem('user');           
+      window.location.href = "/user/Logout";                 
     }) 
-  }
-
-  // 顶部选项卡切换    
-  var tabs = $(".tab a");  
-  $(".tab > a").click(function(){    
-    changeTab(tabs, $(this));    
+  }   
+  
+  // 顶部选项卡切换      
+  var tabs = $(".tab a");     
+  $(".tab > a").click(function(){       
+    changeTab(tabs, $(this));          
   })  
-    
-  // 左侧快捷入口进入选项卡    
-  $(".left-nav a").click(function(){      
+          
+  // 左侧快捷入口进入选项卡       
+  $(".left-nav a").click(function(){         
     // 关闭侧边栏      
-    $("#leftside").offCanvas('close');
+    $("#leftside").offCanvas('close');    
     // 显示点击的选项卡       
-    var tab = $(this).children("span");
+    var tab = $(this).children("span");    
     if(tab.html() == "推荐项目"){     // 推荐项目  
-      changeTab(tabs, $(".tab > a:contains('推荐')"));      
+      changeTab(tabs, $(".tab > a:contains('推荐')"));        
     }else if(tab.html() == "排行榜"){     // 排行榜    
       changeTab(tabs, $(".tab > a:contains('排行')"));      
     }else if(tab.html() == "最新项目"){     // 最新项目  
@@ -103,10 +103,10 @@ window.onload = function(){
     }
   })
 }
-  
-// 浏览器窗口缩放时
-$(window).resize(function(){   
-  initPage();            
+    
+// 浏览器窗口缩放时         
+$(window).resize(function(){     
+  initPage();                 
 })    
 
 /**
@@ -149,12 +149,12 @@ function initPage(){
       // 先隐藏不必要的元素   
       curPoster.css("visibility", "hidden");            
       curZhezhao.css("visibility", "hidden");     
-      curPlay.css("visibility", "hidden");        
+      curPlay.css("visibility", "hidden");              
       // 再显示视频层
       curVideoDiv.css("display", "block");    
     })  
   })  
-}
+}  
 
 /**
  * 选项卡切换
@@ -166,16 +166,16 @@ function changeTab(tabs, currentTab){
   /***** 切换Tab标题 *****/
   tabs.each(function(index){
     $(this).css("color", "#fff");         
-  })
+  })  
   currentTab.css("color", "#1dbcd2");    
 
-  /***** 切换Tab内容 *****/
-  var tuijian = $(".tuijian");   
+  /***** 切换Tab内容 *****/  
+  var tuijian = $(".tuijian");     
   var paihang = $(".paihang");    
   var zuixin = $(".zuixin");
   var success = $(".success");   
   if(currentTab.html() == "推荐"){     // 推荐Tab 
-
+   
     // 隐藏其它内容
     paihang.css("display","none");   
     zuixin.css("display","none");   
@@ -184,57 +184,59 @@ function changeTab(tabs, currentTab){
     // 点击Tab标签显示当前相应内容
     (tuijian.css("display") == "none") ? tuijian.css("display","block") : null;
     if($(".tuijian").html() == "" || $(".tuijian").html() == null){   
-      tuijian.append(      
+      tuijian.append(        
         "<img src='images/index/shipin.png' class='am-img-responsive video'/>" +
         "<img src='images/index/shipinmengban@2x.png' class='am-img-responsive zhezhao'/>" +
         "<img src='images/index/shipin_btn.png' class='am-img-responsive play'/>" +
         "<img src='images/index/img1.png' class='am-img-responsive intro'/>" +
-        "<span class='intro-title'>某某某音乐会</span>" +  
+        "<span class='intro-title'>某某某音乐会</span>" +   
         "<div class='intro-line'></div>" +
         "<div class='intro-content'>" +
         "<img src='images/index/mubiao.png' class='am-img-responsive'/>" +
         "<span>目标1500</span>" +
-        "<img src='images/index/yichou.png' class='am-img-responsive' style='margin-left:2rem;'/>" +
-        "<span style='margin-right: 2rem;'>已筹200</span>" +
-        "<img src='images/index/shengyu.png' class='am-img-responsive'/>" +
-        "<span>剩余8天</span></div>" +
-        "<img src='images/index/support.png' class='am-img-responsive intro-support'/>"
-      );
+        "<img src='images/index/yichou.png' class='am-img-responsive' style='margin-left:2rem;'/>" +    
+        "<span style='margin-right: 2rem;'>已筹200</span>" +      
+        "<img src='images/index/shengyu.png' class='am-img-responsive'/>" +    
+        "<span>剩余8天</span></div>" +    
+        "<img src='images/index/support.png' class='am-img-responsive intro-support'/>"        
+      );   
     }
-    initPage();    
-  }else if(currentTab.html() == "排行"){     // 排行Tab  
-
-    // 隐藏其它内容而不是删除节点 
-    tuijian.css("display","none");     
-    zuixin.css("display","none");        
-    success.css("display","none");  
+    initPage();          
+  }else if(currentTab.html() == "演出众筹"){     // 排行Tab    // 演出众筹           
+    tuijian.css('display', 'none'); 
+    $('.yanchu').removeAttr('hidden');          
+  
+    // 隐藏其它内容而不是删除节点   
+    // tuijian.css("display","none");     
+    // zuixin.css("display","none");        
+    // success.css("display","none");  
 
     // 显示当前内容
-    (paihang.css("display") == "none") ? paihang.css("display","block") : null;    
-    if($(".paihang ul").html() == "" || $(".paihang ul").html() == null){   
-      paihang.css("display","block");       
-      $(".paihang ul").append(
-        "<li class='am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left'style='background: #202020;'>" +
-        "<div class='am-u-sm-4 am-list-thumb'>" +
-        "<img src='imgs/paihang/tupian@2x.png' class='am-img-responsive paihang-poster'/></div>" +
-        "<div class='am-u-sm-8 am-list-main'>" +
-        "<p class='paihang-title'>2015年周杰伦世界巡回演唱会-南京站</p>" +
-        "<img class='paihang-jiantou' src='imgs/paihang/xiayiji@2x.png'>" +   
-        "<div class='paihang-content'>" + 
-        "<span>目标1500</span>" +      
-        "<span>已筹200</span>" +        
-        "<span>剩余8天</span></div>" +   
-        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +         
-        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +      
-        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +     
-        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
-        "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
-        "<a class='paihang-support' href='item.html'>立即支持</a>" +
-        "</div></li>"
-      );
-      // Hack一下箭头的位置
-      browserType("UCBrowser") ? $(".paihang-jiantou").css("top", "1.2rem") : null;
-    }
+    // (paihang.css("display") == "none") ? paihang.css("display","block") : null;    
+    // if($(".paihang ul").html() == "" || $(".paihang ul").html() == null){   
+    //   paihang.css("display","block");       
+    //   $(".paihang ul").append(
+    //     "<li class='am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left'style='background: #202020;'>" +
+    //     "<div class='am-u-sm-4 am-list-thumb'>" +
+    //     "<img src='imgs/paihang/tupian@2x.png' class='am-img-responsive paihang-poster'/></div>" +
+    //     "<div class='am-u-sm-8 am-list-main'>" +
+    //     "<p class='paihang-title'>2015年周杰伦世界巡回演唱会-南京站</p>" +
+    //     "<img class='paihang-jiantou' src='imgs/paihang/xiayiji@2x.png'>" +   
+    //     "<div class='paihang-content'>" + 
+    //     "<span>目标1500</span>" +      
+    //     "<span>已筹200</span>" +         
+    //     "<span>剩余8天</span></div>" +   
+    //     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +         
+    //     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +      
+    //     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +     
+    //     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
+    //     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
+    //     "<a class='paihang-support' href='item.html'>立即支持</a>" +
+    //     "</div></li>"
+    //   );
+    //   // Hack一下箭头的位置
+    //   browserType("UCBrowser") ? $(".paihang-jiantou").css("top", "1.2rem") : null;
+    // }
   }else if(currentTab.html() == "最新"){     // 最新Tab
 
     // 隐藏其它内容

@@ -21,6 +21,7 @@
 	margin-bottom: 1rem;  
 	border: .1rem solid #666;        
 	font-size: 1.5rem;
+	color: #fff;
 }
 .btn,.btn:focus,.btn:active{  
 	background: #1dbcd2;
@@ -47,11 +48,25 @@
 	height: 1.8rem;
 	display: none;
 }
-#content > a{     /* 注册账号 */
-	color: #ccc;
-	display: block;
-	margin: 0rem auto;
+#content > a:nth-of-type(1){     /* 注册账号 */
+	color: #ccc; 
+	display: block; 
+	margin: 0rem auto;      
 	text-align: center;
 	font-size: 1.5rem;
 	margin-top: 1rem;
+} 
+.forgetPwd{      
+	color: #ccc;
+	font-size: 1.3rem;      
+	float: right;
+	margin-top: -2.1rem;  
+	margin-right: 50%;
+	transform: translateX(13rem);
+	-webkit-transform: translateX(13rem);
+	-moz-transform: translateX(13rem);
+	-ms-transform: translateX(13rem);
+	-o-transform: translateX(13rem);
 }
+
+

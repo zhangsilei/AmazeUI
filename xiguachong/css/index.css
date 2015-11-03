@@ -27,23 +27,23 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 .am-offcanvas-bar{
 	background: #202020;
 }
-.logo{        
+.logo{           
 	width: 13.88rem;     
 	height: 4.58rem;  
 }
 .left-nav{
 	height: 21.6rem;      
 	width: 15rem; 
-}   
+}      
 .left-nav li{  
-	margin-top: 1px;      
-	line-height: 3.5rem; 
+	margin-top: 1px;         
+	line-height: 4rem; 
 	font-size: 1.6rem;     
 	float: left;
 	margin-left: .4rem;
-} 
+}         
 .left-nav img{   
-	width: 2rem;       
+	width: 2rem;         
 	height: 2rem;   
 }
 .left-nav span{
@@ -66,27 +66,27 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	position: absolute;
 	left: 50%;
 	top: -.5rem;
-	transform: translate(-50%);
-	-webkit-transform: translate(-50%); 
-	-moz-transform: translate(-50%);
-	-ms-transform: translate(-50%);
-	-o-transform: translate(-50%);
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%); 
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
 }
 .left-bottom span{
 	line-height: 6.5rem;
-	font-size: 1.4rem;
+	font-size: 1.4rem;   
 } 
 /* 搜索框 */
-.search{
+.search{  
 	background: #0ea0b7;
 	width: 70%;  
 	height: 62%;  
 	margin: 0rem auto;
-	transform: translate(0rem, 40%);
-	-webkit-transform: translate(0rem, 40%);
-	-moz-transform: translate(0rem, 40%);
-	-ms-transform: translate(0rem, 40%);
-	-o-transform: translate(0rem, 40%);
+	transform: translateY(40%);
+	-webkit-transform: translateY(40%);
+	-moz-transform: translateY(40%);
+	-ms-transform: translateY(40%);
+	-o-transform: translateY(40%);
 	border-radius: 2rem;
 	position: relative;
 }
@@ -96,11 +96,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	position: absolute;
 	top: 50%;
 	left: 1.5rem;
-	transform: translate(0rem, 50%);
-	-webkit-transform: translate(0rem, -50%);
-	-moz-transform: translate(0rem, -50%);
-	-ms-transform: translate(0rem, -50%);
-	-o-transform: translate(0rem, -50%);
+	transform: translateY(50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
 }
 .search input{
 	background: #0ea0b7;
@@ -118,11 +118,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	height: 6rem; 
 	display: block;      
 	margin-left: 50%;    
-	transform: translate(-50%);
-	-webkit-transform: translate(-50%);   
-	-moz-transform: translate(-50%);     
-	-ms-transform: translate(-50%);   
-	-o-transform: translate(-50%);   
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);   
+	-moz-transform: translateX(-50%);     
+	-ms-transform: translateX(-50%);   
+	-o-transform: translateX(-50%);   
 }
 .user-title{
 	font-size: 1.6rem;       
@@ -163,28 +163,28 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 }    
 .tab a{
 	color: #fff;         
-	font-size: 1.6rem;          
+	font-size: 1.5rem;          
 	display: inline-block;
-	padding: .1rem 1rem;
+	padding: .1rem 0rem;   
 	margin: 0rem 3%;
 	line-height: 3rem;   
 }
-.tab a:first-child{ 
+.tab a:first-child{       
 	color: #1dbcd2;     
-}
-.tab + div{
+}   
+.tab + div{  
 	width: 100%;
 	height: .2rem;  
-	background: #1dbcd2;
+	background: #1dbcd2;  
 }
 /* 推荐项目 */
 .tuijian{
 	position: relative;
-}
+}   
 .tuijian > img:first-child,     /* 视频海报 */
 .tuijian > img:nth-of-type(4){     /* 概况海报 */   
 	margin: 0rem auto;
-}
+}      
 .tuijian > img:nth-child(2),     /* 视频蒙版 */
 .tuijian > img:nth-child(3),     /* 播放按钮 */
 .tuijian > img:nth-of-type(5),     /* 图片蒙版 */
@@ -193,11 +193,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	position: absolute;
 	top: 0rem;    
 	left: 50%;   
-	transform: translate(-50%);
-	-webkit-transform: translate(-50%);
-	-ms-transform: translate(-50%);
-	-moz-transform: translate(-50%);
-	-o-transform: translate(-50%);  
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-o-transform: translateX(-50%);  
 }
 .tuijian > img:nth-of-type(5){     /* 图片蒙版 */
 	display: none;
@@ -245,6 +245,28 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	height: 5.12rem;
 	margin-top: 5%; 
 	display: none;
+}
+/* 演出众筹 */
+.yanchu{  
+}
+.kind{
+	width: 100%;
+	text-align: center;
+}
+.kind div{    
+	width: 18%; 
+	text-align: center;
+	display: inline-block;
+	margin: 2rem 0rem 1rem;
+}
+.kind img{
+	width: 3rem;
+	height: 3rem;
+	margin: 0rem auto;
+}
+.kind span{
+	font-size: 1.4rem;
+	color: #ccc;
 }
 /* 项目排行样式 */
 .paihang-poster,.success-poster{

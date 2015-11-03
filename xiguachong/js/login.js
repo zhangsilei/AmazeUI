@@ -1,24 +1,26 @@
-$(document).ready(function(){
+$(function(){
 	initPage();
-	$(".btn").click(function(){
-		window.location.href = "index.html?result=success";
-	})
-})  
 
-$(window).resize(function(){
-	initPage();
-})    
+	var mobile = $('#mobile');
+	var userPwd = $('#userPwd'); 
+	$(".btn").click(function(){
+		$.get('/Mobile/login', {mobile: mobile.val(), userPwd: userPwd.val()}, function(data){
+			console.log(data);
+		})   
+	})
+
+})  
+    
+$(window).resize(function(){       
+	initPage();             
+})       
   
-/**
- * 页面初始化时，用js定位部分元素
- */
-function initPage(){
-	var accIpt = $(".phone input");      
-	var pwdIpt = $(".pwd input");  
-	var phone = $(".phone img");   
-	var pwd = $(".pwd img");
-	var phoneleft = parseInt(accIpt.css("marginLeft")) + accIpt.width() - phone.width();
-	phone.css("left",phoneleft).css("display", "block"); 
-	var pwdLeft = parseInt(pwdIpt.css("marginLeft")) + pwdIpt.width() - pwd.width();
-	pwd.css("left",pwdLeft).css("display", "block");   
-}
+/**   
+ * 页面初始化时，用js定位部分元素   
+ */   
+function initPage(){   
+	var accIpt = $(".phone input"), phoneIcon = $(".phone img"), pwdIcon = $(".pwd img");           
+	var phoneleft = parseInt(accIpt.css("marginLeft")) + accIpt.width() - phoneIcon.width();  
+	phoneIcon.css("left", phoneleft).css("display", "block");             
+	pwdIcon.css("left", phoneleft).css("display", "block");   
+}  

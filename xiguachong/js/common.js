@@ -24,7 +24,7 @@ var browser={
  * 获取请求url的参数
  * @param {String} name URL后缀的参数名
  */
-function getQueryString(name){
+function getQueryString(name){      
     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
     var r = window.location.search.substr(1).match(reg);
     if(r!=null)return  unescape(r[2]); return null;
@@ -38,7 +38,7 @@ function getQueryString(name){
 function browserType(browserStr){     
     return (navigator.userAgent.indexOf(browserStr) != -1) ? true: false;
 }
-
+   
 /**
  * 写入Cookie   
  * @param {String} cname  Cookie的key
@@ -74,4 +74,14 @@ function getCookie(cname){
     }
     return cvalue;
 }
+
+/**   
+ * 过滤两端空格
+ * @param {String} str 要过滤的原字符串    
+ * @return {String} 过滤后的字符串   
+ */   
+function trim(str){        
+    return str.replace(/(^\s*)|(\s*$)/g, ""); 
+} 
+
 
