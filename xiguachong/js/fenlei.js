@@ -8,13 +8,13 @@ $(document).ready(function(){
     "<img class='paihang-jiantou' src='imgs/paihang/xiayiji@2x.png'>" +   
     "<div class='paihang-content'>" + 
     "<span>目标1500</span>" +      
-    "<span>已筹200</span>" +        
+    "<span>已筹200</span>" +            
     "<span>剩余8天</span></div>" +   
     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +         
     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +      
     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +     
     "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
-    "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +
+    "<img class='paihang-star' src='imgs/paihang/star-1@2x.png'>" +     
     "<a class='paihang-support' href='item.html'>立即支持</a></div></li>"
   );   
 })

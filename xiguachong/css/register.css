@@ -49,7 +49,7 @@
 .validate button:active{
 	background: #888;
 }
-.btn,.btn:focus,.btn:active{  
+.btn,.btn:focus,.btn:active,.btn:hover{  
 	background: #1dbcd2;
 	border: none;
 	width: 80%;

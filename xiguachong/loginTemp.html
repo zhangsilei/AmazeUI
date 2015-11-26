@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>西瓜虫演出</title>
+	<script src="js/common.js"></script>    
+	<meta charset="UTF-8"/>
+	<script type="text/javascript">  
+		var ls = window.localStorage;
+		if(ls){   
+			ls.setItem('flag', getQueryString('flag'));      // 三方登录标记        
+			ls.setItem('userId', getQueryString('Id'));
+			ls.setItem('nickname', getQueryString('nickname')); 
+			ls.setItem('imgurl', decodeURI(getQueryString('imgurl')));           
+			window.location.href = 'index.html';          
+		}else{           
+			console.log('浏览器不支持localStorage'); 
+		}         
+	</script>
+</head>          
+<body>  
+	数据正在加载...
+</body>
+</html>

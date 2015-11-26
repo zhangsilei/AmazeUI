@@ -14,7 +14,7 @@
 }
 .sex p{
 	font-size: 1.6rem;    
-	color: #ccc;
+	color: #ccc;   
 	margin: .3rem 0rem 0rem;
 }
 .man img,.woman img{
@@ -36,11 +36,11 @@
 .user-info{
 	max-width: 40rem;
 	margin: 0rem auto; 
-}
+} 
 .user-info ul{
 	font-size: 1.6rem;
 }
-.user-info li span:nth-of-type(2){
+.user-info li span:nth-of-type(2){ 
 	float: right;
 }
 .user-info ul li{
@@ -50,9 +50,9 @@
 	width: 1.2em;
 	height: 1.2rem;
 	float: right;
-	margin: .5rem .5rem 0rem 0rem;
+	margin: .5rem .5rem 0rem 0rem; 
 }
-.btn,.btn:focus,.btn:active{  
+.btn,.btn:focus,.btn:active,.btn:hover{  
 	background: #1dbcd2;
 	border: none;
 	max-width: 40rem;

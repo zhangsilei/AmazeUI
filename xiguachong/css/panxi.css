@@ -1,0 +1,50 @@
+body{
+	background: #202020;
+}
+.panxi{
+	position: relative;
+	margin-bottom: 1rem;
+	max-width: 70rem;
+	margin: 0rem auto;
+}   
+.zhezhao,
+.panxi > img:nth-child(2){     /* 播放按钮 */ 
+	position: absolute;
+	top: 0rem;  
+	left: 50%;      
+	transform: translateX(-50%);  
+	-webkit-transform: translateX(-50%);       
+}
+.panxi > img:first-child,     /* 视频海报 */   
+.panxi > img:nth-of-type(3){     /* 概况海报 */   
+	margin: 0rem auto;    
+}           
+.panxi > img:nth-child(2){     /* 播放按钮 */    
+	width: 7rem;      
+	height: 7rem;                 
+	margin-top: 18%;   
+ 
+}        
+.video{         
+	display: none;   
+	position: absolute;             
+	top: 0rem;          
+	left: 0rem;  
+} 
+.panxi div:nth-of-type(2){
+	padding: .5rem;
+}  
+.panxi div:nth-of-type(2) img{
+	width: 2rem;
+	height: 2rem;
+} 
+.panxi .zan,
+.panxi .zan + span,
+.panxi .talk + span{
+	margin-left: 1rem;
+} 
+.panxi .talk{
+	margin-left: 2rem;
+}
+
+  

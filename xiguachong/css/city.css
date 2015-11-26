@@ -6,19 +6,19 @@
 	height: 100%;
 }
 #content ul{
-	max-width: 40rem;
+	max-width: 100rem;
 	list-style: none;
-	font-size: 1.6rem; 
+	font-size: 1.6rem;  
 	padding-top: 1.5rem;
 	margin: 0rem auto;
 }
 #content li{
-	margin-bottom: 2rem;  
+	margin-bottom: 2rem;   
 }
 #content > ul:first-child span + span{
 	float: right;
 	margin-right:2rem;   
-}
+} 
 #content li:nth-child(2) span{  
 	color: #999;
 }

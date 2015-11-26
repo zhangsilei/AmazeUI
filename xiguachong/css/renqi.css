@@ -1,0 +1,46 @@
+.renqi{
+	position: relative;
+	max-width: 100rem;
+}  
+.renqi img,
+.renqi{      
+	margin: 0rem auto;   
+}   
+.renqi-mengban{
+	left: 50%; 
+	bottom: 0rem;   
+	transform: translateX(-50%);    
+	-webkit-transform: translateX(-50%);
+} 
+.renqi-mengban, 
+.renqi span:nth-of-type(1),
+.renqi span:nth-of-type(2),
+.renqi span:nth-of-type(3), 
+.renqi button{ 
+	position: absolute; 
+}
+.renqi span:nth-of-type(1), 
+.renqi span:nth-of-type(2){
+	left: 2rem;
+}
+.renqi span:nth-of-type(1){     /* 人名 */
+	font-size: 2rem;    
+	bottom: 4rem;
+} 
+.renqi span:nth-of-type(2),     /* 学校 */
+.renqi span:nth-of-type(3){     /* 身份 */    
+	font-size: 1.5rem;      
+	bottom: 1rem; 
+} 
+.renqi span:nth-of-type(3){    /* 身份 */  
+	left: 12rem; 
+}  
+.renqi button{ 
+	right: 1rem;    
+	bottom: 1.5rem; 
+	border: none;  
+	border-radius: 3rem; 
+	font-size: 1.8rem; 
+	padding: .5rem 2rem;
+	background: #1dbcd2;
+}

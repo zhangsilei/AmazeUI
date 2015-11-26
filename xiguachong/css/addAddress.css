@@ -1,0 +1,31 @@
+/**
+ * 内容块
+ */
+#content{
+	background: #202020;
+	padding: 4rem 2rem 0rem;
+	font-size: 1.6rem;
+}
+.address-info{
+	max-width: 40rem;
+	margin: 0rem auto 10rem;
+}
+.address-info div span:nth-of-type(2){
+	float: right;  
+}
+.address-info hr{ 
+	margin-top: .5rem;
+}
+.address-info div{
+	margin-top: -.5rem; 
+}
+.btn,.btn:focus,.btn:active{  
+	background: #1dbcd2;
+	border: none;
+	width: 100%;
+	max-width: 40rem;
+	height: 3.5rem;
+	margin: 2rem auto 0rem;
+	font-size: 1.8rem;
+	color: #fff;
+}

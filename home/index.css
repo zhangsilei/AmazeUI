@@ -7,7 +7,7 @@ html,body{
 	height: 100%;
 	overflow: hidden;
 }
-#container,.section{
+.container,.section{
 	height: 100%;
 	position: relative; 
 }
@@ -183,10 +183,10 @@ img{
 #section0 > .main > img{     /* 手机图片 */  
 	width: 588.8px;       
 	height: 673.6px;
-	float: left;                                
+	float: left;                                 
 	margin: -20px 5% 0px -50px;
 }   
-.tit,
+.tit, 
 .text1{
 	color: #FFF;
 	font-family: "SimHei";

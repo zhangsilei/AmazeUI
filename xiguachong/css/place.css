@@ -1,0 +1,106 @@
+body{
+	background: #202020;
+}
+.poster .intro,     
+.place, 
+.phone,
+.weilai-title{           
+	background: rgba(0, 0, 0, .3);                             
+}       
+.show-name + span,                           
+.max-people, 
+.paihang-title, 
+.paihang-content span{
+	color: #ccc;
+}     
+#content{ 
+	max-width: 100rem;
+} 
+.poster .intro{  
+	width: 100%;      
+	height: 4rem; 
+	left: 0rem;
+	bottom: 0rem;
+}   
+.show-name{ 
+	margin-left: 1rem;           
+} 
+.show-name + span,                         
+.max-people{    
+	margin-top: .3rem;   
+}   
+.show-name + span{ 
+	margin-left: 2rem;
+}   
+.place,
+.phone{    
+	padding: 1rem;
+}
+.place span, 
+.phone span{
+	color: #e5e5e5;
+} 
+.place-icon,
+.phone-icon{    
+	width: 10%;
+}   
+.place-icon img,
+.phone-icon img{  
+	width: 3rem;    
+	height: 3rem;               
+} 
+.place-intro,            
+.phone-intro{      
+	width: 86%;
+	margin-left: 1rem;
+	padding-right: 1.5rem;
+}                    
+.place-intro img, 
+.phone-intro img{          
+	width: 1.5rem; 
+	height: 1.5rem; 
+}
+.place-intro img,
+.phone-intro img{
+	right: 0rem;     
+	top: 50%;
+	transform: translateY(-50%);  
+	-webkit-transform: translateY(-50%);
+}  
+.phone{    
+	margin-top: .1rem;
+}
+.weilai-title{
+	border-top: .1rem solid #202020;
+	padding: 1rem;
+}     
+.paihang-poster{            
+	min-width: 8rem;      
+	min-height: 12rem;    
+} 
+.paihang-title{  
+	margin-right: 1rem; 
+	margin-top: -.5rem;     
+}      
+.paihang-content{    
+	margin-top: -1rem;           
+}  
+.paihang-content img{
+	width: 2rem;
+	height: 2rem;
+}            
+.paihang-content .date, 
+.paihang-content .time,
+.paihang-content .city, 
+.paihang-content .show,
+.paihang-content .ticket{ 
+	margin-left: .5rem;
+}
+.paihang-jiantou{
+	width: 1.2rem;               
+	height: 1.2rem;               
+	top: .2rem;        
+	right: .7rem;      
+}
+      
+

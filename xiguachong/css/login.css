@@ -23,7 +23,7 @@
 	font-size: 1.5rem;
 	color: #fff;
 }
-.btn,.btn:focus,.btn:active{  
+.btn,.btn:focus,.btn:active,.btn:hover{  
 	background: #1dbcd2;
 	border: none;
 	width: 80%;

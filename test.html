@@ -7,7 +7,7 @@
   <meta name="keywords" content="">
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>Amaze UI Examples</title>
+  <title>测试表格</title>
 
   <!-- Set render engine for 360 browser -->
   <meta name="renderer" content="webkit">
@@ -20,7 +20,7 @@
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
   <link rel="icon" sizes="192x192" href="assets/i/app-icon72x72@2x.png">
-
+ 
   <!-- Add to homescreen for Safari on iOS -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -37,52 +37,70 @@
   -->
 
   <link rel="stylesheet" href="assets/css/amazeui.min.css">
-  <link rel="stylesheet" href="assets/css/app.css">
-</head>
+  <link rel="stylesheet" href="assets/datatables-master/dist/amazeui.datatables.css">
+</head>  
 <body>
-<!--[if lte IE 9]>
+<!--[if lte IE 9]> 
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
   href="http://browsehappy.com/" target="_blank">升级浏览器</a>
-  以获得更好的体验！</p>
-<![endif]-->
-	
-	<div class="am-slider am-slider-default">
-	  <ul class="am-slides">
-	    <li>
-		  	
-	    </li>
-	    <li>
-	    	
-	    </li>
-	    <li>
-	    	<img src="http://s.amazeui.org/media/i/demos/pure-3.jpg" />
-	    </li>
-	    <li>
-	    	<img src="http://s.amazeui.org/media/i/demos/pure-4.jpg" />
-	    </li>
-	  </ul>
-	</div>
+  以获得更好的体验！</p> 
+<![endif]--> 
+	     
+  <table width="100%" class="am-table am-table-striped am-table-bordered am-table-compact am-text-nowrap" id="example-r">
+    <thead>
+      <tr>
+        <th>管理员ID</th>
+        <th>管理员用户名</th>
+        <th>密码</th> 
+        <th>是否有效</th>
+        <th>是否删除</th>   
+        <th>权限ID</th>
+        <th>上次登录时间</th>
+        <th>上次登录IP</th> 
+      </tr>
+    </thead>  
+    <tbody>
+      <tr class="odd gradeX"> 
+        <td>test</td>
+        <td></td>
+        <td></td>
+        <td class="center"></td>
+        <td class="center"></td> 
+        <td></td>
+        <td></td>
+        <td></td>        
+      </tr>
+      <tr class="even gradeC">
+        <td>Trident</td>
+        <td>Internet
+          Explorer 5.0</td>
+        <td>Win 95+</td>
+        <td class="center">5</td>
+        <td class="center">C</td>
+      </tr>
+    </tbody>
+  </table> 
 
-<!--[if lt IE 9]>
+<!--[if lt IE 9]>       
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
 <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="assets/js/jquery.min.js"></script>
-<!--<![endif]-->
-<script src="assets/js/amazeui.min.js"></script>
-<script type="text/javascript">  
-	$(function() {
-	  $('.am-slider').flexslider({
-	    direction: "vertical",     // 垂直播放
-	    animationLoop: false,     // 不循环播放
-	  	slideshow: false,     // 不自动播放
-	  	controlNav: false,     // 不显示控制点
-	  	directionNav: false     // 不显示上/下一个按钮
-	  });
-	});
-</script>
+<script src="assets/js/jquery.min.js"></script>    
+<!--<![endif]-->      
+<script src="assets/js/amazeui.min.js"></script>    
+<script src="assets/datatables-master/dist/amazeui.datatables.min.js"></script> 
+<script src="assets/datatables-master/dist/dataTables.responsive.min.js"></script>
+<script>
+  $(function() { 
+    $('#example-r').DataTable({ 
+      responsive: true, 
+      dom: 'ti' 
+    });
+  });
+</script>   
 </body>
 </html>
+ 
