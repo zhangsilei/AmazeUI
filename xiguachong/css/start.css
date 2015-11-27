@@ -1,0 +1,137 @@
+body,div,ul,li,i,p,a,span,img,h4,input{
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	list-style: none;
+	border: 0;
+}
+a:link,a:visited,a:hover,a:active{
+	color: #fff;
+}
+#startz{
+	background: #202020;
+	font-size: 1.5rem;
+	position: relative;
+	width: 100%;
+	height: 600px;
+}
+#startz .slip{
+	width: 1px;
+	height: 65px;
+	border-left: 1px dashed #787878;
+	margin: 0 auto;
+}
+#startz .text{
+	position: absolute;
+}
+#startz .slip:nth-of-type(1){
+	margin-top: 20px;
+}
+#startz .middle{
+	width: 20%;
+	position: absolute;
+	left: 40%;
+	top: 0;
+}
+#startz img:nth-of-type(1){
+			transform: translateX(-11px);
+	-webkit-transform: translateX(-11px);
+}
+#startz img:nth-of-type(2){
+			transform: translateX(7px);
+	-webkit-transform: translateX(7px);
+}
+#startz img:nth-of-type(3){
+			transform: translateX(-7px);
+	-webkit-transform: translateX(-7px);
+}
+#startz img:nth-of-type(4){
+			transform: translateX(9px);
+	-webkit-transform: translateX(9px);
+}
+#startz .one{
+	color: #FF5466;
+	left: 53%;
+	top: 13%;
+}
+#startz .two{
+	color: #F19715;
+	right: 52%;
+	top: 30%;
+}
+#startz .three{
+	color: #85d560; 
+	left: 53%;
+	top: 49%;
+}
+#startz .four{
+	color: #5671B3;
+	right: 52%;
+	top: 66%;
+}
+#startz .bot{
+	position: absolute;
+	width: 100%;
+	height: 50px;
+	font-size: 2.0rem;
+	bottom: 6%;
+}
+#startz .bot b{
+	color: #6495ED;
+}
+@media screen and (min-width: 600px){
+	#startz{
+		font-size: 2.5rem;
+		height: 850px;
+	}
+	#startz .slip{
+		height: 100px;
+				transform: translateY(3px);
+		-webkit-transform: translateY(3px);
+		border-left: 2px dashed #787878;
+	}
+	#startz .slip:nth-of-type(1){
+		margin-top: 60px;
+	}
+	#startz .one{
+		top: 16%;
+	}
+	#startz .two{
+		top: 33%;
+	}
+	#startz .three{
+		top: 52%;
+	}
+	#startz .four{
+		top: 69%;
+	}
+	#startz .bot{
+		bottom: 5%;
+		font-size: 3.0rem;
+	}
+}
+@media screen and (min-width: 400px) and (max-width: 599px){
+	#startz{
+		height: 700px;
+	}
+	#startz .slip:nth-of-type(1){
+		margin-top: 40px;
+	}
+	#startz .one{
+		top: 14%;
+	}
+	#startz .two{
+		top: 28%;
+	}
+	#startz .three{
+		top: 45%;
+	}
+	#startz .four{
+		top: 59%;
+	}
+	#startz .bot{
+		bottom: 11%;
+}
+

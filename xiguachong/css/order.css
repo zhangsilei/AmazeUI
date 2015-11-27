@@ -1,0 +1,66 @@
+body{
+	background: #202020;
+}
+.intro,
+.detail,
+.send{
+	background: rgba(0, 0, 0, .3); 
+}
+.intro .am-text-lg{ 
+	line-height: 2rem;
+} 
+.time img,
+.place img,
+.send img{ 
+	width: 2rem;
+	height: 2rem;
+} 
+.time span,
+.place span,
+.detail-content > div:nth-of-type(1) span,
+.detail-content > div:nth-of-type(2) span,
+.detail-content > div:nth-of-type(3) span,
+.detail-content > div:nth-of-type(3) + span,
+.send-content span{
+	font-size: 1.5rem; 
+}
+
+.time span,
+.place span{  
+	line-height: 100%;
+}
+@media screen and(min-width: 375px){
+	#showName{
+		margin: 1rem 0rem 3rem; 
+	}
+}  
+.intro .am-text-lg,
+.detail > span:first-child, 
+.send > span:first-child, 
+.send > div:nth-of-type(1) span,
+.money span{
+	color: #ccc; 
+}
+.detail > span:first-child,
+.send > div:first-child span{
+	font-size: 1.7rem; 
+}  
+.line{
+	border-top: .1rem dashed #999;
+}
+.time span,
+.place span,
+.detail-content span,   
+.send-content span{
+	color: #999;
+}
+#status{ 
+	color: #3dcbcc;
+}      
+#btn,.btn:hover{  
+	background: #2bbccf;   
+	border: none;
+	height: 3.5rem;
+	color: #fff;
+}
+

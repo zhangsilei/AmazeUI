@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">  
@@ -8,11 +8,10 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>西瓜虫演出</title>   
-  <meta property="qc:admins" content="137726140260175130767636" />
    
   <!-- Set render engine for 360 browser -->      
   <meta name="renderer" content="webkit">
-    
+         
   <!-- No Baidu Siteapp-->
   <meta http-equiv="Cache-Control" content="no-siteapp"/>    
          
@@ -26,7 +25,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
-  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png">
+  <link rel="apple-touch-icon-precomposed" href="assets/i/app-icon72x72@2x.png"> 
 
   <!-- Tile icon for Win8 (144x144 + tile color) -->
   <meta name="msapplication-TileImage" content="assets/i/app-icon72x72@2x.png">
@@ -40,18 +39,6 @@
   <link rel="stylesheet" href="assets/css/amazeui.min.css">     
   <link rel="stylesheet" href="css/index.css">           
   <link rel="stylesheet" href="css/base.css">
-  <!--[if lt IE 9]>
-  <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>        
-  <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>      
-  <script src="assets/js/amazeui.ie8polyfill.min.js"></script>
-  <![endif]-->   
-      
-  <!--[if (gte IE 9)|!(IE)]><!-->   
-  <script src="assets/js/jquery.min.js"></script>          
-  <!--<![endif]-->        
-  <script src="assets/js/amazeui.min.js"></script>          
-  <script src="js/common.js"></script>      
-  <script src="js/index.js"></script> 
 </head> 
 <body>
 <!--[if lte IE 9]>     
@@ -74,52 +61,55 @@
         <div class="am-offcanvas-content">                
           <img class="logo" src="imgs/leftside/logo@2x.png">           
           <!-- 导航 -->    
-          <ul class="left-nav" id="left-nav">    
-            <li>
-              <a href="city.html">
+          <ul class="left-nav" id="left-nav">             
+            <li>     
+              <a href="city.html">     
                 <img src="imgs/leftside/wezhi--@2x.png">             
-                <span class='am-sans-serif'>切换城市</span>  
-              </a>  
-            </li> 
+                <span class='am-sans-serif'>切换城市</span>                        
+              </a>    
+            </li>  
             <li>  
-              <a href="javascript:void(0);">      
+              <a href="javascript:void(0);">       
                 <img src="imgs/leftside/xuanzefenlei-@2x.png">              
-                <span class='am-sans-serif'>首页</span>               
-              </a>                 
-            </li>    
-            <li>        
-              <a href="live.html">   
-                <img src="imgs/leftside/tuijianxiangmu@2x.png">     
-                <span class='am-sans-serif'>Live House</span>  
-              </a>         
-            </li>   
+                <span class='am-sans-serif'>首页</span>                  
+              </a>                                   
+            <li>                    
+              <a href="live.html" class="am-vertical-align">   
+                <img src="imgs/leftside/tuijianxiangmu@2x.png" class="am-vertical-align-middle">          
+                <span class='am-sans-serif am-vertical-align-middle' style="margin-left: .9rem;">Live&nbsp;House</span>          
+              </a>          
+            </li>     
             <li>
               <a href="panxi.html">
-                <img src="imgs/leftside/panxibobao@3x.png">         
+                <img src="imgs/leftside/panxibobao@3x.png">          
                 <span class='am-sans-serif'>潘西播报</span>   
               </a>  
             </li>
             <li> 
               <a href="javascript:void(0);"> 
-                <img src="imgs/leftside/paihangbang@2x.png">       
+                <img src="imgs/leftside/paihangbang@2x.png">        
                 <span class='am-sans-serif'>排行榜</span>
               </a>  
             </li>
-          </ul>
+          </ul> 
           <!-- 微信、微博 --> 
           <!-- <div class="left-bottom">  
             <img src="imgs/leftside/weixin-@2x.png">
             <span class='am-sans-serif'>西瓜虫微信服务号</span>   
           </div>               
-          <div class="left-bottom">      
+          <div class="left-bottom">       
             <img src="imgs/leftside/weibo@2x.png">
             <span class='am-sans-serif'>西瓜虫官方微博</span>    
-          </div> -->
+          </div> -->    
+          <div class="left-btn">
+            <div class="am-fl"><a href="start.html">发起众筹</a></div>
+            <div class="am-fl"><a href="">商务合作</a></div>
+          </div>
         </div>
       </div>   
     </div>  
 
-    <!-- 搜索框 -->
+    <!-- 搜索框 -->  
     <div class="search">
       <img src="imgs/index/sousuo-1@2x.png">  
       <input type="text" placeholder="搜索明星、演唱会、场馆">  
@@ -134,7 +124,7 @@
         <img src="imgs/index/yonghu-@2x.png">       
       </a>          
     </div>     
-    <!-- 个人信息栏 -->           
+    <!-- 个人信息栏 -->            
     <div id="rightside" class="am-offcanvas">          
       <div class="am-offcanvas-bar am-offcanvas-bar-flip">      
         <div class="am-offcanvas-content">                     
@@ -143,9 +133,9 @@
           <!-- 登录导航 --> 
           <ul class="right-nav" id="right-nav">  
             <li>    
-              <a href="##">        
+              <a href="/user/WechatLogin">        
                 <img src="imgs/login/weixin@2x.png">    
-                <span class='am-sans-serif'>微信登录</span>   
+                <span class='am-sans-serif'>微信登录</span>         
               </a>    
             </li> 
             <li>      
@@ -169,7 +159,7 @@
             </li>   
           </ul>
         </div> 
-      </div>     
+      </div>      
     </div>  
   </header>
        
@@ -184,29 +174,29 @@
       <a class='am-sans-serif' href="javascript:void(0);">其他众筹</a>                  
     </div><div></div>        
    
-    <!-- 项目推荐（首页加载时显示该标签，标签数据在JS中动态加载） -->  
+    <!-- 项目推荐（首页加载时显示该标签，标签数据在JS中动态加载） -->   
     <div id="tuijian"></div>   
-  
-    <!-- 全部众筹，原演出众筹 -->                  
-    <div class="yanchu" id="yanchu">            
-      <!-- 轮播图用JS动态加载 -->  
-      <div data-am-widget="slider" class="am-slider am-slider-a1 center" data-am-slider>  
-        <ul class="am-slides">          
+              
+    <!-- 全部众筹，原演出众筹 -->                      
+    <div class="quanbu" id="quanbu">                
+      <!-- 轮播图用JS动态初始化，否则会有加载延迟!!!! -->  
+      <div class="am-slider am-slider-a1 center">          
+        <ul class="am-slides">                  
             <li>                 
-              <img class="am-img-responsive" src="imgs/fenlei/banner@2x.png" alt="loading...">              
-            </li>           
-            <li>              
-              <img class="am-img-responsive" src="imgs/fenlei/banner@2x.png" alt="loading...">            
+              <img src="imgs/fenlei/banner@2x.png">                    
+            </li>                
+            <li>               
+              <img src="imgs/fenlei/banner@2x.png">                             
             </li>           
             <li>     
-              <img class="am-img-responsive" src="imgs/fenlei/banner@2x.png" alt="loading..."> 
+              <img src="imgs/fenlei/banner@2x.png"> 
             </li>       
             <li>           
-              <img class="am-img-responsive" src="imgs/fenlei/banner@2x.png" alt="loading...">      
-            </li>  
-        </ul>  
+              <img src="imgs/fenlei/banner@2x.png">      
+            </li>     
+        </ul>             
       </div> 
-      <!-- 种类 -->
+      <!-- 种类 -->      
       <div class="kind">       
         <div class="all">   
           <img src="imgs/fenlei/quanbuzhongchou-@2x.png" class="am-img-responsive"> 
@@ -215,7 +205,7 @@
         <div class="sing">
           <img src="imgs/fenlei/yanchanghui@2x.png" class="am-img-responsive"> 
           <span class='am-sans-serif'>演唱会</span>   
-        </div>
+        </div> 
         <div class="opera"> 
           <img src="imgs/fenlei/huaju@2x.png" class="am-img-responsive"> 
           <span class='am-sans-serif'>话剧</span>
@@ -234,17 +224,29 @@
         <!-- 内容列表 -->                    
         <div class="am-list-news-bd"><ul class="am-list"></ul></div>            
       </div>                     
-    </div>                    
+    </div>                         
  
-    <!-- 人气众筹 -->
+    <!-- 人气众筹 --> 
     <div id="renqi"></div>
-        
-    <!-- 排行榜 -->               
-    <div class="paihang" id="paihang">                   
+               
+    <!-- 排行榜 -->                
+    <div class="paihang" id="paihang">                      
       <!-- 数据列表 -->                        
-      <div class="am-list-news-bd"><ul class="am-list"></ul></div>                    
+      <div class="am-list-news-bd"><ul class="am-list"></ul></div>                      
     </div>     
-       
-  </div>    
+           
+  </div>
+<!--[if lt IE 9]> 
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>        
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>      
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->   
+      
+<!--[if (gte IE 9)|!(IE)]><!-->   
+<script src="assets/js/jquery.min.js"></script>           
+<!--<![endif]-->           
+<script src="assets/js/amazeui.min.js"></script>          
+<script src="js/common.js"></script>         
+<script src="js/index.js"></script>     
 </body>
 </html>

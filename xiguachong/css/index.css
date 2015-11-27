@@ -13,9 +13,9 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 /* .header{
 	background: #000;
 }
-.header-font,.header-font-left{   
+.header-font,.header-font-left{    
 	font-size: 1.6rem;  
-	color: #fff;  
+	color: #fff;      
 }
 .header-font-left{   
 	font-size: 1.4rem;  
@@ -39,33 +39,33 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	float: left;          
 	margin-top: 1px;         
 	line-height: 4rem;         
-	font-size: 1.6rem;        
+	font-size: 1.6rem;         
 	float: left;
-	margin-left: .4rem;  
-}         
+	margin-left: .4rem;     
+}          
 .left-nav li a{ 
 	display: block;   
 	height: 4rem;
-	padding-right: 2rem;  
+	padding-right: 2rem;           
+}      
+.left-nav li:nth-of-type(2) > a{      
+	padding-right: 5.2rem;                      
+}   
+.left-nav li:nth-of-type(3) > a{       
+	padding-right: 0rem;             
 } 
-.left-nav li:nth-of-type(2) > a{  
-	padding-right: 5.2rem;               
-} 
-.left-nav li:nth-of-type(3) > a{
-	padding-right: 0rem;
-}
 .left-nav img{    
 	width: 2rem;          
-	height: 2rem;    
-}
+	height: 2rem;         
+}     
 .left-nav span{
-	margin-left: .5rem;	  
+	margin-left: .5rem;    
 }   
 .left-bottom{
-	width: 100%;   
+	width: 100%;        
 	height: 4rem;
 	position: relative;
-}
+} 
 .left-bottom:nth-of-type(2){ 
 	margin-top: 2.5rem;
 }
@@ -73,36 +73,48 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	margin: 20% 0rem 1rem 0rem; 
 } 
 .left-bottom img{ 
-	width: 2.5rem;
+	width: 2.5rem; 
 	height: 2.5rem; 
 	position: absolute; 
 	left: 50%;
-	top: -.5rem;
-	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%); 
+	top: -.5rem; 
+	transform: translateX(-50%);      
+	-webkit-transform: translateX(-50%);  
 } 
 .left-bottom span{
-	line-height: 6.5rem;
+	line-height: 6.5rem;  
 	font-size: 1.4rem;   
+}   
+.left-btn{
+	width: 120%;
+	margin: 80% 0rem 0rem -5%;   
+}
+.left-btn div{
+	border: .1rem solid #ccc; 
+	width: 42%;               
+	height: 3rem;         
+	line-height: 3rem;      
+	margin: 0 2%;  
+	border-radius: .5rem;
 } 
 /* 搜索框 */
-.search{  
+.search{          
 	background: #0ea0b7;
 	width: 70%;   
 	height: 62%;  
 	margin: 0rem auto;       
-	transform: translateY(40%);
-	-webkit-transform: translateY(40%);
-	border-radius: 2rem;
+	transform: translateY(40%);       
+	-webkit-transform: translateY(40%);       
+	border-radius: 2rem; 
 	position: relative;
 }
 .search img{
 	width: 2rem;
 	height: 2rem;    
-	position: absolute;
+	position: absolute; 
 	top: 50%;
 	left: 1.5rem;
-	transform: translateY(50%);
+	transform: translateY(-50%);    
 	-webkit-transform: translateY(-50%);
 }
 .search input{     
@@ -155,7 +167,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 /*
  * 内容块样式
  */ 
-.center,
+.center, 
 .tab,
 .kind, 
 .mengxiang,
@@ -163,13 +175,13 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	max-width: 100rem;    
 	margin: 0rem auto; 
 }  
-#content{
+#content{ 
 	background: #202020;
 }    
 /* Tab选项卡 */
 .tab{    
 	text-align: center; 
-	height: 3rem;
+	height: 3rem;    
 }       
 .tab a{
 	color: #fff;         
@@ -179,13 +191,13 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	line-height: 3rem;   
 } 
 .tab a:first-child{            
-	color: #1dbcd2;      
+	color: #1dbcd2;       
 }     
 .tab + div{  
 	width: 100%; 
-	height: .2rem;  
+	height: .2rem;     
 	background: #1dbcd2;      
-}        
+}         
 /* 推荐项目 */      
 .tuijian{   
 	position: relative;
@@ -202,11 +214,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	top: 0rem;     
 	left: 50%;               
 	transform: translateX(-50%);
-	-webkit-transform: translateX(-50%); 
+	-webkit-transform: translateX(-50%);       
 } 
 .tuijian > img:nth-child(2){     /* 播放按钮 */    
 	width: 7rem;     
-	height: 7rem;      
+	height: 7rem;          
 	top: 14%;  
 }       
 .video{         
@@ -228,7 +240,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	text-align: center;
 	font-size: 1.5rem; 
 	color: #fff; 
-	position: absolute; 
+	position: absolute;    
 	left: 0rem;    
 	top: 50%;     
 	margin-top: 25%;
@@ -237,7 +249,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	display: inline-block;
 	width: 2rem; 
 	height: 2rem;   
-}         
+}          
 .intro span:nth-of-type(1), 
 .intro span:nth-of-type(2){         
 	margin-right: 7%;       
@@ -256,50 +268,49 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
     .intro{         
     	margin-top: 18rem; 
     }   
-    .tuijian a img{      
+    .tuijian a img{       
     	margin-top: 28rem;
     }
 }               
 /* 全部众筹，原演出众筹 */ 
+.quanbu{  
+	display: none;
+}
 .kind{    
 	width: 100%;    
-	text-align: center;
-}       
-.kind div{    
-	width: 18%; 
 	text-align: center;    
-	display: inline-block; 
-	margin: 2rem 0rem 1rem;    
+}           
+.kind div{      
+	width: 18%; 
+	text-align: center;           
+	display: inline-block;          
+	margin: 2rem 0rem 1rem;                 
 } 
-.kind img,
-.mengxiang .tab-show img,
-.mengxiang .tab-tuan img,  
-.mengxiang .tab-xing img,      
-.mengxiang .tab-chou img, 
-.guazi .yule img, 
-.guazi .panxi img, 
-.guazi .yiren img{   
-	width: 3rem; 
-	height: 3rem;  
-	margin: 0rem auto;  
+.kind img{   
+	width: 3rem;  
+	height: 3rem;     
+	margin: 0rem auto;                
 }
-.kind span, 
-.mengxiang span,
-.guazi span{  
+.kind span{   
 	font-size: 1.4rem;
 	color: #ccc;
 }
 /* 人气众筹样式 */
-.renqi{
-	position: relative;
-	max-width: 100rem; 
-}  
+.renqi{ 
+	display: block;    
+	position: relative;           
+	max-width: 100rem;    
+}         
+.renqi,
+.renqi:hover{           
+	color: #fff;    
+}
 .renqi img, 
 .renqi{      
 	margin: 0rem auto;   
-}   
+}      
 .renqi-mengban{
-	left: 50%; 
+	left: 50%;  
 	bottom: 0rem;    
 	transform: translateX(-50%);    
 	-webkit-transform: translateX(-50%);
@@ -316,7 +327,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	left: 2rem;  
 }
 .renqi span:nth-of-type(1){     /* 人名 */
-	font-size: 2rem;    
+	font-size: 2rem;         
 	bottom: 4rem;
 } 
 .renqi span:nth-of-type(2),     /* 学校 */
@@ -326,7 +337,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 } 
 .renqi span:nth-of-type(3){    /* 身份 */  
 	left: 12rem; 
-}  
+}   
 .renqi button{ 
 	right: 1rem;    
 	bottom: 1.5rem; 
@@ -336,102 +347,15 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	padding: .5rem 2rem;
 	background: #1dbcd2;
 }
-/* 梦想众筹二级菜单 */ 
-/* 小型演出 */
-/*.mengxiang{    
-	width: 100%;
-	margin-top: 1rem;  
-	display: none;   
-	text-align: center;
-}
-.mengxiang .tab-show, 
-.mengxiang .tab-tuan,  
-.mengxiang .tab-xing,  
-.mengxiang .tab-chou{   
-	width: 24%;   
-	display: inline-block; 
-	text-align: center;
-}
-.line{   
-	width: 100%;  
-	display: block; 
-	margin-top: -1rem; 
-}
-.mengxiang > div:last-child,
-.guazi > div:last-child{
-	text-align: left; 
-}*/
-/* 梦想预备团 */
-/*.tuan{
-	position: relative;
-	text-align: left;
-}
-.tuan span{ 
-	color: #fff; 
-} 
-.tuan img{    
-	opacity: .7;
-} 
-.tuan > .tuan-intro{        
-	background: rgba(0, 0, 0, .5); 
-	width: 70%;        
-	height: 5rem;  
-	position: absolute;    
-	bottom: 0rem;
-	left: 0rem;  
-	padding-left: 1rem; 
-}  
-.tuan > .tuan-intro > span:nth-of-type(1){      人名       
-	display: block;
-	font-size: 1.8rem;     
-	font-weight: 600;
-}
-.tuan > .tuan-intro > span:nth-of-type(2),      人物介绍 
-.tuan > .tuan-intro > span:nth-of-type(3){ 
-	font-size: 1.4rem;  
-}      
-.tuan > button{      支持按钮  
-	width: 30%;  
-	height: 5rem;  
-	position: absolute;       
-	bottom: 0rem;     
-	right: 0rem;
-	border: 0rem;    
-	background: rgba(48, 144, 158, .9);
-	font-weight: 700;
-	font-size: 1.8rem;
-}*/
-/* 众筹之星 */ 
-/*.xing{ 
-	display: none;
-}
-.xing ul{
-	border: none;
-} 
-.xing ul li{
-	width: 30%;
-	margin: 1rem auto 0rem;
-	margin-left: 2.5%; 
-}
-.xing span{     
-	color: #fff;
-}
-.xing ul li span:nth-of-type(1){
-	display: block; 
-	font-size: 1.8rem;  
-}
-.xing ul li span:nth-of-type(2){ 
-	font-size: 1.3rem;   
-}*/
 /* 瓜子娱乐样式 */  
-.guazi{
+/*.guazi{
 	text-align: center;      
 	display: none;
 } 
 .guazi .yule,
 .guazi .panxi,          
 .guazi .yiren{  
-	margin-top: 1rem;
+	margin-top: 1rem; 
 	display: inline-block;     
 	width: 32%;          
 }     
@@ -441,14 +365,14 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	overflow: hidden; 
 	white-space: nowrap;
 	text-overflow: ellipsis;
-}
+}*/
 /* 项目排行样式 */  
 .paihang{      
 	display: block;  
 }   
 .paihang-poster,.success-poster{ 
 	min-width: 8rem;   
-	min-height: 12rem;  
+	min-height: 12rem;   
 } 
 .paihang-title,.success-title{ 
 	font-size: 1.8rem; 
@@ -470,14 +394,14 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	margin-top: 1.5rem;
 	width: 1.2rem;
 	height: 1.2rem;
-}
+} 
 .paihang-support{ 
 	position: absolute;
 	bottom: -.5rem;
 	right: 1rem;
-	margin-left: 2.5rem;
+	margin-left: 2.5rem; 
 	font-size: 1.8rem;      
-	color: #1dbcd2; 
+	color: #1dbcd2;  
 } 
 .paihang-jiantou,.success-jiantou{
 	width: 1.2rem;               
@@ -487,11 +411,11 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	right: .7rem;      
 }
 /* 最新项目样式 */
-.zuixin{
+/*.zuixin{
   	background: #202020; 
   	display: none;
 }
-.zuixin-poster{
+.zuixin-poster{ 
 	margin: 0rem auto;  
 }
 .zuixin-content{  
@@ -513,9 +437,9 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	font-size: 1.8rem;
 	padding-top: .5rem;
 	padding-bottom: 1rem;
-}
+} */
 /* 成功项目样式 */
-.success{
+/*.success{
 	display: none;
 }
 .success-content{  
@@ -538,7 +462,7 @@ input:-ms-input-placeholder { /* Internet Explorer 10+ */
 	position: absolute;
 	bottom: -1.4rem;
 	margin-left: 2rem;
-}
+}*/
 
 
 

@@ -1,0 +1,72 @@
+.time{
+	height: 4rem;
+}
+.time,
+.tip-top{
+	background: #e1e1e1;
+}
+.time span,
+.tip-top,
+.tip-bottom span,
+.item-bottom > div span,
+.item-bottom .num{ 
+	color: #666;         
+}
+@media screen and(min-width: 414px){ 
+	.tip-top{
+		text-align: center;
+		line-height: 4rem;
+	}
+}       
+/* 项目列表 */ 
+.item{
+	background: #242424;
+}
+.item-top span:first-child{     
+	color: #2ebcd2;
+}  
+.item-top span:not([id="money"]){
+	color: #999;
+}
+.line{
+	width: .1rem;
+	height: 1.8rem;
+	border-left: .1rem dashed #999;
+} 
+.item-top + span{
+	color: #ccc;
+}
+.item > img:not([id="and"]){
+	width: 6rem;
+	height: 6rem;
+}
+#and{       
+	width: 2rem;
+	height: 2rem;
+}
+.tip-bottom,
+body{
+	background: #000; 
+}  
+.item-bottom{  
+	height: 4.5rem; 
+}
+.item-bottom button{
+	height: 4.5rem;
+	background: #2bbccf; 
+	border: none; 
+	color: #fff; 
+} 
+.item-bottom > div{
+	height: 100%;
+}      
+.item-bottom > div img{
+	width: 3rem;
+	height: 3rem; 
+	border: .1rem solid #666; 
+}
+.item-bottom .num{
+	border-top: .1rem solid #666; 
+	border-bottom: .1rem solid #666;
+	padding: 0rem 2rem;
+}

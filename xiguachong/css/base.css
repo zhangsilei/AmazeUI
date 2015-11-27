@@ -4,7 +4,7 @@
 	outline: none; 
 	list-style: none; 
 } 
-:root{     
+:root{       
 	background: #202020;    
 }
 /* 页头 */  
@@ -18,25 +18,34 @@
 .marginCenter{   
 	margin: 0rem auto;
 }         
+/* 文本居中 */
+.textCenter{
+	text-align: center;
+}  
 /* 相对定位 */ 
 .relative{
 	position: relative;
 } 
 /* 绝对定位 */     
 .absolute{    
-	position: absolute;     
+	position: absolute;       
 }            
+/* 行内块级显示 */
+.inlineBlock{
+	display: inline-block;
+}     
 /* 块级显示 */
 .block{
-	display: inline-block;
+	display: block; 
+}   
+/* 字体大小 */ 
+.font15{     
+	font-size: 1.5rem;
 }
-/* 字体大小 */
-.font14{
-	font-size: 1.4rem;
+.font17{
+	font-size: 1.7rem;
 }
-.font16{
-	font-size: 1.6rem;
-}
-.font18{
-	font-size: 1.8rem;
+/* 背景z-index */
+.bg-z-index{
+	z-index: -1;
 }

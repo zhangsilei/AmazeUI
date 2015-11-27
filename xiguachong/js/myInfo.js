@@ -10,10 +10,10 @@ $(function(){
   if(ls.getItem('flag') != 'success'){     // 不是三方登录 
     $.post('/Info/mobileUserInfo', {Id: userObj.userId}, function(data){  
       showUserInfo(data.sex, data.userName, data.mobile, data.email); 
-    })  
+    })   
   }else{     // 是三方登录 
     var userId = ls.getItem('userId');  
-    $.post('/Info/getQQWCUserInfo', {Id: userId}, function(data){    
+    $.post('/Info/getQQWCUserInfo', {Id: userId}, function(data){     
       showUserInfo(data.sex, data.nickName, data.mobile, data.email); 
     })  
   }                           

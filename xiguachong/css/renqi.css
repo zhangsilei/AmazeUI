@@ -1,46 +1,81 @@
-.renqi{
-	position: relative;
-	max-width: 100rem;
-}  
-.renqi img,
-.renqi{      
-	margin: 0rem auto;   
-}   
-.renqi-mengban{
-	left: 50%; 
-	bottom: 0rem;   
-	transform: translateX(-50%);    
-	-webkit-transform: translateX(-50%);
-} 
-.renqi-mengban, 
-.renqi span:nth-of-type(1),
-.renqi span:nth-of-type(2),
-.renqi span:nth-of-type(3), 
-.renqi button{ 
-	position: absolute; 
+body,div,img,p,h5,a{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: 0;
 }
-.renqi span:nth-of-type(1), 
-.renqi span:nth-of-type(2){
-	left: 2rem;
+a:link,
+a:visited,
+a:hover,
+a:active{
+	color: #fff;
 }
-.renqi span:nth-of-type(1){     /* 人名 */
-	font-size: 2rem;    
-	bottom: 4rem;
+p:nth-of-type(1){
+	font-size: 1.8rem;      
+}
+p{
+	font-size: 1.4rem;
+	margin-top: 2px;
+}
+.mian{            
+	background: #202020;
+}
+.details{ 
+	/*height: 300px;*/    
+	background: #202020; 
+	padding: 13px 10px;
 } 
-.renqi span:nth-of-type(2),     /* 学校 */
-.renqi span:nth-of-type(3){     /* 身份 */    
-	font-size: 1.5rem;      
-	bottom: 1rem; 
-} 
-.renqi span:nth-of-type(3){    /* 身份 */  
-	left: 12rem; 
-}  
-.renqi button{ 
-	right: 1rem;    
-	bottom: 1.5rem; 
-	border: none;  
-	border-radius: 3rem; 
-	font-size: 1.8rem; 
-	padding: .5rem 2rem;
-	background: #1dbcd2;
+.details p:nth-of-type(2){
+	margin-top: 5px;
+}
+img{
+	width: 100%;
+}
+.support{
+	width: 100%;
+	height: 40px;
+	line-height: 40px; 
+	text-align: center;
+	background-color: #1DBCD2;
+	font-size: 1.8rem;
+}
+@media screen and (min-width: 375px) and (max-width: 410px){
+	p:nth-of-type(1){
+		font-size: 1.9rem;
+	}
+	p{
+		font-size: 1.5rem;
+	}
+}
+@media screen and (min-width: 411px) and (max-width: 700px){
+	p:nth-of-type(1){
+		font-size: 2.4rem; 
+	}    
+	p{           
+		font-size: 1.8rem;
+		margin-top: 3px;
+	}
+	.details p:nth-of-type(2){         
+		margin-top: 9px;
+	}
+	.support{
+		height: 50px;
+		line-height: 50px;
+	}
+}
+@media screen and (min-width: 701px){
+	p:nth-of-type(1){
+		font-size: 2.8rem;
+	}
+	p{
+		font-size: 2.0rem;
+		margin-top: 5px;
+	}
+	.details p:nth-of-type(2){
+		margin-top: 15px;
+	}
+	.support{
+		height: 60px;
+		line-height: 60px;
+	}
 }
