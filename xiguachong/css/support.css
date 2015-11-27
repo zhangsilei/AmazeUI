@@ -1,8 +1,11 @@
 .time{
 	height: 4rem;
 }
+.time span{
+	line-height: 4rem;
+}
 .time,
-.tip-top{
+.tip-top{ 
 	background: #e1e1e1;
 }
 .time span,
@@ -12,21 +15,26 @@
 .item-bottom .num{ 
 	color: #666;         
 }
-@media screen and(min-width: 414px){ 
+@media screen and(min-width: 414px){  
 	.tip-top{
 		text-align: center;
-		line-height: 4rem;
+		line-height: 4rem; 
 	}
-}       
+}      
+.item-top span,
+.item-top div{
+	vertical-align: middle;
+}
 /* 项目列表 */ 
 .item{
 	background: #242424;
 }
-.item-top span:first-child{     
+.item-top span:first-child{      
 	color: #2ebcd2;
 }  
 .item-top span:not([id="money"]){
 	color: #999;
+	font-size: 1.4rem;
 }
 .line{
 	width: .1rem;
@@ -36,19 +44,19 @@
 .item-top + span{
 	color: #ccc;
 }
-.item > img:not([id="and"]){
+.item > div:nth-of-type(2) img:not([id="and"]){
 	width: 6rem;
-	height: 6rem;
+	height: 6rem; 
 }
 #and{       
 	width: 2rem;
 	height: 2rem;
-}
+} 
 .tip-bottom,
 body{
 	background: #000; 
 }  
-.item-bottom{  
+.item-bottom{   
 	height: 4.5rem; 
 }
 .item-bottom button{
@@ -70,3 +78,4 @@ body{
 	border-bottom: .1rem solid #666;
 	padding: 0rem 2rem;
 }
+

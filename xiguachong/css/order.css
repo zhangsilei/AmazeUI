@@ -10,10 +10,16 @@ body{
 	line-height: 2rem;
 } 
 .time img,
+.time span,
+.place img,
+.place span{
+	vertical-align: middle; 
+}
+.time img,
 .place img,
 .send img{ 
 	width: 2rem;
-	height: 2rem;
+	height: 2rem; 
 } 
 .time span,
 .place span,
@@ -57,10 +63,10 @@ body{
 #status{ 
 	color: #3dcbcc;
 }      
-#btn,.btn:hover{  
+#btn{  
 	background: #2bbccf;   
 	border: none;
-	height: 3.5rem;
+	height: 3.5rem;   
 	color: #fff;
 }
 
