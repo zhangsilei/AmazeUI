@@ -8,26 +8,26 @@ $(function(){
 
 	// 加载页面时请求后台数据   
   if(ls.getItem('flag') != 'success'){     // 不是三方登录 
-    $.post('/Info/mobileUserInfo', {Id: userObj.userId}, function(data){  
+    $.post('/Info/mobileUserInfo', {userId: userObj.userId}, function(data){   
       showUserInfo(data.sex, data.userName, data.mobile, data.email); 
     })   
-  }else{     // 是三方登录 
-    var userId = ls.getItem('userId');  
-    $.post('/Info/getQQWCUserInfo', {Id: userId}, function(data){     
+  }else{     // 是三方登录  
+    var userId = ls.getItem('userId');       
+    $.post('/Info/getQQWCUserInfo', {userId: userId}, function(data){     
       showUserInfo(data.sex, data.nickName, data.mobile, data.email); 
-    })  
+    })   
   }                           
-  
-  // 在资料页面显示用户信息           
-  function showUserInfo(datasex, datauserName, datamobile, dataemail){
+   
+  // 在资料页面显示用户信息             
+  function showUserInfo(dataSex, dataUsername, dataMobile, dataEmail){  
     var userName = userInfo.eq(0).children('span').eq(1);           
     var phoneNum = userInfo.eq(1).children('span').eq(1);              
     var email = userInfo.eq(2).children('span').eq(1);
     // 性别           
-    datasex == 1 ? displayController(womanIcon, manIcon) : displayController(manIcon, womanIcon); 
+    dataSex == 1 ? displayController(womanIcon, manIcon) : displayController(manIcon, womanIcon); 
     // 昵称            
     if(getQueryString('from') == 'index'){     // 点击我的资料进来当前页面   
-      userName.html(datauserName);     // 从后台获取数据          
+      userName.html(dataUsername);     // 从后台获取数据          
       ls.removeItem('newNickname');            
     }else{     // 从别的页面进来的            
       if(ls.getItem('newNickname') != null){     // 设置过草稿          
@@ -38,9 +38,9 @@ $(function(){
     }       
     // 手机号                     
     if(getQueryString('from') == 'index'){         
-      phoneNum.html(datamobile);  
+      phoneNum.html(dataMobile);  
       ls.removeItem('newphoneNum'); 
-    }else{           
+    }else{            
       if(ls.getItem('newphoneNum') != null){   
         phoneNum.html(ls.getItem('newphoneNum'));    
       }else{   
@@ -49,20 +49,20 @@ $(function(){
     } 
     // 邮箱         
     if(getQueryString('from') == 'index'){   
-      email.html(dataemail);      
-      ls.removeItem('newemail'); 
+      email.html(dataEmail);      
+      ls.removeItem('newemail');  
     }else{  
-      if(ls.getItem('newemail') != null){
+      if(ls.getItem('newemail') != null){ 
         email.html(ls.getItem('newemail')); 
       }else{  
         email.html(userObj.email);
       }   
     }
     // 加载完数据后存到本地以保持用户登录状态                
-    userObj.sex = datasex;                                    
-    userObj.nickname = datauserName;                              
-    userObj.phoneNum = datamobile;                                                 
-    userObj.email = dataemail;                                   
+    userObj.sex = dataSex;                                    
+    userObj.nickname = dataUsername;                              
+    userObj.phoneNum = dataMobile;                                                 
+    userObj.email = dataEmail;                                   
     if(ls){                  
       ls.setItem('user', JSON.stringify(userObj));      
     }else{                           

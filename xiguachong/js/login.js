@@ -30,17 +30,17 @@ $(function(){
 		        var userStr = JSON.stringify(new User(data.userId, data.msg, null, null, defaultImgUrl, null));     // 用户ID、用户名、用户头像 
 		        ls.setItem('status', 'online');                                  
 		        ls.setItem('user', userStr);                                                       
-		        window.location.href = 'index.html';                                              
+		        window.location.href = 'index.html';                                               
 		      }else{                                                                         
-		        console.log('浏览器不支持localStorage！');                                            
+		        console.log('浏览器不支持localStorage！');                                             
 		      }                                        
 				}                 
-			})        
-		} 
+			})         
+		}      
 	})    
      
 })      
-          
+           
 $(window).resize(function(){initPage();})                    
        
 // 页面初始化时，用JS定位部分元素    

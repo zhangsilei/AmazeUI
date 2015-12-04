@@ -39,15 +39,64 @@
   <link rel="stylesheet" href="assets/css/amazeui.min.css">     
   <link rel="stylesheet" href="css/index.css">           
   <link rel="stylesheet" href="css/base.css">
+  <style type="text/css">
+    html,body{
+      background: #202020;
+      position: relative;
+      height: 100%;
+    }
+    .container{
+      position: absolute;
+      top: 50%; 
+      left: 50%; 
+      z-index: 999999;
+      transform: translate(-50%, -50%);  
+      -webkit-transform: translate(-50%, -50%);
+    }
+    .help{
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      border: 1px #fff solid; 
+      border-radius: 50%;
+      -webkit-animation: rotation 1s ease-in-out infinite;
+         -moz-animation: rotation 1s ease-in-out infinite;
+              animation: rotation 1s ease-in-out infinite;
+    }
+    .help:after{
+      width: 5px;
+      height: 5px; 
+      background-color: rgba(255,255,255,1);  
+      border-radius: 100%; 
+      position: absolute; 
+      content: ""; 
+    }
+    @-webkit-keyframes rotation{
+      0%{-webkit-transform: rotate(0deg);}
+      100%{-webkit-transform: rotate(360deg);}
+    }
+    @-moz-keyframes rotation{  
+      0%{-moz-transform: rotate(0deg);}
+      100%{-moz-transform: rotate(360deg);}
+    }
+    @keyframes rotation{
+      0%{transform: rotate(0deg);}
+      100%{transform: rotate(360deg);}
+    }
+  </style>
 </head> 
-<body>
+<body onload="loading();">
+
+  <!-- 加载动画 -->
+  <div class="container"><div class="help"></div></div>
+
 <!--[if lte IE 9]>     
 <p class="browsehappy">你正在使用<strong>过时</strong>的浏览器，Amaze UI 暂不支持。 请 <a
   href="http://browsehappy.com/" target="_blank">升级浏览器</a>
   以获得更好的体验！</p>
 <![endif]-->
 
-  <!-- 页头 -->
+  <!-- 页头 --> 
   <header data-am-widget="header" class="am-header am-header-default"> 
     <div class="am-header-left am-header-nav">
       <!-- 左侧栏触发器 --> 
@@ -174,7 +223,7 @@
       <a class='am-sans-serif' href="javascript:void(0);">其他众筹</a>                  
     </div><div></div>        
    
-    <!-- 项目推荐（首页加载时显示该标签，标签数据在JS中动态加载） -->   
+    <!-- 推荐 -->   
     <div id="tuijian"></div>   
               
     <!-- 全部众筹，原演出众筹 -->                      
@@ -199,40 +248,48 @@
       <!-- 种类 -->      
       <div class="kind">       
         <div class="all">   
-          <img src="imgs/fenlei/quanbuzhongchou-@2x.png" class="am-img-responsive"> 
+          <img src="imgs/fenlei/quanbuzhongchou-@2x.png"> 
           <span class='am-sans-serif'>全部众筹</span> 
         </div>    
         <div class="sing">
-          <img src="imgs/fenlei/yanchanghui@2x.png" class="am-img-responsive"> 
+          <img src="imgs/fenlei/yanchanghui@2x.png"> 
           <span class='am-sans-serif'>演唱会</span>   
-        </div> 
+        </div>  
         <div class="opera"> 
-          <img src="imgs/fenlei/huaju@2x.png" class="am-img-responsive"> 
+          <img src="imgs/fenlei/huaju@2x.png">  
           <span class='am-sans-serif'>话剧</span>
         </div> 
         <div class="zaji">     
-          <img src="imgs/fenlei/zaji@2x.png" class="am-img-responsive">  
-          <span class='am-sans-serif'>杂技</span>
+          <img src="imgs/fenlei/zaji@2x.png">  
+          <span class='am-sans-serif'>曲苑杂坛</span>
         </div>               
         <div class="show">       
-          <img src="imgs/fenlei/tuokouxiu@2x.png" class="am-img-responsive"> 
-          <span class='am-sans-serif'>脱口秀</span> 
+          <img src="imgs/fenlei/tuokouxiu@2x.png"> 
+          <span class='am-sans-serif'>见面会</span>   
         </div>
       </div>      
       <!-- 众筹项目 -->               
       <div class="paihang center">            
-        <!-- 内容列表 -->                    
-        <div class="am-list-news-bd"><ul class="am-list"></ul></div>            
-      </div>                     
+        <!-- 数据列表 -->                    
+        <div class="am-list-news-bd"><ul class="am-list"></ul></div> 
+        <!-- 加载更多 -->  
+        <div class="am-list-news-ft am-margin-bottom more">
+          <a class="am-list-news-more" href="javascript:void(0);" style="color:#ccc;">点击查看更多 &raquo;</a>
+        </div>           
+      </div>              
     </div>                         
  
-    <!-- 人气众筹 --> 
-    <div id="renqi"></div>
-               
+    <!-- 人气众筹 -->  
+    <div id="renqi"></div>  
+                
     <!-- 排行榜 -->                
     <div class="paihang" id="paihang">                      
-      <!-- 数据列表 -->                        
-      <div class="am-list-news-bd"><ul class="am-list"></ul></div>                      
+      <!-- 数据列表 -->                         
+      <div class="am-list-news-bd"><ul class="am-list"></ul></div> 
+      <!-- 加载更多 -->  
+      <div class="am-list-news-ft am-margin-bottom more">
+        <a class="am-list-news-more" href="javascript:void(0);" style="color:#ccc;">点击查看更多 &raquo;</a>
+      </div>
     </div>     
            
   </div>

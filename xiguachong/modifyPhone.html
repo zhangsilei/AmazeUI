@@ -124,7 +124,7 @@
         tipShowHide(tip, warning, '验证码只能输入六位数字！');  
       }else{   
         var userObj = JSON.parse(ls.getItem('user'));          
-        $.post('/Info/updateMobile', {Id: userObj.userId , mobile: mobile.val(), code: code.val()}, function(data){
+        $.post('/Info/updateMobile', {userId: userObj.userId , mobile: mobile.val(), code: code.val()}, function(data){
           if(data.state == 'fail'){              
             tipShowHide(tip, error, data.msg);        
           }else{                      

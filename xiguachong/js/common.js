@@ -4,25 +4,20 @@
  * @param {Elements}/{Element} showEles 要显示的元素
  */ 
 function displayController(hideEles, showEles) {
-  try{
-    if (hideEles.length > 1) {
-      for (i in hideEles) {    
-        hideEles[i].hide();      
-      }  
-    }else {   
-      hideEles.hide();             
+  if (hideEles.length > 1) {
+    for (i in hideEles) {    
+      hideEles[i].fadeOut(200);      
+    }  
+  }else {   
+    hideEles.fadeOut(200);              
+  }    
+  if (showEles.length > 1) {
+    for (i in showEles) {
+      showEles[i].fadeIn(200);    
     }    
-    if (showEles.length > 1) {
-      for (i in showEles) {
-        showEles[i].show();    
-      }    
-    }else {        
-      showEles.show(); 
-    }     
-  }catch(e){ 
-    console.log('参数不能为null');
-  }
-     
+  }else {        
+    showEles.fadeIn(200); 
+  }     
 }
 
 /**
